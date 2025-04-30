@@ -1,0 +1,19 @@
+{
+  "name": "my-app-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/my-app-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["my-app"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/apps/my-app-e2e"],
+      "options": {
+        "config": "apps/my-app-e2e/playwright.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
