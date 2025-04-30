@@ -5,81 +5,89 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "codegen/frontend-client": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "graphql-codegen --config apps/my-app/codegen.yml"
+      },
+      "outputs": [
+        "{projectRoot}/web/graphql"
+      ]
+    },
+
     "build": {
-  "executor": "@nx/next:build",
-  "outputs": ["{options.outputPath}"],
-  "defaultConfiguration": "production",
-  "options": {
-    "outputPath": "dist/apps/my-app"
-  },
-  "configurations": {
-    "development": {
-      "outputPath": "apps/my-app"
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/my-app"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/my-app"
+        },
+        "production": {}
+      },
+      "dependsOn": ["build-custom-server"]
     },
-    "production": {}
-  },
-  "dependsOn": [
-    "build-custom-server"
-  ]
-},
-"build-custom-server": {
-  "executor": "@nx/webpack:webpack",
-  "defaultConfiguration": "production",
-  "options": {
-    "outputPath": "dist/apps/my-app",
-    "main": "apps/my-app/server.ts",
-    "tsConfig": "apps/my-app/tsconfig.server.json",
-    "maxWorkers": 2,
-    "assets": [],
-    "compiler": "tsc",
-    "target": "node",
-    "webpackConfig": "apps/my-app/webpack.config.js"
-  },
-  "configurations": {
-    "development": {},
-    "production": {
-      "optimization": true,
-      "extractLicenses": true,
-      "inspect": false
-    }
-  }
-},
-"serve": {
-  "executor": "@nx/next:server",
-  "defaultConfiguration": "development",
-  "options": {
-    "buildTarget": "my-app:build",
-    "dev": true,
-    "customServerTarget": "my-app:serve-custom-server"
-  },
-  "configurations": {
-    "development": {
-      "buildTarget": "my-app:build:development",
-      "dev": true,
-      "customServerTarget": "my-app:serve-custom-server:development"
+    "build-custom-server": {
+      "executor": "@nx/webpack:webpack",
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/my-app",
+        "main": "apps/my-app/server.ts",
+        "tsConfig": "apps/my-app/tsconfig.server.json",
+        "maxWorkers": 2,
+        "assets": [],
+        "compiler": "tsc",
+        "target": "node",
+        "webpackConfig": "apps/my-app/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false
+        }
+      }
     },
-    "production": {
-      "buildTarget": "my-app:build:production",
-      "dev": false,
-      "customServerTarget": "my-app:serve-custom-server:production"
-    }
-  }
-},
-"serve-custom-server": {
-  "executor": "@nx/js:node",
-  "defaultConfiguration": "development",
-  "options": {
-    "buildTarget": "my-app:build-custom-server"
-  },
-  "configurations": {
-    "development": {
-      "buildTarget": "my-app:build-custom-server:development"
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "my-app:build",
+        "dev": true,
+        "customServerTarget": "my-app:serve-custom-server"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "my-app:build:development",
+          "dev": true,
+          "customServerTarget": "my-app:serve-custom-server:development"
+        },
+        "production": {
+          "buildTarget": "my-app:build:production",
+          "dev": false,
+          "customServerTarget": "my-app:serve-custom-server:production"
+        }
+      }
     },
-    "production": {
-      "buildTarget": "my-app:build-custom-server:production"
-    }
-  }
-},
+    "serve-custom-server": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "my-app:build-custom-server"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "my-app:build-custom-server:development"
+        },
+        "production": {
+          "buildTarget": "my-app:build-custom-server:production"
+        }
+      }
+    },
     "export": {
       "executor": "@nx/next:export",
       "options": {

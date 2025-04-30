@@ -1,9 +1,24 @@
 import styles from './index.module.scss'
 import { useQuery } from '@apollo/client'
-import { Box, Inline, ContentBlock, Button, Stack } from '@island.is/island-ui/core'
+import {
+  Box,
+  Inline,
+  ContentBlock,
+  Button,
+  Stack,
+} from '@island.is/island-ui/core'
 import { gql } from '@apollo/client'
 import { useState } from 'react'
+import { Characters, Scalars, Character } from '../graphql/schema'
+import Image from 'next/image'
 
+type GetCharactersData = {
+  characters?: Characters | null
+}
+
+type GetCharactersVars = {
+  page?: Scalars['Int']
+}
 export const GET_CHARACTERS = gql`
   query GetCharacters($page: Int) {
     characters(page: $page) {
@@ -27,18 +42,20 @@ const Index = () => {
 
   const [page, setPage] = useState(1)
 
-  const { data, loading, error } = useQuery(GET_CHARACTERS, {
+  const { data, loading, error } = useQuery<
+    GetCharactersData,
+    GetCharactersVars
+  >(GET_CHARACTERS, {
     variables: { page: apiPage },
   })
 
   console.log(data)
 
-  const nextPage = () =>
-  {
+  const nextPage = () => {
     setApiPage(apiPage + 1)
   }
 
-  const prevPage = () => setApiPage(apiPage -1)
+  const prevPage = () => setApiPage(apiPage - 1)
 
   /*
    * Replace the elements below with your own.
@@ -52,29 +69,32 @@ const Index = () => {
 
         {data && (
           <>
-          <Stack space={1}>
-            <Inline space="containerGutter">
-              {data.characters.results.map(
-                (character: { id: string; name: string; image: string }) => (
-                  <Box key={character.id}>
-                    <img
-                      src={character.image}
-                      alt={character.name}
-                      width={100}
-                      height={100}
-                    />
-                    <div>{character.name}</div>
-                  </Box>
-                ),
-              )}
-            </Inline>
-            <Inline>
-            {data.characters.info.prev && <Button onClick={prevPage}>Prev</Button>}
-            {data.characters.info.next && <Button onClick={nextPage}>Next</Button>}
-            </Inline>
+            <Stack space={1}>
+              <Inline space="containerGutter">
+                {data?.characters?.results
+                  ?.filter((c): c is Character => c !== null)
+                  .map((character) => (
+                    <Box key={character.id ?? character.name ?? Math.random()}>
+                      <Image
+                        src={character.image ?? ''}
+                        alt={character.name ?? 'Unknown'}
+                        width={100}
+                        height={100}
+                      />
+                      <div>{character.name ?? 'Unnamed'}</div>
+                    </Box>
+                  ))}
+              </Inline>
+              <Inline>
+                {data?.characters?.info?.prev && (
+                  <Button onClick={prevPage}>Prev</Button>
+                )}
+                {data?.characters?.info?.next && (
+                  <Button onClick={nextPage}>Next</Button>
+                )}
+              </Inline>
             </Stack>
           </>
-
         )}
       </ContentBlock>
     </Box>

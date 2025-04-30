@@ -1,8 +1,14 @@
 import { test, expect } from '@playwright/test'
 
-test('has title', async ({ page }) => {
-  await page.goto('/')
+test('has 20 images and finds Rick Sanchez', async ({ page }) => {
+  await page.goto('/');
 
-  // Expect h1 to contain a substring.
-  expect(await page.locator('h1').innerText()).toContain('Welcome')
-})
+  // Expect exactly 20 images on the page
+  const images = page.locator('img');
+  await expect(images).toHaveCount(20);
+
+  // Wait for and check for a specific image by alt text
+  const rickImage = page.locator('img[alt="Rick Sanchez"]');
+
+  await expect(rickImage).toBeVisible();
+});

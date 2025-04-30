@@ -3,7 +3,6 @@ const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin')
 
 const withVanillaExtract = createVanillaExtractPlugin()
 
-
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/
@@ -13,17 +12,23 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
-  publicRuntimeConfig:
-  {
+  publicRuntimeConfig: {
     graphqlEndpoint: 'https://rickandmortyapi.graphcdn.app/',
     test: process.env.TEST,
-    NEXTAUTH_URL: 'http://localhost:3000'
-
+    NEXTAUTH_URL: 'http://localhost:3000',
   },
-  serverRuntimeConfig:
-  {
-    NEXTAUTH_URL: 'http://localhost:3000'
-  }
+  serverRuntimeConfig: {
+    NEXTAUTH_URL: 'http://localhost:3000',
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'rickandmortyapi.com',
+        pathname: '/api/character/avatar/**',
+      },
+    ],
+  },
 }
 
 const plugins = [
