@@ -17,7 +17,7 @@ import { useDateUtils } from '../../i18n/useDateUtils'
 interface NewsCardProps {
   title: string
   introduction: string | React.ReactNode
-  image?: Partial<any>
+  image?: string
   readMoreText?: string
   href: string
   date?: string
@@ -142,8 +142,8 @@ export const NewsCard: React.FC<React.PropsWithChildren<NewsCardProps>> = ({
                 ratio="1:1"
                 thumbnailColor="blue100"
                 image={{
-                  url: image?.url,
-                  title: image?.title,
+                  url: image,
+                  title: title,
                 }}
               />
             </Box>

@@ -39,6 +39,16 @@ const Index = () => {
     totalPages,
   } = useCharacterPagination()
 
+  const [activeCharacter, setActiveCharacter] = useState<Character | null>(null)
+
+  const clickCharacter = (c: Character) => {
+    if (c.id === activeCharacter?.id) {
+      setActiveCharacter(null)
+    } else {
+      setActiveCharacter(c)
+    }
+  }
+
   /*
    * Replace the elements below with your own.
    *
@@ -56,18 +66,37 @@ const Index = () => {
               {characters
                 ?.filter((c): c is Character => c !== null)
                 .map((character) => (
-                  <GridColumn span="1/4" key={character.id}>
-                    <ProfileCard
-                      link={{ text: character.location?.name ?? '', url: '#' }}
-                      size="small"
-                      title={character?.name ?? ''}
-                      image={character.image ?? ''}
-                      key={character.id ?? character.name ?? Math.random()}
-                    />
-                  </GridColumn>
+                  <>
+                    <GridColumn span={'1/4'} key={character.id}>
+                      <Box onClick={() => clickCharacter(character)}>
+                        <ProfileCard
+                          link={{
+                            text: character.location?.name ?? '',
+                            url: '#',
+                          }}
+                          size="small"
+                          title={character?.name ?? ''}
+                          image={character.image ?? ''}
+                          key={character.id ?? character.name ?? Math.random()}
+                        />
+                      </Box>
+                    </GridColumn>
+                    {activeCharacter?.id == character.id && (
+                      <>
+                        <GridColumn span={'4/4'}>
+                          <NewsCard
+                            title={character?.name ?? ''}
+                            introduction={JSON.stringify(character)}
+                            image={character?.image ?? ''}
+                            href="#"
+                            readMoreText=''
+                          />
+                        </GridColumn>
+                      </>
+                    )}
+                  </>
                 ))}
             </GridRow>
-            <NewsCard title='Title' introduction='introduction' href='href'/>
             <Pagination
               page={page}
               totalPages={totalPages}
