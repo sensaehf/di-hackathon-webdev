@@ -1,6 +1,6 @@
 import { gql, useQuery } from '@apollo/client'
 import { useState, useMemo } from 'react'
-import { Characters, Scalars, Character } from '../graphql/schema'
+import { Characters, Scalars, Character } from '../../graphql/schema'
 
 type UsePaginatedCharactersResult = {
   characters: Character[]

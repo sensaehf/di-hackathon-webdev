@@ -18,7 +18,7 @@ import { gql } from '@apollo/client'
 import { useState } from 'react'
 import Image from 'next/image'
 import { Character, Characters, Scalars } from '../../graphql/schema'
-import { useCharacterPagination } from '../../pages/useCharacterPagination'
+import { useCharacterPagination } from './useCharacterPagination'
 import NewsCard from '../../components/NewsCard/NewsCard'
 type GetCharactersData = {
   characters?: Characters | null
