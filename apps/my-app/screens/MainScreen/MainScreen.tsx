@@ -1,4 +1,5 @@
-import styles from './index.module.scss'
+import * as styles from './MainScreen.css'
+
 import { useQuery } from '@apollo/client'
 import {
   Box,
@@ -68,7 +69,7 @@ const MainScreen = () => {
                 .map((character) => (
                   <>
                     <GridColumn span={'1/4'} key={character.id}>
-                      <Box onClick={() => clickCharacter(character)}>
+                      <Box className={styles.hoverable} onClick={() => clickCharacter(character)}>
                         <ProfileCard
                           link={{
                             text: character.location?.name ?? '',
