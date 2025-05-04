@@ -5,13 +5,19 @@ import {
   Inline,
   ContentBlock,
   Button,
+  Header,
   Stack,
+  Pagination,
+  ProfileCard,
+  GridContainer,
+  GridColumn,
+  GridRow,
 } from '@island.is/island-ui/core'
 import { gql } from '@apollo/client'
 import { useState } from 'react'
 import { Characters, Scalars, Character } from '../graphql/schema'
 import Image from 'next/image'
-
+import { useCharacterPagination } from './useCharacterPagination'
 type GetCharactersData = {
   characters?: Characters | null
 }
@@ -19,43 +25,18 @@ type GetCharactersData = {
 type GetCharactersVars = {
   page?: Scalars['Int']
 }
-export const GET_CHARACTERS = gql`
-  query GetCharacters($page: Int) {
-    characters(page: $page) {
-      results {
-        id
-        name
-        image
-      }
-      info {
-        count
-        next
-        pages
-        prev
-      }
-    }
-  }
-`
 
 const Index = () => {
-  const [apiPage, setApiPage] = useState(1)
-
-  const [page, setPage] = useState(1)
-
-  const { data, loading, error } = useQuery<
-    GetCharactersData,
-    GetCharactersVars
-  >(GET_CHARACTERS, {
-    variables: { page: apiPage },
-  })
-
-  console.log(data)
-
-  const nextPage = () => {
-    setApiPage(apiPage + 1)
-  }
-
-  const prevPage = () => setApiPage(apiPage - 1)
+  const {
+    characters,
+    loading,
+    error,
+    nextPage,
+    prevPage,
+    setPage,
+    page,
+    totalPages,
+  } = useCharacterPagination()
 
   /*
    * Replace the elements below with your own.
@@ -63,40 +44,44 @@ const Index = () => {
    * Note: The corresponding styles are in the ./index.scss file.
    */
   return (
-    <Box paddingY={2}>
-      <ContentBlock width="medium">
+    <Box paddingX={12}>
+      <Header />
+      <GridContainer>
         {loading && <Box className="">Loading</Box>}
 
-        {data && (
+        {characters && (
           <>
-            <Stack space={1}>
-              <Inline space="containerGutter">
-                {data?.characters?.results
-                  ?.filter((c): c is Character => c !== null)
-                  .map((character) => (
-                    <Box key={character.id ?? character.name ?? Math.random()}>
-                      <Image
-                        src={character.image ?? ''}
-                        alt={character.name ?? 'Unknown'}
-                        width={100}
-                        height={100}
-                      />
-                      <div>{character.name ?? 'Unnamed'}</div>
-                    </Box>
-                  ))}
-              </Inline>
-              <Inline>
-                {data?.characters?.info?.prev && (
-                  <Button onClick={prevPage}>Prev</Button>
-                )}
-                {data?.characters?.info?.next && (
-                  <Button onClick={nextPage}>Next</Button>
-                )}
-              </Inline>
-            </Stack>
+            <GridRow rowGap={5}>
+              {characters
+                ?.filter((c): c is Character => c !== null)
+                .map((character) => (
+                  <GridColumn span="1/4" key={character.id}>
+                    <ProfileCard
+                      link={{ text: character.location?.name ?? '', url: '#' }}
+                      size="small"
+                      title={character?.name ?? ''}
+                      image={character.image ?? ''}
+                      key={character.id ?? character.name ?? Math.random()}
+                    />
+                  </GridColumn>
+                ))}
+            </GridRow>
+            <Pagination
+              page={page}
+              totalPages={totalPages}
+              renderLink={(page, className, children) => (
+                <Box
+                  cursor="pointer"
+                  className={className}
+                  onClick={() => setPage(page)}
+                >
+                  {children}
+                </Box>
+              )}
+            />
           </>
         )}
-      </ContentBlock>
+      </GridContainer>
     </Box>
   )
 }
