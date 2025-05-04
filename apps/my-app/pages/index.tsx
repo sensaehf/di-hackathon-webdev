@@ -18,6 +18,7 @@ import { useState } from 'react'
 import { Characters, Scalars, Character } from '../graphql/schema'
 import Image from 'next/image'
 import { useCharacterPagination } from './useCharacterPagination'
+import NewsCard from '../components/NewsCard/NewsCard'
 type GetCharactersData = {
   characters?: Characters | null
 }
@@ -66,6 +67,7 @@ const Index = () => {
                   </GridColumn>
                 ))}
             </GridRow>
+            <NewsCard title='Title' introduction='introduction' href='href'/>
             <Pagination
               page={page}
               totalPages={totalPages}

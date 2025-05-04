@@ -9,6 +9,7 @@ import './styles.css' // assuming this contains global styles like `.container`,
 
 
 import initApollo from '../graphql/client'
+import { appWithTranslation } from '../i18n'
 
 const Layout: FC<React.PropsWithChildren<unknown>> = ({ children }) => {
   return (
@@ -50,4 +51,4 @@ SupportApplication.getInitialProps = async (appContext: any) => {
   }
 }
 
-export default SupportApplication
+export default appWithTranslation(SupportApplication)
