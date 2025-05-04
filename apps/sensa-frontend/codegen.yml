@@ -1,0 +1,26 @@
+generates:
+  ./apps/sensa-frontend/graphql/schema.tsx:
+    schema: https://rickandmortyapi.graphcdn.app/
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withHOC: false
+      withComponent: false
+      avoidOptionals:
+        object: true
+      namingConvention:
+        enumValues: keep
+
+  ./apps/sensa-frontend/graphql/possibleTypes.json:
+    schema: https://rickandmortyapi.graphcdn.app/
+    plugins:
+      - fragment-matcher
+    config:
+      apolloClientVersion: 3
+
+hooks:
+  afterAllFileWrite:
+    - prettier --write

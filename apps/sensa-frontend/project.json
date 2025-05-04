@@ -1,0 +1,108 @@
+{
+  "name": "sensa-frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sensa-frontend",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "codegen/frontend-client": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "graphql-codegen --config apps/sensa-frontend/codegen.yml"
+      },
+      "outputs": [
+        "{projectRoot}/web/graphql"
+      ]
+    },
+
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/sensa-frontend"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/sensa-frontend"
+        },
+        "production": {}
+      },
+      "dependsOn": ["build-custom-server"]
+    },
+    "build-custom-server": {
+      "executor": "@nx/webpack:webpack",
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/sensa-frontend",
+        "main": "apps/sensa-frontend/server.ts",
+        "tsConfig": "apps/sensa-frontend/tsconfig.server.json",
+        "maxWorkers": 2,
+        "assets": [],
+        "compiler": "tsc",
+        "target": "node",
+        "webpackConfig": "apps/sensa-frontend/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "sensa-frontend:build",
+        "dev": true,
+        "customServerTarget": "sensa-frontend:serve-custom-server"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sensa-frontend:build:development",
+          "dev": true,
+          "customServerTarget": "sensa-frontend:serve-custom-server:development"
+        },
+        "production": {
+          "buildTarget": "sensa-frontend:build:production",
+          "dev": false,
+          "customServerTarget": "sensa-frontend:serve-custom-server:production"
+        }
+      }
+    },
+    "serve-custom-server": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "sensa-frontend:build-custom-server"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sensa-frontend:build-custom-server:development"
+        },
+        "production": {
+          "buildTarget": "sensa-frontend:build-custom-server:production"
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "sensa-frontend:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/sensa-frontend/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
