@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import React, { FC } from 'react'
 import { ApolloProvider } from '@apollo/client/react'
 import { getSession, Provider } from 'next-auth/client'
@@ -10,17 +9,6 @@ import { AppLayout } from '../components/Layouts/AppLayout';
 
 import initApollo from '../graphql/client'
 import { appWithTranslation } from '../i18n'
-
-const Layout: FC<React.PropsWithChildren<unknown>> = ({ children }) => {
-  return (
-    <div>
-      <Head>
-        <title>Ísland.is</title>
-      </Head>
-      {children}
-    </div>
-  )
-}
 
 const SupportApplication: any = ({ Component, pageProps }: any) => {
   return (
