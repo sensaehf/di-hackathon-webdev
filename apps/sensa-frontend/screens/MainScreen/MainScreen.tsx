@@ -21,7 +21,7 @@ import { Character, Characters, Scalars } from '../../graphql/schema'
 import { useCharacterPagination } from './useCharacterPagination'
 import NewsCard from '../../components/NewsCard/NewsCard'
 
-import { ParliamentMemberList } from '../../Data/parliamentMemberList'
+import { ParliamentMemberList } from '../../data/parliamentMemberList'
 import { useI18n } from '../../i18n'
 type GetCharactersData = {
   characters?: Characters | null
