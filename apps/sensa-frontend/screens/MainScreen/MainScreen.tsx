@@ -57,7 +57,6 @@ const MainScreen = () => {
    */
   return (
     <Box paddingX={12}>
-      <Header />
       <GridContainer>
         {loading && <Box className="">Loading</Box>}
 

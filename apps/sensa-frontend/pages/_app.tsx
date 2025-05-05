@@ -6,7 +6,7 @@ import { getSession, Provider } from 'next-auth/client'
 import { appWithLocale } from '@island.is/localization'
 import './styles.css' // assuming this contains global styles like `.container`, `.rounded`, etc.
 
-
+import { AppLayout } from '../components/Layouts/AppLayout';
 
 import initApollo from '../graphql/client'
 import { appWithTranslation } from '../i18n'
@@ -25,9 +25,9 @@ const Layout: FC<React.PropsWithChildren<unknown>> = ({ children }) => {
 const SupportApplication: any = ({ Component, pageProps }: any) => {
   return (
     <ApolloProvider client={initApollo(pageProps.apolloState)}>
-        <Layout>
+        <AppLayout>
           <Component {...pageProps} />
-        </Layout>
+        </AppLayout>
     </ApolloProvider>
   )
 }
