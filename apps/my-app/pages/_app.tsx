@@ -6,19 +6,25 @@ import { getSession, Provider } from 'next-auth/client'
 import { appWithLocale } from '@island.is/localization'
 import './styles.css' // assuming this contains global styles like `.container`, `.rounded`, etc.
 
-
+import { Page, GridContainer, Header, Footer } from '@island.is/island-ui/core'
 
 import initApollo from '../graphql/client'
 import { appWithTranslation } from '../i18n'
 
 const Layout: FC<React.PropsWithChildren<unknown>> = ({ children }) => {
   return (
-    <div>
+    <Page>
       <Head>
         <title>Ísland.is</title>
       </Head>
+      <GridContainer>
+        <Header />
+      </GridContainer>
       {children}
-    </div>
+      <GridContainer>
+        <Footer />
+      </GridContainer>
+    </Page>
   )
 }
 

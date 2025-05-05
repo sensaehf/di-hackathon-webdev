@@ -65,8 +65,7 @@ const MainScreen = () => {
    */
   return (
     <Box paddingX={12}>
-      <Header />
-      <h1>{t.info}</h1>
+
       <GridContainer>
         {loading && <Box className="">Loading</Box>}
 
