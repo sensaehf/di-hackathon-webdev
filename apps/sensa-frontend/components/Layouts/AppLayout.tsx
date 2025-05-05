@@ -56,6 +56,7 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
   const [currentLocale, setCurrentLocale] = useState<Locale>(
     i18n?.activeLocale ?? 'is',
   )
+
   const [isSwitching, setIsSwitching] = useState(false)
 
   if (!i18n) return null
@@ -85,14 +86,14 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
       </GridContainer>
       <GridContainer>{children}</GridContainer>
       <Footer
-        topLinks={topLinks}
-        topLinksContact={topLinksContact}
-        privacyPolicyLink={privacyPolicyLink}
-        termsLink={termsLink}
+        topLinks={i18n.t.footer.topLinksInfo}
+        topLinksContact={i18n.t.footer.topLinksContact}
+        privacyPolicyLink={privacyPolicyLink} //TODO
+        termsLink={termsLink} // TODO
         languageSwitchOnClick={toggleLocale}
-        languageSwitchLink={languageSwitchLink}
-        bottomLinks={bottomLinks}
-        bottomLinksTitle={bottomLinksTitle}
+        languageSwitchLink={languageSwitchLink} //TODO
+        bottomLinks={i18n.t.footer.bottomLinks}
+        bottomLinksTitle={i18n.t.footer.bottomLinksTitle}
       />
     </Page>
   )
