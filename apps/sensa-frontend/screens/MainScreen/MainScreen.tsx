@@ -16,6 +16,7 @@ import {
 
 import { ParliamentMemberList } from '../../data/parliamentMemberList'
 import { useI18n } from '../../i18n'
+import { useEffect } from 'react'
 
 
 const MainScreen = () => {
@@ -25,8 +26,8 @@ const MainScreen = () => {
     activeLocale,
   } = useI18n()
 
+  useEffect(() => console.log(activeLocale), [activeLocale])
 
-  console.log(activeLocale)
 
   /*
    * Replace the elements below with your own.
@@ -35,6 +36,7 @@ const MainScreen = () => {
    */
   return (
     <Box paddingX={12}>
+      <h1>{t.info}</h1>
 
       <GridContainer>
         <ParliamentMemberList />

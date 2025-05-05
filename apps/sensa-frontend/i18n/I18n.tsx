@@ -24,12 +24,12 @@ export const I18nContext = createContext<I18nContextType | null>(null)
 i18n.locale(defaultLanguage)
 
 function I18n({ children, locale, translations }: PropTypes) {
-  const [activeDict, setActiveDict] = useState(() => translations)
-  const activeLocaleRef = useRef(locale || defaultLanguage)
+  const [activeDict, setActiveDict] = useState(translations)
+  const [activeLocale, setActiveLocale] = useState(locale || defaultLanguage)
   const [, setTick] = useState(0)
   const firstRender = useRef(true)
 
-  // for initial SSR render
+  // Initial render logic (SSR-safe)
   if (locale && firstRender.current === true) {
     firstRender.current = false
     i18n.locale(locale)
@@ -40,24 +40,22 @@ function I18n({ children, locale, translations }: PropTypes) {
     if (locale) {
       i18n.locale(locale)
       i18n.set(locale, activeDict)
-      activeLocaleRef.current = locale
-      // force rerender
+      setActiveLocale(locale)
       setTick((tick) => tick + 1)
     }
   }, [locale, activeDict])
 
-  const i18nWrapper = {
-    activeLocale: activeLocaleRef.current,
-    t: translations,
-    locale: (l: Locale, dict: any) => {
+  const i18nWrapper: I18nContextType = {
+    activeLocale,
+    t: activeDict,
+    locale: (l: Locale, dict?: any) => {
       i18n.locale(l)
-      activeLocaleRef.current = l
+      setActiveLocale(l)
       if (dict) {
         i18n.set(l, dict)
         setActiveDict(dict)
-      } else {
-        setTick((tick) => tick + 1)
       }
+      setTick((tick) => tick + 1)
     },
   }
 
@@ -65,5 +63,6 @@ function I18n({ children, locale, translations }: PropTypes) {
     <I18nContext.Provider value={i18nWrapper}>{children}</I18nContext.Provider>
   )
 }
+
 
 export default I18n
