@@ -2,13 +2,12 @@ import React, { FC } from 'react'
 import { ApolloProvider } from '@apollo/client/react'
 import { getSession, Provider } from 'next-auth/client'
 
-import { appWithLocale } from '@island.is/localization'
 import './styles.css' // assuming this contains global styles like `.container`, `.rounded`, etc.
 
 import { AppLayout } from '../components/Layouts/AppLayout';
 
 import initApollo from '../graphql/client'
-import { appWithTranslation } from '../i18n'
+import { appWithTranslation, withLocale } from '../i18n'
 
 const SupportApplication: any = ({ Component, pageProps }: any) => {
   return (
@@ -44,5 +43,7 @@ SupportApplication.getInitialProps = async (appContext: any) => {
     }
   }
 }
+
+
 
 export default appWithTranslation(SupportApplication)

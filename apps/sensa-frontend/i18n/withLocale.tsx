@@ -1,30 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NextComponentType } from 'next'
 import { BaseContext, NextPageContext } from 'next/dist/shared/lib/utils'
-import { Locale } from '@island.is/shared/types'
 
-import { Translation } from './locales/translation'
+import { I18nContext } from './I18n'
 
 const withLocale =
-  <C extends BaseContext = NextPageContext, IP = {}, P = {}>(locale: Locale) =>
-  (Component: NextComponentType<C, IP, P>): NextComponentType<C, IP> => {
-    const getInitialProps = Component.getInitialProps
+  <C extends BaseContext = NextPageContext, IP = {}, P = {}>(
+    Component: NextComponentType<C, IP, P>,
+  ): NextComponentType<C, IP> => {
+    const NewComponent: React.FC<P> = (props: P) => {
+      const i18n = useContext(I18nContext) // ✅ OK here
 
-    const NewComponent: any = (props: P) => <Component {...props} />
-
-    NewComponent.getInitialProps = async (ctx: C) => {
-      const newContext = Object.assign({}, ctx, { locale })
-      const [props, { default: translations = {} }] = await Promise.all([
-        getInitialProps && getInitialProps(newContext),
-        import(`./locales/${locale}.json`),
-      ])
-
-      return {
-        ...props,
-        locale,
-        translations: translations as Translation,
+      if (!i18n) {
+        // Optional: show fallback if context is missing
+        return <div>Loading...</div>
       }
+
+      // Example usage of i18n.locale
+      console.log('Locale from context:', i18n.activeLocale)
+
+      return <Component {...props} />
     }
+
+    // Pass through original getInitialProps if needed
+    NewComponent.getInitialProps = Component.getInitialProps
+
     return NewComponent
   }
 
