@@ -1,6 +1,5 @@
 import * as styles from './MainScreen.css'
 
-import { useQuery } from '@apollo/client'
 import {
   Box,
   Inline,
@@ -14,22 +13,12 @@ import {
   GridColumn,
   GridRow,
 } from '@island.is/island-ui/core'
-import { gql } from '@apollo/client'
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { Character, Characters, Scalars } from '../../graphql/schema'
-import { useCharacterPagination } from './useCharacterPagination'
-import NewsCard from '../../components/NewsCard/NewsCard'
 
 import { ParliamentMemberList } from '../../data/parliamentMemberList'
 import { useI18n } from '../../i18n'
-type GetCharactersData = {
-  characters?: Characters | null
-}
+
 
 const MainScreen = () => {
-
-  const [activeCharacter, setActiveCharacter] = useState<Character | null>(null)
 
   const {
     t: { accessControl: t, routes },
@@ -37,13 +26,6 @@ const MainScreen = () => {
   } = useI18n()
 
 
-  const clickCharacter = (c: Character) => {
-    if (c.id === activeCharacter?.id) {
-      setActiveCharacter(null)
-    } else {
-      setActiveCharacter(c)
-    }
-  }
   console.log(activeLocale)
 
   /*
