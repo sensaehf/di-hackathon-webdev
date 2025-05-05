@@ -1,7 +1,16 @@
 export type ParliamentData = {
+  parliamentMembersShort: ParliamentMemberShort[]
   parliamentMembers: ParliamentMember[]
   roles: Role[]
   committees: Committee[]
+}
+
+export type ParliamentMemberShort = {
+    name: string
+    abbreviation: string
+    constituency: string
+    constituencyNumber: string
+    party: string
 }
 
 export type ParliamentMember = {
@@ -12,8 +21,8 @@ export type ParliamentMember = {
     fullName: string
     abbreviation: string
   }
-  constituency: string,
-  constituencyNumber: string,
+  constituency: string
+  constituencyNumber: string
   bio: string
   dateOfBirth: string
   email: string
