@@ -15,7 +15,7 @@ interface LayoutProps {
           <title>Ísland.is</title>
         </Head>
         <GridContainer>
-            <Header />
+            <Header /> 
         </GridContainer>
         {children}
         <Footer />

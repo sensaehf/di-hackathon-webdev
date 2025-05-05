@@ -1,0 +1,58 @@
+{
+    "parliamentMembers": [
+        {
+            "id": 1,
+            "name": {
+                "firstName": "",
+                "lastName": ""
+            },
+            "constituency": "",
+            "bio": "",
+            "dateOfBirth": "",
+            "email": "",
+            "phone": "",
+            "socialMedia": [
+                {
+                    "type": "",
+                    "link": ""
+                }
+            ],
+            "party": "",
+            "image": {
+                "url": ""
+            },
+            "ministry": "",
+            "roles": [
+                {
+                    "id": ""
+                }
+            ],
+            "committees": {
+                "current": [
+                    { 
+                        "id": "", 
+                        "name": ""
+                    }                        
+                ],
+                "previous": [
+                    { 
+                        "id": "", 
+                        "name": ""
+                    } 
+                ]
+            }
+        }
+    ],
+    "roles": [
+        {
+            "id": "",
+            "name": ""
+        }
+    ],
+    "committees": [
+        {
+            "id": "",
+            "name": ""
+        }
+    ]
+}
