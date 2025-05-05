@@ -15,11 +15,12 @@ import {
   GridRow,
 } from '@island.is/island-ui/core'
 import { gql } from '@apollo/client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Character, Characters, Scalars } from '../../graphql/schema'
 import { useCharacterPagination } from './useCharacterPagination'
 import NewsCard from '../../components/NewsCard/NewsCard'
+import { useI18n } from '../../i18n'
 type GetCharactersData = {
   characters?: Characters | null
 }
@@ -42,6 +43,12 @@ const MainScreen = () => {
 
   const [activeCharacter, setActiveCharacter] = useState<Character | null>(null)
 
+  const {
+    t: { accessControl: t, routes },
+    activeLocale,
+  } = useI18n()
+
+
   const clickCharacter = (c: Character) => {
     if (c.id === activeCharacter?.id) {
       setActiveCharacter(null)
@@ -49,6 +56,7 @@ const MainScreen = () => {
       setActiveCharacter(c)
     }
   }
+  console.log(activeLocale)
 
   /*
    * Replace the elements below with your own.
@@ -58,6 +66,7 @@ const MainScreen = () => {
   return (
     <Box paddingX={12}>
       <Header />
+      <h1>{t.info}</h1>
       <GridContainer>
         {loading && <Box className="">Loading</Box>}
 

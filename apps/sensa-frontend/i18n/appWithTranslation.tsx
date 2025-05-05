@@ -4,6 +4,7 @@ import { NextComponentType } from 'next/dist/shared/lib/utils'
 
 const appWithTranslation = (WrappedComponent: NextComponentType) => {
   const AppWithTranslation = (props: any) => {
+    console.log(props.pageProps?.locale)
     return (
       <I18n
         translations={props.pageProps?.translations || {}}

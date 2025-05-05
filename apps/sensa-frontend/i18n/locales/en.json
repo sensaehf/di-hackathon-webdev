@@ -673,6 +673,38 @@
   },
   "municipalities": {
     "title": "Municipalities",
+    "info": "Information about the municipalities available in the system.",
+    "empty": "No municipalities have been added yet.",
+    "subtitles": {
+      "companies": "Municipalities"
+    },
+    "form": {
+      "title": "Municipality form",
+      "name": "Name",
+      "address": "Address",
+      "postnumber": "Post number",
+      "email": "Email",
+      "status": "Status",
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "tableHeaders": {
+      "id": "ID",
+      "name": "Name",
+      "address": "Address",
+      "postnumber": "Post number",
+      "email": "Email",
+      "status": "Status"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "buttons": {
+      "add": "Add municipality",
+      "view": "View",
+      "addMunicipality": "Add municipality"
+    },
     "municipality": {
       "view": {
         "title": "Municipality",

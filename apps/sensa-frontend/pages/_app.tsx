@@ -42,10 +42,16 @@ SupportApplication.getInitialProps = async (appContext: any) => {
 
   }
 
+  let pageProps = {}
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(customContext)
+  }
+
   const apolloState = apolloClient.cache.extract()
 
   return {
     pageProps: {
+      ...pageProps,
       apolloState,
     }
   }
