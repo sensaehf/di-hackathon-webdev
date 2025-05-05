@@ -64,7 +64,19 @@
         "title": "Tekjusagan",
         "href": "https://tekjusagan.is/"
       }
-    ]
+    ],
+    "privacyPolicyLink": {
+      "title": "Persónuverndarstefna",
+      "href": "/personuverndarstefna-stafraent-islands"
+    },
+    "termsLink" : {
+      "title": "Notendaskilmálar",
+      "href": "/skilmalar-island-is"
+    },
+    "languageSwitchLink": {
+      "title": "Íslenska",
+      "href": ""
+    }
   },
   "gdpr": {
     "title": "Þín gögn",

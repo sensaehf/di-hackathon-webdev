@@ -64,7 +64,19 @@
         "title": "Tekjusagan - Public Data on Living Standards",
         "href": "https://tekjusagan.is/"
       }
-    ]
+    ],
+    "privacyPolicyLink": {
+      "title": "Privacy policy IS",
+      "href": "/personuverndarstefna-stafraent-islands"
+    },
+    "termsLink" : {
+      "title": "Terms and Conditions",
+      "href": "/skilmalar-island-is"
+    },
+    "languageSwitchLink": {
+      "title": "Iceland",
+      "href": ""
+    }
   },
   "gdpr": {
     "title": "You own your data",

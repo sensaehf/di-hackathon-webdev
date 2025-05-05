@@ -8,46 +8,6 @@ interface LayoutProps {
   children: ReactNode
 }
 
-const topLinks = [
-  {
-    title: 'About Digital Iceland',
-    href: 'https://stafraent.island.is/',
-  },
-  {
-    title: 'Public institutions',
-    href: 'https://island.is/en/o',
-  },
-]
-
-const topLinksContact = [
-  {
-    title: 'How can we help?',
-    href: 'https://island.is/en/help',
-  },
-]
-
-const privacyPolicyLink = {
-  title: 'Privacy policy IS',
-  href: '/personuverndarstefna-stafraent-islands',
-}
-const termsLink = {
-  title: 'Terms and Conditions',
-  href: '/skilmalar-island-is',
-}
-
-const languageSwitchLink = {
-  title: 'Iceland',
-  href: '',
-}
-
-const bottomLinks = [
-  {
-    title: 'Samráðsgátt - Public Consulation',
-    href: 'https://minarsidur.island.is/',
-  },
-
-]
-const bottomLinksTitle = "Other Government sites"
 
 export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
   children,
@@ -88,10 +48,10 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
       <Footer
         topLinks={i18n.t.footer.topLinksInfo}
         topLinksContact={i18n.t.footer.topLinksContact}
-        privacyPolicyLink={privacyPolicyLink} //TODO
-        termsLink={termsLink} // TODO
+        privacyPolicyLink={i18n.t.footer.privacyPolicyLink} //TODO
+        termsLink={i18n.t.footer.termsLink} // TODO
         languageSwitchOnClick={toggleLocale}
-        languageSwitchLink={languageSwitchLink} //TODO
+        languageSwitchLink={i18n.t.footer.languageSwitchLink} //TODO
         bottomLinks={i18n.t.footer.bottomLinks}
         bottomLinksTitle={i18n.t.footer.bottomLinksTitle}
       />

@@ -328,6 +328,9 @@ export interface Footer {
   topLinksContact: BottomLink[]
   bottomLinksTitle: string
   bottomLinks: BottomLink[]
+  privacyPolicyLink: BottomLink
+  termsLink: BottomLink
+  languageSwitchLink: BottomLink
 }
 
 export interface BottomLink {
