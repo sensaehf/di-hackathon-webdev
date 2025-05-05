@@ -52,6 +52,13 @@
         }
       }
     },
+    "translations": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "quicktype is.json -o translation.d.ts --top-level Translation",
+        "cwd": "apps/sensa-frontend/i18n/locales"
+      }
+    },
     "serve": {
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
