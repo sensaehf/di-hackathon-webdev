@@ -9,8 +9,11 @@ export type ParliamentMember = {
   name: {
     firstName: string
     lastName: string
+    fullName: string
+    abbreviation: string
   }
-  constituency: string
+  constituency: string,
+  constituencyNumber: string,
   bio: string
   dateOfBirth: string
   email: string

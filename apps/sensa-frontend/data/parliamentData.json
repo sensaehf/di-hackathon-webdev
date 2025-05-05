@@ -4,9 +4,12 @@
             "id": 1,
             "name": {
                 "firstName": "",
-                "lastName": ""
+                "lastName": "",
+                "fullName": "",
+                "abbreviation": ""
             },
             "constituency": "",
+            "constituencyNumber": "",
             "bio": "",
             "dateOfBirth": "",
             "email": "",
