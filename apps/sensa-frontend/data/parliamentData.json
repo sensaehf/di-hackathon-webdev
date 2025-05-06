@@ -17,8 +17,8 @@
             "phone": "",
             "socialMedia": [
                 {
-                    "type": "",
-                    "link": ""
+                    "type": "Facebook",
+                    "link": "/lunheim"
                 }
             ],
             "image": {
@@ -33,20 +33,18 @@
             "committees": {
                 "current": [
                     { 
-                        "id": "", 
-                        "name": ""
+                        "id": "" 
                     }                        
                 ],
                 "previous": [
                     { 
-                        "id": "", 
-                        "name": ""
+                        "id": ""
                     } 
                 ]
             }
         },
         {
-            "id": 1,
+            "id": 2,
             "name": {
                 "firstName": "",
                 "lastName": "",
@@ -78,14 +76,12 @@
             "committees": {
                 "current": [
                     { 
-                        "id": "", 
-                        "name": ""
+                        "id": ""
                     }                        
                 ],
                 "previous": [
                     { 
-                        "id": "", 
-                        "name": ""
+                        "id": ""
                     } 
                 ]
             }

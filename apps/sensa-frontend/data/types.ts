@@ -58,3 +58,8 @@ export type Committee = {
   id: string
   name: string
 }
+
+export type BreadcrumbItem = {
+  title: string
+  href: string
+}
