@@ -6,6 +6,25 @@
     "logoutText": "Log out"
   },
   "footer": {
+    "middleLinks": [
+      { "title": "Vehicles & Driving", "href": "#" },
+      { "title": "Business Owners & Independent Contractors", "href": "#" },
+      { "title": "The Courts & Justice System", "href": "#" },
+      { "title": "Finances & Taxes", "href": "#" },
+      { "title": "Family & Social Welfare", "href": "#" },
+      { "title": "Health", "href": "#" },
+      { "title": "Housing", "href": "#" },
+      { "title": "Industry", "href": "#" },
+      { "title": "Immigrating to Iceland", "href": "#" },
+      { "title": "Wage Earners, Workplace Rights & Pensions", "href": "#" },
+      { "title": "People with Disabilities", "href": "#" },
+      { "title": "Education", "href": "#" },
+      { "title": "Consumer Protections", "href": "#" },
+      { "title": "Civil Matters & Personal Rights", "href": "#" },
+      { "title": "Transportation", "href": "#" },
+      { "title": "The Environment", "href": "#" },
+      { "title": "Travel, Passports & Living Outside Iceland", "href": "#" }
+    ],
     "topLinksInfo": [
       {
         "title": "About Digital Iceland",
@@ -69,7 +88,7 @@
       "title": "Privacy policy IS",
       "href": "/personuverndarstefna-stafraent-islands"
     },
-    "termsLink" : {
+    "termsLink": {
       "title": "Terms and Conditions",
       "href": "/skilmalar-island-is"
     },

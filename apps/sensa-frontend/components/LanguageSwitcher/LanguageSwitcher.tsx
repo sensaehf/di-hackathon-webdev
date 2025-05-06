@@ -1,6 +1,4 @@
-import React, { useContext, useState } from 'react'
-import { I18nContext } from '../../i18n/I18n'
-import { Locale } from '@island.is/shared/types'
+import React from 'react'
 import { Button } from '@island.is/island-ui/core'
 
 export interface LanguageSwitcherProps

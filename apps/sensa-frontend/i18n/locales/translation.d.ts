@@ -331,6 +331,7 @@ export interface Footer {
   privacyPolicyLink: BottomLink
   termsLink: BottomLink
   languageSwitchLink: BottomLink
+  middleLinks: BottomLink[]
 }
 
 export interface BottomLink {
