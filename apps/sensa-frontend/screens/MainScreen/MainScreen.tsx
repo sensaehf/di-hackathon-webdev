@@ -19,7 +19,8 @@ import { ParliamentMemberList } from '../../data/parliamentMemberList'
 import { useI18n } from '../../i18n'
 import { useEffect } from 'react'
 import LivePlayer from '../../components/LivePlayer/LivePlayer'
-import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
+import AlthingiHeaderSearch from '../../components/AlthingiHeaderSearch/AlthingiHeaderSearch'
+import VideoPlayer from 'apps/sensa-frontend/components/VideoPlayer/VideoPlayer'
 
 
 const MainScreen = () => {
@@ -38,16 +39,10 @@ const MainScreen = () => {
    * Note: The corresponding styles are in the ./index.scss file.
    */
   return (
-    <Box paddingX={12}>
-      <Text as="h1" variant='h2'>{t.info}</Text>
+    <Box >
+        <AlthingiHeaderSearch />
 
       <GridContainer>
-        <LivePlayer />
-        <VideoPlayer
-        videoSource="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"  // Example prerecorded video URL
-        audioDescriptionSource='audioDescription.vtt'
-        captionSource='captions.vtt'
-      />
         <ParliamentMemberList />
       </GridContainer>
     </Box>

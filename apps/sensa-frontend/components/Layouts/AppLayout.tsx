@@ -7,12 +7,16 @@ import {
   FooterLinkProps,
   Button,
   Text,
+  Box,
+  UserMenu,
+  Icon,
 } from '@island.is/island-ui/core'
 import { I18nContext } from '../../i18n/I18n' // Adjust import to your path
 import { Locale } from '@island.is/shared/types'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 import * as styles from './AppLayout.css'
 import Link from 'next/link'
+import AlthingiHeader from '../Header/AlthingiHeader'
 
 interface LayoutProps {
   children: ReactNode
@@ -39,6 +43,7 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
       `../../i18n/locales/${nextLocale}.json`
     )
     i18n.locale(nextLocale, newTranslations)
+    i18n.activeLocale = nextLocale
 
     // Delay to make sure context settles
     setTimeout(() => {
@@ -50,29 +55,35 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
 
   return (
     <>
-      <div className={styles.layoutWrapper}>
-        <GridContainer>
-          <header>
+      <Box className={styles.layoutWrapper}>
+        <header>
+          <Box className={styles.islandBox}>
             <Header
-              logoRender={(defaultLogo) => (
-                <Link href="/">
-                  {defaultLogo}
-                </Link>
-              )}
+              logoRender={(defaultLogo) => <Link href="/">{defaultLogo}</Link>}
+            />
+          </Box>
+          <Box className={styles.althingiHeader}>
+            <AlthingiHeader
               headerItems={
                 <>
-                <LanguageSwitcher
-                  label={label}
-                  onClick={toggleLocale}
-                  isSwitching={isSwitching}
-                />
-                <Link href="/slow">slow</Link>
+                  <LanguageSwitcher
+                    label={label}
+                    onClick={toggleLocale}
+                    isSwitching={isSwitching}
+                  />
+                  <Button variant="utility">
+                    Menu{' '}
+                    <Box marginLeft={1}>
+                      <Icon size='small' type="outline" icon="menu" color="blue400" />
+                    </Box>
+                  </Button>
                 </>
               }
             />
-          </header>
-        </GridContainer>
-        <GridContainer className={styles.content}>{children}</GridContainer>
+          </Box>
+        </header>
+
+        {children}
 
         <Footer
           topLinks={i18n.t.footer.topLinksInfo}
@@ -87,7 +98,7 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
           middleLinksTitle={i18n.t.footer.middleLinksTitle}
           middleLinks={i18n.t.footer.middleLinks}
         />
-      </div>
+      </Box>
     </>
   )
 }

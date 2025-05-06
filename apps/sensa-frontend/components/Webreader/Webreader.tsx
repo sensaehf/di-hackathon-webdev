@@ -1,10 +1,10 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
 import { Box, ResponsiveProp, Space } from '@island.is/island-ui/core'
 
 import { CUSTOMER_ID, SCRIPT_URL } from './config'
-import { useI18n } from '../../i18n'
+import { I18nContext } from '../../i18n/I18n'
 
 declare global {
   interface Window {
@@ -33,8 +33,8 @@ const Webreader: FC<React.PropsWithChildren<WebReaderProps>> = ({
 }) => {
   const [href, setHref] = useState('')
   const router = useRouter()
-  const { activeLocale } = useI18n()
-
+  const i18n = useContext(I18nContext)
+  const activeLocale = i18n?.activeLocale ?? 'is'
   useEffect(() => {
     const routeChangestart = () => {
       if (typeof ReadSpeaker !== 'undefined' && ReadSpeaker.PlayerAPI?.stop) {

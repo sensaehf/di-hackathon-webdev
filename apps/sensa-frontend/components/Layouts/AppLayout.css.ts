@@ -1,4 +1,5 @@
 // AppLayout.css.ts
+import { blue100, blue200, blue400, blueberry100, red600 } from '@island.is/island-ui/theme'
 import { style } from '@vanilla-extract/css'
 
 export const layoutWrapper = style({
@@ -9,4 +10,16 @@ export const layoutWrapper = style({
 
 export const content = style({
   flex: 1,
+})
+
+
+export const islandBox = style({
+  backgroundColor: blue200,
+  paddingLeft: 20,
+  paddingRight: 20
+})
+
+export const althingiHeader = style({
+  paddingLeft: 20,
+  paddingRight: 100
 })

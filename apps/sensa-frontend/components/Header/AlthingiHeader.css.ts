@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-import { blue100, theme, themeUtils } from '@island.is/island-ui/theme'
+import { theme, themeUtils } from '@island.is/island-ui/theme'
 import { responsiveStyleMap } from '@island.is/island-ui/vanilla-extract-utils'
 
 export const container = responsiveStyleMap({
@@ -8,7 +8,6 @@ export const container = responsiveStyleMap({
 })
 
 export const infoContainer = style({
-  backgroundColor: blue100,
   ...themeUtils.responsiveStyle({
     md: {
       borderLeftWidth: '1px',
