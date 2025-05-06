@@ -1,2 +1,7 @@
-import MainScreen from "../screens/MainScreen/MainScreen";
-export default MainScreen
+import HomeScreen from "../screens/HomeScreen/HomeScreen";
+
+export default function Home() {
+    return (
+        <HomeScreen />
+    );
+  }

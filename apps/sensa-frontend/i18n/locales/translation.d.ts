@@ -9,6 +9,8 @@
 
 export interface Translation {
   home: TranslationHome
+  menu: Menu
+  routes: Routes
   header: Header
   footer: Footer
   gdpr: Gdpr
@@ -28,9 +30,29 @@ export interface Translation {
   recyclingCompanies: RecyclingCompanies
   accessControl: AccessControl
   errorBoundary: ErrorBoundary
-  routes: Routes
   municipalities: Municipalities
   alerts: Alerts
+}
+
+export interface Menu {
+  menu: string
+  peopleAndCommittees: string
+  membersOfParliament: string
+  sessionsAndBills: string
+  laws: string
+  resolutions: string
+  about: string,
+  news: string
+}
+
+export interface Routes {
+  peopleAndCommittees: string
+  membersOfParliament: string
+  sessionsAndBills: string
+  laws: string
+  resolutions: string
+  about: string,
+  news: string
 }
 
 export interface AccessControl {
@@ -577,19 +599,6 @@ export interface RecyclingFundSidenav {
   companies: string
   accessControl: string
   municipalities: string
-}
-
-export interface Routes {
-  home: RoutesHome
-  myCars: string
-  recycleVehicle: RecycleVehicle
-  deregisterVehicle: RoutesDeregisterVehicle
-  recycledVehicles: string
-  accessControl: string
-  accessControlCompany: string
-  recyclingCompanies: RecyclingCompaniesClass
-  companyInfo: RecyclingCompaniesClass
-  municipalities: RecyclingCompaniesClass
 }
 
 export interface RecyclingCompaniesClass {
