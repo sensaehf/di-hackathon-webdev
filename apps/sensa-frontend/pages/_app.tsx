@@ -7,7 +7,7 @@ import './styles.css' // assuming this contains global styles like `.container`,
 import { AppLayout } from '../components/Layouts/AppLayout'
 
 import initApollo from '../graphql/client'
-import { appWithTranslation, withLocale } from '../i18n'
+import { appWithTranslation } from '../i18n'
 import PageLoader from '../components/PageLoader/PageLoader'
 
 const SupportApplication: any = ({ Component, pageProps }: any) => {
