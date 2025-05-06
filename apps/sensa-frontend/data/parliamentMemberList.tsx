@@ -1,20 +1,27 @@
-import React, { FC } from 'react';
-import parliamentData from './parliamentData.json';
-import parliamentDataShort from './data.json';
-import { ParliamentData, ParliamentMember, ParliamentMemberShort } from './types';
+import React, { FC } from 'react'
+import parliamentData from './parliamentData.json'
+import parliamentDataShort from './data.json'
+import {
+  ParliamentData,
+  ParliamentMember,
+  ParliamentMemberShort,
+} from './types'
+import { Webreader } from '../components/Webreader'
 
 export const ParliamentMemberList: FC = () => {
-    const members: ParliamentMember[] = parliamentData.parliamentMembers
+  const members: ParliamentMember[] = parliamentData.parliamentMembers
 
-    return (
-        <>
+  return (
+    <>
+      <Webreader readId="members" />
+      <ul id="members">
         {members.map((member) => (
-            <li key={member.id}>
-              {member.name.fullName} {member.constituency} {member.constituencyNumber} {member.party}
-            </li>
-          ))}
-        </>
-    )
+          <li key={member.name.fullName}>
+            {member.name.fullName} {member.constituency}{' '}
+            {member.constituencyNumber} {member.party}
+          </li>
+        ))}
+      </ul>
+    </>
+  )
 }
-
-
