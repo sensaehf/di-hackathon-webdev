@@ -1,8 +1,9 @@
 import React, { FC, ReactNode, useContext, useState } from 'react'
-import { GridContainer, Page, Header, Footer } from '@island.is/island-ui/core'
+import { GridContainer, GridRow, GridColumn, Page, Header, Footer } from '@island.is/island-ui/core'
 import { I18nContext } from '../../i18n/I18n' // Adjust import to your path
 import { Locale } from '@island.is/shared/types'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
+import SideBar from '../SideBar/SideBar'
 
 interface LayoutProps {
   children: ReactNode
@@ -44,7 +45,16 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
       <GridContainer>
         <Header headerItems={<LanguageSwitcher label={label} onClick={toggleLocale} isSwitching={isSwitching}/>} />
       </GridContainer>
-      <GridContainer>{children}</GridContainer>
+      <GridContainer>
+        <GridRow>
+          <GridColumn span={"4/12"}>
+            <SideBar />
+          </GridColumn>
+          <GridColumn span={"8/12"}>
+          {children}
+          </GridColumn>
+        </GridRow>
+      </GridContainer>
       <Footer
         topLinks={i18n.t.footer.topLinksInfo}
         topLinksContact={i18n.t.footer.topLinksContact}

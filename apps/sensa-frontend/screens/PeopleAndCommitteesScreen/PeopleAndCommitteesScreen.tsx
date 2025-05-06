@@ -1,9 +1,13 @@
+import {
+  Box
+} from '@island.is/island-ui/core'
+
 const PeopleAndCommitteesScreen = () => {
 
   return (
-    <>
-       People and Committees
-    </>
+    <Box paddingX={12}>
+        PeopleAndCommitteesScreen        
+    </Box>
   )
 }
 

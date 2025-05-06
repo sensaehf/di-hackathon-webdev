@@ -1,21 +1,24 @@
 {
   "home": {
-    "title": "Alþingi"
+    "title": "Alþingi",
+    "menu": "Valmynd",
+    "about": "IS About"
   },
   "menu": {
-    "menu": "Valmynd",
     "peopleAndCommittees": "IS People and Committees",
     "membersOfParliament": "IS Members Of Parliament",
     "sessionsAndBills": "IS Sessions and Bills",
-    "laws": "IS Laws",
-    "resolutions": "IS Resulotions",
-    "about": "IS About",
-    "news": "IS News"
+    "parties": "IS Parties",
+    "committees": "IS Committees",
+    "constituencies": "IS Constituencies"
   },
   "routes": {
     "peopleAndCommittees": "/peopleAndCommittees",
     "membersOfParliament": "/peopleAndCommittees/membersOfParliament",
-    "sessionsAndBills": "/sessionsAndBills"
+    "sessionsAndBills": "/sessionsAndBills",
+    "parties": "/peopleAndCommittees/parties",
+    "committees": "/peopleAndCommittees/committees",
+    "constituencies": "/peopleAndCommittees/constituencies"
   },
   "footer": {
     "topLinksInfo": [

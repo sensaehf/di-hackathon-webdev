@@ -1,21 +1,24 @@
 {
   "home": {
-    "title": "Parliament"
+    "title": "Parliament",
+    "menu": "Menu",
+    "about": "About"
   },
   "menu": {
-    "menu": "Menu",
     "peopleAndCommittees": "People and Committees",
     "membersOfParliament": "Members Of Parliament",
     "sessionsAndBills": "Sessions and Bills",
-    "laws": "Laws",
-    "resolutions": "Resulotions",
-    "about": "About",
-    "news": "News"
+    "parties": "Parties",
+    "committees": "Committees",
+    "constituencies": "Constituencies"
   },
   "routes": {
     "peopleAndCommittees": "/peopleAndCommittees",
     "membersOfParliament": "/peopleAndCommittees/membersOfParliament",
-    "sessionsAndBills": "/sessionsAndBills"
+    "sessionsAndBills": "/sessionsAndBills",
+    "parties": "/peopleAndCommittees/parties",
+    "committees": "/peopleAndCommittees/committees",
+    "constituencies": "/peopleAndCommittees/constituencies"
   },
   "footer": {
     "topLinksInfo": [
@@ -90,5 +93,4 @@
       "href": ""
     }
   }
- 
 }

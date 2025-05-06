@@ -1,49 +1,69 @@
+import { useRouter } from 'next/router'
+import { useContext } from 'react';
+import { I18nContext } from '../../i18n/I18n';
 
 import {
   Box,
   Navigation
 } from '@island.is/island-ui/core'
-import { useContext } from 'react';
-import { I18nContext } from '../../i18n/I18n';
+
 
 const SideBar = () => {
-  
+  const router = useRouter()
+  const i18n = useContext(I18nContext)
+
   const aboutText = () => {
-    return i18n?.t.menu.about + ' ' + i18n?.t.home.title 
+    return i18n?.t.home.about + ' ' + i18n?.t.home.title 
   }
 
-  const i18n = useContext(I18nContext)
+  const isActive = (path: string | undefined) => {
+    if(path === undefined) return false;
+    return router.asPath === path || router.asPath.startsWith(path + '/');
+  }
 
   const items = [
     {
-      active: true,
-      href: i18n?.t.routes.peopleAndCommittees,
-      title: i18n?.t.menu.peopleAndCommittees,
+      active: isActive(i18n?.t.routes.peopleAndCommittees ?? ''),
+      href: i18n?.t.routes.peopleAndCommittees ?? '',
+      title: i18n?.t.menu.peopleAndCommittees ?? '',
       items: [
         {
-          href: i18n?.t.routes.membersOfParliament,
-          title: i18n?.t.menu.membersOfParliament
+          active: isActive(i18n?.t.routes.membersOfParliament ?? ''),
+          href: i18n?.t.routes.membersOfParliament ?? '',
+          title: i18n?.t.menu.membersOfParliament ?? ''
+        },
+        {
+          active: isActive(i18n?.t.routes.parties ?? ''),
+          href: i18n?.t.routes.parties ?? '',
+          title: i18n?.t.menu.parties ?? ''
+        },
+        {
+          active: isActive(i18n?.t.routes.constituencies ?? ''),
+          href: i18n?.t.routes.constituencies ?? '',
+          title: i18n?.t.menu.constituencies ?? ''
+        },
+        {
+          active: isActive(i18n?.t.routes.committees ?? ''),
+          href: i18n?.t.routes.committees ?? '',
+          title: i18n?.t.menu.committees ?? ''
         },
         {
           href: '/',
-          title: 'Menypunkt 2'
-        },
-        {
-          href: '/',
-          title: 'Menypunkt 3'
+          title: 'History'
         },
       ]
     },
     {
-      title: i18n?.t.menu.sessionsAndBills,
-      href: i18n?.t.routes.sessionsAndBills
+      active: isActive(i18n?.t.routes.sessionsAndBills ?? ''),
+      title: i18n?.t.menu.sessionsAndBills ?? '',
+      href: i18n?.t.routes.sessionsAndBills ?? ''
     },
     {
-      title: i18n?.t.menu.laws,
+      title: 'Laws',
       href: '/'
     },
     {
-      title: i18n?.t.menu.resolutions,
+      title: 'Resolutions',
       href: '/'
     },
     {
@@ -52,7 +72,7 @@ const SideBar = () => {
     }
     ,
     {
-      title: i18n?.t.menu.news,
+      title: i18n?.t.menu.news ?? '',
       href: '/'
     }
   ]
@@ -64,7 +84,7 @@ const SideBar = () => {
         activeItemTitle=""
         colorScheme="blue"
         items={items}
-        title={i18n?.t.menu.menu}
+        title={i18n?.t.home.title ?? ''}
       />
     </Box>
   );
