@@ -7,30 +7,48 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
+import Constituencies from "apps/sensa-frontend/pages/peopleAndCommittees/constituencies"
+
 export interface Translation {
   home: TranslationHome
+  menu: Menu
+  routes: Routes
   header: Header
   footer: Footer
-  gdpr: Gdpr
-  myCars: MyCars
-  recycle: Confirm
-  confirm: Confirm
-  handover: Handover
-  completed: Completed
-  processes: Processes
-  deregisterOverview: DeregisterOverview
-  companyInfo: CompanyInfo
-  companyInfoForm: CompanyInfoForm
-  deregisterSidenav: DeregisterSidenav
-  deregisterVehicle: TranslationDeregisterVehicle
-  recyclingFundOverview: RecyclingFundOverview
-  recyclingFundSidenav: RecyclingFundSidenav
-  recyclingCompanies: RecyclingCompanies
-  accessControl: AccessControl
-  errorBoundary: ErrorBoundary
-  routes: Routes
-  municipalities: Municipalities
-  alerts: Alerts
+}
+
+export interface TranslationHome {
+  title: string,
+  menu: string,
+  about: string
+}
+
+export interface Menu {
+  menu: string
+  peopleAndCommittees: string
+  membersOfParliament: string
+  sessionsAndBills: string
+  laws: string
+  resolutions: string
+  about: string,
+  news: string,
+  parties: string,
+  committees: string
+  constituencies: string
+  history: string
+}
+
+export interface Routes {
+  peopleAndCommittees: string
+  membersOfParliament: string
+  sessionsAndBills: string
+  laws: string
+  resolutions: string
+  about: string,
+  news: string,
+  parties: string
+  committees: string
+  constituencies: string
 }
 
 export interface AccessControl {
@@ -398,10 +416,6 @@ export interface Header {
   logoutText: string
 }
 
-export interface TranslationHome {
-  title: string
-}
-
 export interface MyCars {
   title: string
   subTitles: MyCarsSubTitles
@@ -579,19 +593,6 @@ export interface RecyclingFundSidenav {
   companies: string
   accessControl: string
   municipalities: string
-}
-
-export interface Routes {
-  home: RoutesHome
-  myCars: string
-  recycleVehicle: RecycleVehicle
-  deregisterVehicle: RoutesDeregisterVehicle
-  recycledVehicles: string
-  accessControl: string
-  accessControlCompany: string
-  recyclingCompanies: RecyclingCompaniesClass
-  companyInfo: RecyclingCompaniesClass
-  municipalities: RecyclingCompaniesClass
 }
 
 export interface RecyclingCompaniesClass {

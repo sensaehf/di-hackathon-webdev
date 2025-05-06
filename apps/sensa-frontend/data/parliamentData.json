@@ -17,14 +17,14 @@
             "phone": "",
             "socialMedia": [
                 {
-                    "type": "",
-                    "link": ""
+                    "type": "Facebook",
+                    "link": "/lunheim"
                 }
             ],
             "image": {
-                "url": ""
+                "url": "https://www.althingi.is/myndir/thingmenn-cache/1510/1510-220.jpg"
             },
-            "ministry": "",
+            "ministry": "https://www.government.is/ministries/ministry-of-health/",
             "roles": [
                 {
                     "id": ""
@@ -33,20 +33,18 @@
             "committees": {
                 "current": [
                     { 
-                        "id": "", 
-                        "name": ""
+                        "id": "" 
                     }                        
                 ],
                 "previous": [
                     { 
-                        "id": "", 
-                        "name": ""
+                        "id": ""
                     } 
                 ]
             }
         },
         {
-            "id": 1,
+            "id": 2,
             "name": {
                 "firstName": "",
                 "lastName": "",
@@ -78,14 +76,12 @@
             "committees": {
                 "current": [
                     { 
-                        "id": "", 
-                        "name": ""
+                        "id": ""
                     }                        
                 ],
                 "previous": [
                     { 
-                        "id": "", 
-                        "name": ""
+                        "id": ""
                     } 
                 ]
             }

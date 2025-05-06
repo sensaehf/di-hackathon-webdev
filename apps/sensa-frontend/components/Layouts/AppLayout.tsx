@@ -100,5 +100,6 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
         />
       </Box>
     </>
+
   )
 }
