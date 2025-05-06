@@ -47,22 +47,22 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
   const label = currentLocale === 'is' ? 'EN' : 'IS'
 
   return (
-    <Page>
+    <>
       <div className={styles.layoutWrapper}>
         <GridContainer>
-          <Header
-            headerItems={
-              <LanguageSwitcher
-                label={label}
-                onClick={toggleLocale}
-                isSwitching={isSwitching}
-              />
-            }
-          />
+          <header>
+            <Header
+              headerItems={
+                <LanguageSwitcher
+                  label={label}
+                  onClick={toggleLocale}
+                  isSwitching={isSwitching}
+                />
+              }
+            />
+          </header>
         </GridContainer>
-        <GridContainer className={styles.content}>
-          {children}
-          </GridContainer>
+        <GridContainer className={styles.content}>{children}</GridContainer>
 
         <Footer
           topLinks={i18n.t.footer.topLinksInfo}
@@ -78,6 +78,6 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
           middleLinks={i18n.t.footer.middleLinks}
         />
       </div>
-    </Page>
+    </>
   )
 }

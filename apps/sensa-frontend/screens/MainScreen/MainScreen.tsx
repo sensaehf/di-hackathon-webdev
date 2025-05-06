@@ -10,6 +10,7 @@ import {
   Pagination,
   ProfileCard,
   GridContainer,
+  Text,
   GridColumn,
   GridRow,
 } from '@island.is/island-ui/core'
@@ -18,6 +19,7 @@ import { ParliamentMemberList } from '../../data/parliamentMemberList'
 import { useI18n } from '../../i18n'
 import { useEffect } from 'react'
 import LivePlayer from '../../components/LivePlayer/LivePlayer'
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 
 
 const MainScreen = () => {
@@ -37,10 +39,15 @@ const MainScreen = () => {
    */
   return (
     <Box paddingX={12}>
-      <h1>{t.info}</h1>
+      <Text as="h1" variant='h2'>{t.info}</Text>
 
       <GridContainer>
         <LivePlayer />
+        <VideoPlayer
+        videoSource="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"  // Example prerecorded video URL
+        audioDescriptionSource='audioDescription.vtt'
+        captionSource='captions.vtt'
+      />
         <ParliamentMemberList />
       </GridContainer>
     </Box>

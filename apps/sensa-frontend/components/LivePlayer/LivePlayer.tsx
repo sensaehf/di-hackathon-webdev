@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 import Hls from 'hls.js';
 
-export default function HlsPlayer() {
-  const ref = useRef();
+export default function LivePlayer() {
+  const ref = useRef<HTMLVideoElement | null>(null);  // This initializes the ref with `null`
+
 
   useEffect(() => {
     const hls = new Hls();
