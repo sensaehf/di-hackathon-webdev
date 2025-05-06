@@ -332,6 +332,7 @@ export interface Footer {
   termsLink: BottomLink
   languageSwitchLink: BottomLink
   middleLinks: BottomLink[]
+  middleLinksTitle: string
 }
 
 export interface BottomLink {

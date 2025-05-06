@@ -5,26 +5,7 @@
   "header": {
     "logoutText": "Útskrá"
   },
-  "middleLinks": [
-    { "title": "Akstur og bifreiðar", "href": "#" },
-    { "title": "Atvinnurekstur og sjálfstætt starfandi", "href": "#" },
-    { "title": "Dómstólar og réttarfar", "href": "#" },
-    { "title": "Fjármál og skattar", "href": "#" },
-    { "title": "Fjölskylda og velferð", "href": "#" },
-    { "title": "Heilbrigðismál", "href": "#" },
-    { "title": "Húsnæðismál", "href": "#" },
-    { "title": "Iðnaður", "href": "#" },
-    { "title": "Innflytjendamál", "href": "#" },
-    { "title": "Launþegi, réttindi og lífeyrir", "href": "#" },
-    { "title": "Málefni fatlaðs fólks", "href": "#" },
-    { "title": "Menntun", "href": "#" },
-    { "title": "Neytendamál", "href": "#" },
-    { "title": "Samfélag og réttindi", "href": "#" },
-    { "title": "Samgöngur", "href": "#" },
-    { "title": "Umhverfismál", "href": "#" },
-    { "title": "Vegabréf, ferðalög og búseta erlendis", "href": "#" },
-    { "title": "Vörur og þjónusta Ísland.is", "href": "#" }
-  ],
+
   "footer": {
     "topLinksInfo": [
       {
@@ -53,37 +34,30 @@
     "bottomLinksTitle": "Aðrir opinberir vefir",
     "bottomLinks": [
       {
-        "title": "Mínar síður",
-        "href": "https://minarsidur.island.is/"
-      },
-      {
-        "title": "Heilsuvera",
-        "href": "https://www.heilsuvera.is/"
-      },
-      {
-        "title": "Opinber nýsköpun",
-        "href": "https://opinbernyskopun.island.is/"
-      },
-      {
         "title": "Samráðsgátt",
-        "href": "https://samradsgatt.island.is/"
-      },
-      {
-        "title": "Mannanöfn",
-        "href": "https://island.is/mannanofn/"
-      },
-      {
-        "title": "Undirskriftarlistar",
-        "href": "http://vefur.island.is/undirskriftalistar"
-      },
-      {
-        "title": "Opnir reikningar ríkisins",
-        "href": "http://www.opnirreikningar.is/"
-      },
-      {
-        "title": "Tekjusagan",
-        "href": "https://tekjusagan.is/"
+        "href": "#"
       }
+    ],
+    "middleLinksTitle": "Þjónustuflokkar",
+    "middleLinks": [
+      { "title": "Akstur og bifreiðar", "href": "#" },
+      { "title": "Atvinnurekstur og sjálfstætt starfandi", "href": "#" },
+      { "title": "Dómstólar og réttarfar", "href": "#" },
+      { "title": "Fjármál og skattar", "href": "#" },
+      { "title": "Fjölskylda og velferð", "href": "#" },
+      { "title": "Heilbrigðismál", "href": "#" },
+      { "title": "Húsnæðismál", "href": "#" },
+      { "title": "Iðnaður", "href": "#" },
+      { "title": "Innflytjendamál", "href": "#" },
+      { "title": "Launþegi, réttindi og lífeyrir", "href": "#" },
+      { "title": "Málefni fatlaðs fólks", "href": "#" },
+      { "title": "Menntun", "href": "#" },
+      { "title": "Neytendamál", "href": "#" },
+      { "title": "Samfélag og réttindi", "href": "#" },
+      { "title": "Samgöngur", "href": "#" },
+      { "title": "Umhverfismál", "href": "#" },
+      { "title": "Vegabréf, ferðalög og búseta erlendis", "href": "#" },
+      { "title": "Vörur og þjónusta Ísland.is", "href": "#" }
     ],
     "privacyPolicyLink": {
       "title": "Persónuverndarstefna",

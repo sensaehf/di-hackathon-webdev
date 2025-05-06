@@ -56,6 +56,7 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
         bottomLinks={i18n.t.footer.bottomLinks}
         bottomLinksTitle={i18n.t.footer.bottomLinksTitle}
         showMiddleLinks={true}
+        middleLinksTitle={i18n.t.footer.middleLinksTitle}
         middleLinks={i18n.t.footer.middleLinks}
       />
     </Page>

@@ -6,6 +6,7 @@
     "logoutText": "Log out"
   },
   "footer": {
+    "middleLinksTitle": "Categories",
     "middleLinks": [
       { "title": "Vehicles & Driving", "href": "#" },
       { "title": "Business Owners & Independent Contractors", "href": "#" },
@@ -52,36 +53,8 @@
     "bottomLinksTitle": "Other Government Sites",
     "bottomLinks": [
       {
-        "title": "Mínar síður",
-        "href": "https://minarsidur.island.is/"
-      },
-      {
-        "title": "Heilsuvera",
-        "href": "https://www.heilsuvera.is/"
-      },
-      {
-        "title": "Public Sector Innovation",
-        "href": "https://opinbernyskopun.island.is/"
-      },
-      {
         "title": "Samráðsgátt - Public Consultation",
-        "href": "https://samradsgatt.island.is/"
-      },
-      {
-        "title": "Registry of Approved Names",
-        "href": "https://island.is/mannanofn/"
-      },
-      {
-        "title": "Online Petitions",
-        "href": "https://vefur.island.is/en/e-petitions"
-      },
-      {
-        "title": "Public Invoices Paid",
-        "href": "http://www.opnirreikningar.is/"
-      },
-      {
-        "title": "Tekjusagan - Public Data on Living Standards",
-        "href": "https://tekjusagan.is/"
+        "href": "#"
       }
     ],
     "privacyPolicyLink": {
