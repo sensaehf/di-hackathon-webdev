@@ -48,8 +48,14 @@ const SideBar = () => {
           title: i18n?.t.menu.committees ?? ''
         },
         {
-          href: '/',
-          title: 'History'
+          active: isActive(i18n?.t.routes.speaker ?? ''),
+          href: i18n?.t.routes.speaker ?? '',
+          title: i18n?.t.menu.speaker ?? ''
+        },
+        {
+          active: isActive(i18n?.t.routes.history ?? ''),
+          href: i18n?.t.routes.history ?? '',
+          title: i18n?.t.menu.history ?? ''
         },
       ]
     },
@@ -59,21 +65,19 @@ const SideBar = () => {
       href: i18n?.t.routes.sessionsAndBills ?? ''
     },
     {
-      title: 'Laws',
-      href: '/'
+      active: isActive(i18n?.t.routes.sessions ?? ''),
+      title: i18n?.t.menu.sessions ?? '',
+      href: i18n?.t.routes.sessions ?? ''
     },
     {
-      title: 'Resolutions',
-      href: '/'
+      active: isActive(i18n?.t.routes.about ?? ''),
+      title: i18n?.t.menu.about ?? '',
+      href: i18n?.t.routes.about ?? ''
     },
     {
-      title: aboutText(),
-      href: '/'
-    }
-    ,
-    {
+      active: isActive(i18n?.t.routes.news ?? ''),
       title: i18n?.t.menu.news ?? '',
-      href: '/'
+      href: i18n?.t.routes.news ?? ''
     }
   ]
 

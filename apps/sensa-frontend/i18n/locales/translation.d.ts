@@ -7,12 +7,10 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-import Constituencies from "apps/sensa-frontend/pages/peopleAndCommittees/constituencies"
-
 export interface Translation {
   home: TranslationHome
-  menu: Menu
-  routes: Routes
+  menu: MenuAndRoute
+  routes: MenuAndRoute
   header: Header
   footer: Footer
 }
@@ -23,32 +21,19 @@ export interface TranslationHome {
   about: string
 }
 
-export interface Menu {
-  menu: string
+export interface MenuAndRoute {
+  workOfParliament: string
   peopleAndCommittees: string
   membersOfParliament: string
   sessionsAndBills: string
-  laws: string
-  resolutions: string
   about: string,
   news: string,
   parties: string,
   committees: string
   constituencies: string
   history: string
-}
-
-export interface Routes {
-  peopleAndCommittees: string
-  membersOfParliament: string
-  sessionsAndBills: string
-  laws: string
-  resolutions: string
-  about: string,
-  news: string,
-  parties: string
-  committees: string
-  constituencies: string
+  speaker: string
+  sessions: string
 }
 
 export interface AccessControl {

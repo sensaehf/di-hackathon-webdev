@@ -5,20 +5,32 @@
     "about": "About"
   },
   "menu": {
+    "workOfParliament": "Work of Parliament",
     "peopleAndCommittees": "People and Committees",
     "membersOfParliament": "Members Of Parliament",
-    "sessionsAndBills": "Sessions and Bills",
+    "sessionsAndBills": "Laws, Resolutions and Bills",
     "parties": "Parties",
     "committees": "Committees",
-    "constituencies": "Constituencies"
+    "constituencies": "Constituencies",
+    "speaker": "The Speaker and The Speakers Committee",
+    "history": "History",
+    "news": "News",
+    "about": "About Parliament",
+    "sessions": "Sessions"
   },
   "routes": {
-    "peopleAndCommittees": "/peopleAndCommittees",
-    "membersOfParliament": "/peopleAndCommittees/membersOfParliament",
-    "sessionsAndBills": "/sessionsAndBills",
-    "parties": "/peopleAndCommittees/parties",
-    "committees": "/peopleAndCommittees/committees",
-    "constituencies": "/peopleAndCommittees/constituencies"
+    "workOfParliament": "/work",
+    "peopleAndCommittees": "/work/peopleAndCommittees",
+    "membersOfParliament": "/work/peopleAndCommittees/membersOfParliament",
+    "sessionsAndBills": "/work/sessionsAndBills",
+    "parties": "/work/peopleAndCommittees/parties",
+    "committees": "/work/peopleAndCommittees/committees",
+    "constituencies": "/work/peopleAndCommittees/constituencies",
+    "speaker": "/work/peopleAndCommittees/speaker",
+    "history": "/work/peopleAndCommittees/history",
+    "news": "/news",
+    "about": "/about",
+    "sessions": "/sessions"
   },
   "footer": {
     "middleLinksTitle": "Categories",
