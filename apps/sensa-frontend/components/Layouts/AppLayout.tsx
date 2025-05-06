@@ -62,7 +62,6 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
         </GridContainer>
         <GridContainer className={styles.content}>
           {children}
-          {children}{children}{children}{children}{children}{children}{children}{children}{children}{children}{children}{children}
           </GridContainer>
 
         <Footer

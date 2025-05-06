@@ -17,6 +17,7 @@ import {
 import { ParliamentMemberList } from '../../data/parliamentMemberList'
 import { useI18n } from '../../i18n'
 import { useEffect } from 'react'
+import LivePlayer from '../../components/LivePlayer/LivePlayer'
 
 
 const MainScreen = () => {
@@ -39,6 +40,7 @@ const MainScreen = () => {
       <h1>{t.info}</h1>
 
       <GridContainer>
+        <LivePlayer />
         <ParliamentMemberList />
       </GridContainer>
     </Box>
