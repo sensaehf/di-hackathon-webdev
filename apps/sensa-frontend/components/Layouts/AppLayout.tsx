@@ -1,14 +1,20 @@
 import React, { FC, ReactNode, useContext, useState } from 'react'
-import { GridContainer, Page, Header, Footer, FooterLinkProps } from '@island.is/island-ui/core'
+import {
+  GridContainer,
+  Page,
+  Header,
+  Footer,
+  FooterLinkProps,
+  Text,
+} from '@island.is/island-ui/core'
 import { I18nContext } from '../../i18n/I18n' // Adjust import to your path
 import { Locale } from '@island.is/shared/types'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
+import * as styles from './AppLayout.css'
 
 interface LayoutProps {
   children: ReactNode
 }
-
-
 
 export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
   children,
@@ -42,23 +48,37 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
 
   return (
     <Page>
-      <GridContainer>
-        <Header headerItems={<LanguageSwitcher label={label} onClick={toggleLocale} isSwitching={isSwitching}/>} />
-      </GridContainer>
-      <GridContainer>{children}</GridContainer>
-      <Footer
-        topLinks={i18n.t.footer.topLinksInfo}
-        topLinksContact={i18n.t.footer.topLinksContact}
-        privacyPolicyLink={i18n.t.footer.privacyPolicyLink} //TODO
-        termsLink={i18n.t.footer.termsLink} // TODO
-        languageSwitchOnClick={toggleLocale}
-        languageSwitchLink={i18n.t.footer.languageSwitchLink} //TODO
-        bottomLinks={i18n.t.footer.bottomLinks}
-        bottomLinksTitle={i18n.t.footer.bottomLinksTitle}
-        showMiddleLinks={true}
-        middleLinksTitle={i18n.t.footer.middleLinksTitle}
-        middleLinks={i18n.t.footer.middleLinks}
-      />
+      <div className={styles.layoutWrapper}>
+        <GridContainer>
+          <Header
+            headerItems={
+              <LanguageSwitcher
+                label={label}
+                onClick={toggleLocale}
+                isSwitching={isSwitching}
+              />
+            }
+          />
+        </GridContainer>
+        <GridContainer className={styles.content}>
+          {children}
+          {children}{children}{children}{children}{children}{children}{children}{children}{children}{children}{children}{children}
+          </GridContainer>
+
+        <Footer
+          topLinks={i18n.t.footer.topLinksInfo}
+          topLinksContact={i18n.t.footer.topLinksContact}
+          privacyPolicyLink={i18n.t.footer.privacyPolicyLink} //TODO
+          termsLink={i18n.t.footer.termsLink} // TODO
+          languageSwitchOnClick={toggleLocale}
+          languageSwitchLink={i18n.t.footer.languageSwitchLink} //TODO
+          bottomLinks={i18n.t.footer.bottomLinks}
+          bottomLinksTitle={i18n.t.footer.bottomLinksTitle}
+          showMiddleLinks={true}
+          middleLinksTitle={i18n.t.footer.middleLinksTitle}
+          middleLinks={i18n.t.footer.middleLinks}
+        />
+      </div>
     </Page>
   )
 }
