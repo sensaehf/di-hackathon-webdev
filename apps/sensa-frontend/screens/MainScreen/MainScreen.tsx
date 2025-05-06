@@ -1,15 +1,10 @@
+import { Box, GridContainer } from '@island.is/island-ui/core'
 
-import {
-  Box,
-  GridContainer,
-} from '@island.is/island-ui/core'
-
-import { ParliamentMemberList } from '../../data/parliamentMemberList'
 import AlthingiHeaderSearch from '../../components/AlthingiHeaderSearch/AlthingiHeaderSearch'
 import MainScreenContent from '../../components/MainScreenContent/MainScreenContent'
+import AlthingiWork from '../../components/AlthingiWork/AlthingiWork'
 
 const MainScreen = () => {
-
   /*
    * Replace the elements below with your own.
    *
@@ -20,8 +15,9 @@ const MainScreen = () => {
       <AlthingiHeaderSearch />
 
       <GridContainer>
+        <AlthingiWork />
+
         <MainScreenContent />
-        <ParliamentMemberList />
       </GridContainer>
     </Box>
   )

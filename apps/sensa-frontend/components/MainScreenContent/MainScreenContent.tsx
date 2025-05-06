@@ -1,9 +1,11 @@
-import AlthingiWork from "../AlthingiWork/AlthingiWork"
+import { Text } from "@island.is/island-ui/core"
 
 const MainScreenContent = () => {
   return (
     <>
-    <AlthingiWork />
+    <Text variant="h2" as='h2'>
+      What is happening
+    </Text>
     </>
   )
 }
