@@ -5,12 +5,14 @@ import {
   Header,
   Footer,
   FooterLinkProps,
+  Button,
   Text,
 } from '@island.is/island-ui/core'
 import { I18nContext } from '../../i18n/I18n' // Adjust import to your path
 import { Locale } from '@island.is/shared/types'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 import * as styles from './AppLayout.css'
+import Link from 'next/link'
 
 interface LayoutProps {
   children: ReactNode
@@ -52,12 +54,20 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
         <GridContainer>
           <header>
             <Header
+              logoRender={(defaultLogo) => (
+                <Link href="/">
+                  {defaultLogo}
+                </Link>
+              )}
               headerItems={
+                <>
                 <LanguageSwitcher
                   label={label}
                   onClick={toggleLocale}
                   isSwitching={isSwitching}
                 />
+                <Link href="/slow">slow</Link>
+                </>
               }
             />
           </header>

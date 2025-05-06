@@ -4,17 +4,19 @@ import { getSession, Provider } from 'next-auth/client'
 
 import './styles.css' // assuming this contains global styles like `.container`, `.rounded`, etc.
 
-import { AppLayout } from '../components/Layouts/AppLayout';
+import { AppLayout } from '../components/Layouts/AppLayout'
 
 import initApollo from '../graphql/client'
 import { appWithTranslation, withLocale } from '../i18n'
+import PageLoader from '../components/PageLoader/PageLoader'
 
 const SupportApplication: any = ({ Component, pageProps }: any) => {
   return (
     <ApolloProvider client={initApollo(pageProps.apolloState)}>
-        <AppLayout>
-          <Component {...pageProps} />
-        </AppLayout>
+      <AppLayout>
+        <PageLoader />
+        <Component {...pageProps} />
+      </AppLayout>
     </ApolloProvider>
   )
 }
@@ -26,7 +28,6 @@ SupportApplication.getInitialProps = async (appContext: any) => {
     ...ctx,
     apolloClient,
     locale: ctx.locale || ctx?.req?.locale || 'is', // 👈 Fallback here
-
   }
 
   let pageProps = {}
@@ -40,10 +41,8 @@ SupportApplication.getInitialProps = async (appContext: any) => {
     pageProps: {
       ...pageProps,
       apolloState,
-    }
+    },
   }
 }
-
-
 
 export default appWithTranslation(SupportApplication)
