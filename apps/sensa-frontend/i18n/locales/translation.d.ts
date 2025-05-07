@@ -19,6 +19,9 @@ export interface TranslationHome {
   title: string,
   menu: string,
   about: string
+  wipHeader: string
+  wipText1: string
+  wipText2: string
 }
 
 export interface MenuAndRoute {
