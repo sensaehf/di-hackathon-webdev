@@ -12,9 +12,7 @@ const UnderConstruction = () => {
         <img src="/construction.svg" />
       </Stack>
       <Stack space="containerGutter">
-        <Text>
           <Text variant='h2'>{i18n?.t.home.wipHeader}</Text>
-        </Text>
       </Stack>
       <Stack space="containerGutter">
         <Text>{i18n?.t.home.wipText1}</Text>
