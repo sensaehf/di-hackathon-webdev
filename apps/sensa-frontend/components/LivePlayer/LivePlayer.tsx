@@ -14,5 +14,5 @@ export default function LivePlayer() {
     return () => hls.destroy();
   }, []);
 
-  return <video ref={ref} autoPlay muted controls style={{ width: '100%', maxHeight: '360px', objectFit: 'cover' }}/>;
+  return <video ref={ref} muted controls style={{ width: '100%', maxHeight: '360px', objectFit: 'cover' }}/>;
 }
