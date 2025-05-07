@@ -31,7 +31,7 @@
     "law": "Law",
     "resolutions": "Resolutions",
     "resolution": "Resolution",
-    "handbooksAndReports": "Handbooks and Reports"
+    "handbooksAndReports": "AlÞingi and How It Works"
   },
   "routes": {
     "workOfParliament": "/work",
@@ -45,6 +45,7 @@
     "history": "/work/peopleAndCommittees/history",
     "news": "/news",
     "about": "/about",
+    "handbooksAndReports": "/about/handbooksAndReports",
     "sessions": "/sessions"
   },
   "footer": {

@@ -72,7 +72,22 @@ const SideBar = () => {
     {
       active: isActive(i18n?.t.routes.about ?? ''),
       title: i18n?.t.menu.about ?? '',
-      href: i18n?.t.routes.about ?? ''
+      href: i18n?.t.routes.about ?? '',
+      items: [
+      {
+        active: isActive(i18n?.t.routes.handbooksAndReports ?? ''),
+        title: i18n?.t.menu.handbooksAndReports ?? '',
+        href: i18n?.t.routes.handbooksAndReports ?? '',
+      },
+      {
+        title: 'People, Structures and Governance',
+        href: '/',
+      },
+      {
+        title: 'Public Engagement and Educational Resources',
+        href: '/',
+      },
+    ]
     },
     {
       active: isActive(i18n?.t.routes.news ?? ''),
