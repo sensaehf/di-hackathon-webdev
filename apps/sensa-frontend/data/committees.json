@@ -3,5 +3,30 @@
         "id": "1",
         "name": "Efnahags- og viðskiptanefnd",
         "nameEn": "Economic Affairs and Trade Committee"
+    },
+    {
+        "id": "2",
+        "name": "Fjárlaganefnd",
+        "nameEn": "Budget Committee"
+    },
+    {
+        "id": "3",
+        "name": "Allsherjar og menntamálanefnd",
+        "nameEn": "Judicial Affairs and Education Committee"
+    },
+    {
+        "id": "4",
+        "name": "Atvinnuveganefnd",
+        "nameEn": "Industrial Affairs Committee"
+    },
+    {
+        "id": "5",
+        "name": "Efnahags- og viðskiptanefnd",
+        "nameEn": "Economic Affairs and Trade Committee"
+    },
+    {
+        "id": "6",
+        "name": "Framtíðarnefnd",
+        "nameEn": "Future Committee"
     }
 ]

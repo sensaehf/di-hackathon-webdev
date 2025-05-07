@@ -1,5 +1,4 @@
 import {
-  AsyncSearch,
   Box,
   Button,
   Icon,
@@ -11,13 +10,17 @@ import Webreader from 'apps/sensa-frontend/components/Webreader/Webreader'
 import * as styles from './MembersOfParliamentScreen.css'
 import { getAllParliamentMembers } from 'apps/sensa-frontend/data/endpoints'
 import MemberCard from './MemberCard/MemberCard'
+import { useI18n } from 'apps/sensa-frontend/i18n'
 
 const MembersOfParliamentScreen = () => {
+  const i18n = useI18n()
+  
   const pms = getAllParliamentMembers()
+
   return (
     <Box>
       <Text as="h2" variant="h1">
-        Members of Parliament
+        {i18n.t.menu.membersOfParliament}
       </Text>
       <Webreader />
       <Text as="h3" variant="h2" marginBottom={2}>
@@ -49,8 +52,8 @@ const MembersOfParliamentScreen = () => {
       <Text marginBottom={2}>62 members in total</Text>
 
       {pms.map((x, index) => (
-        <Box marginBottom={2}>
-        <MemberCard key={index} member={x} />
+        <Box marginBottom={2} key={index} >
+          <MemberCard member={x} />
         </Box>
       ))}
 

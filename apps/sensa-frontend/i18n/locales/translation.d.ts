@@ -16,8 +16,9 @@ export interface Translation {
 }
 
 export interface TranslationHome {
-  title: string,
-  menu: string,
+  locale: string
+  title: string
+  menu: string
   about: string
   wipHeader: string
   wipText1: string
@@ -29,9 +30,9 @@ export interface MenuAndRoute {
   peopleAndCommittees: string
   membersOfParliament: string
   sessionsAndBills: string
-  about: string,
-  news: string,
-  parties: string,
+  about: string
+  news: string
+  parties: string
   committees: string
   constituencies: string
   history: string

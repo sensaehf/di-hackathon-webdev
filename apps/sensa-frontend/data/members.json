@@ -8,9 +8,13 @@
             "abbreviation": "AMöll"
         },
         "constituency": "Suð­vest",
+        "constituencyEn": "",
         "constituencyNumber": "3. þm.",
+        "constituencyNumberEn": "",
         "party": "Sam­fylk­ingin",
+        "partyEn": "",
         "bio": "Alþingismaður Suðvesturkjördæmis síðan 2024 (Samfylkingin). Heilbrigðisráðherra síðan 2024.",
+        "bioEn": "English bio",
         "dateOfBirth": "1961-06-24",
         "email": "alma.moller@althingi.is",
         "phone": "",
@@ -18,7 +22,8 @@
         "image": {
             "url": "https://www.althingi.is/myndir/thingmenn-cache/1510/1510-220.jpg"
         },
-        "ministry": "https://www.government.is/ministries/ministry-of-health/",
+        "ministry": "",
+        "minustryEn": "",
         "roles": [],
         "committees": {
             "current": [],
@@ -35,8 +40,11 @@
         },
         "constituency": "Norð­vest.",
         "constituencyNumber": "3. þm.",
+        "constituencyEn": "",
         "party": "Sam­fylk­ingin",
+        "partyEn": "",
         "bio": "Alþingismaður Norðvesturkjördæmis síðan 2024 (Samfylkingin). Varaþingmaður Norðvesturkjördæmis febrúar–mars 2010, janúar og október–nóvember 2012, september 2018, maí og október 2019 og janúar–febrúar 2020 (Samfylkingin).",
+        "bioEn": "English bio",
         "dateOfBirth": "",
         "email": "arna.lara.jonsdottir@althingi.is",
         "phone": "",
@@ -45,6 +53,7 @@
             "url": "https://www.althingi.is/myndir/thingmenn-cache/1004/1004-220.jpg"
         },
         "ministry": "",
+        "minustryEn": "",
         "roles": [],
         "committees": {
             "current": [
@@ -55,5 +64,132 @@
             ],
             "previous": []
         }
-    }
+    },
+    {
+        "id": 3,
+        "name": {
+            "firstName": "",
+            "lastName": "",
+            "fullName": "Eiríkur Björn Björgvinsson",
+            "abbreviation": "EBB"
+        },
+        "constituency": "Suðvest.",
+        "constituencyNumber": "10. þm.",
+        "constituencyEn": "Southwest.",
+        "party": "Viðreisn",
+        "partyEn": "Liberal Reform Party",
+        "bio": "Fæddur í Reykjavík 6. september 1966. Foreldrar: Björgvin Ragnar Hjálmarsson, fæddur 6. október 1935, byggingatæknifræðingur og Guðný Kristjana Eiríksdóttir, fædd 16. ágúst 1941, fulltrúi. Maki: Alma Jóhanna Árnadóttir, fædd 29. janúar 1969, PCC markþjálfi og grafískur hönnuður. Foreldrar: Árni Björn Þorvaldsson og Jóna Guðlaugsdóttir. Börn: Árni Björn (1997), Birnir Eiðar (2008) og Hákon Bjarnar (2009).",
+        "bioEn": "Born in Reykjavík on 6 September 1966. Parents: Björgvin Ragnar Hjálmarsson, born 6 October 1935, civil engineer and Guðný Kristjana Eiríksdóttir, born 16 August 1941, representative. Spouse: Alma Jóhanna Árnadóttir, born January 29, 1969, PCC coach and graphic designer. Parents: Árni Björn Þorvaldsson and Jóna Guðlaugsdóttir. Children: Árni Björn (1997), Björn Eiðar (2008) and Hákon Björn (2009).",
+        "dateOfBirth": "",
+        "email": "eirikur.bjorn.bjorgvinsson@althingi.is",
+        "phone": "",
+        "socialMedia": [],
+        "image": {
+            "url": "https://www.althingi.is/myndir/mynd/thingmenn/1513/org/mynd.jpg"
+        },
+        "ministry": "",
+        "minustryEn": "",
+        "roles": [],
+        "committees": {
+            "current": [
+                { 
+                    "committeeId": 4,
+                    "roleId": 2
+                },
+                { 
+                    "committeeId": 2,
+                    "roleId": 4
+                }                                                       
+            ],
+            "previous": []
+        }
+    },
+    {
+        "id": 4,
+        "name": {
+            "firstName": "",
+            "lastName": "",
+            "fullName": "Snorri Másson",
+            "abbreviation": "SMás"
+        },
+        "constituency": "Reykv. s.",
+        "constituencyNumber": "6. þm.",
+        "constituencyEn": "Reykv. s.",
+        "party": "Miðflokkur",
+        "partyEn": "Centre Party",
+        "bio": "Fæddur í Reykjavík 1. maí 1997. Foreldrar: Margrét Jónsdóttir Njarðvík, fædd 6. mars 1966, rektor Háskólans á Bifröst, og Már Jónsson, fæddur 19. janúar 1959, sagnfræðingur, sonur Helgu Kress, systurdóttur Gunnars Thoroddsen alþingismanns og forsætisráðherra. Maki: Nadine Guðrún Yaghi, fædd 14. janúar 1990, forstöðumaður hjá Play. Foreldrar: Guðrún Margrét Guðmundsdóttir og Hassan Yaghi. Börn: Theodór (2018) og Már (2023).",
+        "bioEn": "Born in Reykjavík on 1 May 1997. Parents: Margrét Jónsdóttir Njarðvík, born 6 March 1966, rector of Bifröst University, and Már Jónsson, born 19 January 1959, historian, son of Helga Kress, niece of Gunnar Thoroddsen, member of parliament and prime minister. Spouse: Nadine Guðrún Yaghi, born January 14, 1990, director at Play. Parents: Guðrún Margrét Guðmundsdóttir and Hassan Yaghi. Children: Theodór (2018) and Már (2023).",
+        "dateOfBirth": "",
+        "email": "snorri.masson@althingi.is",
+        "phone": "",
+        "socialMedia": [],
+        "image": {
+            "url": "https://www.althingi.is/myndir/mynd/thingmenn/1526/org/mynd.jpg"
+        },
+        "ministry": "",
+        "minustryEn": "",
+        "roles": [],
+        "committees": {
+            "current": [
+                { 
+                    "committeeId": 3,
+                    "roleId": 3
+                },
+                { 
+                    "committeeId": 2,
+                    "roleId": 4
+                }                                                       
+            ],
+            "previous": []
+        }
+    },         
+    {
+        "id": 5,
+        "name": {
+            "firstName": "",
+            "lastName": "",
+            "fullName": "Áslaug Arna Sigurbjörnsdóttir",
+            "abbreviation": "ÁsIS"
+        },
+        "constituency": "Reykv. s.",
+        "constituencyNumber": "3. þm.",
+        "constituencyEn": "Reykv. s.",
+        "party": "Sjálfstæðisflokkur",
+        "partyEn": "Independence Party",
+        "bio": "Stúdentspróf VÍ 2010. BA-próf í lögfræði HÍ 2015. MA-próf í lögfræði HÍ 2017. Starfsmaður jafningjafræðslu Hins hússins 2010. Blaðamaður á Morgunblaðinu 2011–2013. Lögreglumaður hjá lögreglunni á Suðurlandi 2014–2015. Varaformaður Æskulýðsráðs 2014–2016. Laganemi á lögmannsstofunni Juris 2016. Dómsmálaráðherra 6. september 2019 til 27. nóvember 2021. Vísinda-, iðnaðar- og nýsköpunarráðherra 28. nóvember 2021 til 31. janúar 2022. Háskóla-, iðnaðar- og nýsköpunarráðherra 1. febrúar 2022 til 21. desember 2024.",
+        "bioEn": "Matriculation examination 2010. BA degree in law from the University of Iceland 2015. MA degree in law from the University of Iceland 2017. Employee of peer education at The Other House 2010. Journalist at Morgunblaðið 2011–2013. Police officer with the South Iceland Police Department 2014–2015. Vice-Chairman of the Youth Council 2014–2016. Law student at the law firm Juris 2016. Minister of Justice 6 September 2019 to 27 November 2021. Minister of Science, Industry and Innovation from 28 November 2021 to 31 January 2022. Minister of Higher Education, Industry and Innovation from 1 February 2022 to 21 December 2024.",
+        "dateOfBirth": "",
+        "email": "aslaug.arna.sigurbjornsdottir@althingi.is",
+        "phone": "",
+        "socialMedia": [
+            {
+                "type": "Facebook",
+                "link": "https://www.facebook.com/aslaugarna"
+            },
+            {
+                "type": "Website",
+                "link": "https://aslaugarna.is/"
+            }
+        ],
+        "image": {
+            "url": "https://www.althingi.is/myndir/mynd/thingmenn/1261/org/mynd.jpg"
+        },
+        "ministry": "",
+        "minustryEn": "",
+        "roles": [],
+        "committees": {
+            "current": [
+                { 
+                    "committeeId": 2,
+                    "roleId": 4
+                },
+                { 
+                    "committeeId": 2,
+                    "roleId": 4
+                }                                                       
+            ],
+            "previous": []
+        }
+    }                       
+
 ]

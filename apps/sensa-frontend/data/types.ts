@@ -7,15 +7,20 @@ export type ParliamentMember = {
     abbreviation: string
   }
   constituency: string
+  constituencyEn: string
   constituencyNumber: string
+  constituencyNumberEn: string
   bio: string
+  bioEn: string
   dateOfBirth: string
   email: string
   phone: string
   socialMedia: SocialMediaLink[]
   party: string
+  partyEn: string
   image: Image
   ministry: string
+  ministryEn: string
   roles: {
     id: number
   }[]
@@ -55,4 +60,9 @@ export type Committee = {
 export type BreadcrumbItem = {
   title: string
   href: string
+}
+
+export type SearchItem = {
+  label: string
+  value: string
 }
