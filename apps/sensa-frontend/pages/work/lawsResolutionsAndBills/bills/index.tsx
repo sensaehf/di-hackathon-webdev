@@ -8,8 +8,7 @@ import { useContext } from 'react';
 import { I18nContext } from '../../../../i18n/I18n';
 import { SubLayout } from '../../../../components/Layouts/SubLayout'
 import * as styles from './index.css'
-import LawsScreen from 'apps/sensa-frontend/screens/LawsScreen/LawsScreen';
-import BillsScreen from 'apps/sensa-frontend/screens/BillsScreen/BillsScreen';
+import BillsScreen from '../../../../screens/BillsScreen/BillsScreen';
 export default function MembersOfParliament() {
   const i18n = useContext(I18nContext)
 

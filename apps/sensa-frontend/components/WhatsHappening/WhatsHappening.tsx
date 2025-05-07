@@ -2,6 +2,7 @@ import { Box, Button, Inline, Tabs, Text } from '@island.is/island-ui/core'
 import * as styles from './WhatsHappening.css'
 import LivePlayer from '../LivePlayer/LivePlayer'
 import Events from './Events/Events'
+import Link from 'next/link'
 const WhatsHappening = () => {
   return (
     <>
@@ -63,7 +64,9 @@ const WhatsHappening = () => {
                 variant="text"
                 as="span"
               >
+                <Link href='/sessions/recordedSessions'>
                 Previous recordings
+                </Link>
               </Button>
             </Inline>
           </Box>

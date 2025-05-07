@@ -10,7 +10,6 @@ export default function VideoPlayer({ videoSource, captionSource, audioDescripti
   const ref = useRef<HTMLVideoElement | null>(null);
 
   return (
-    <div>
       <video
         ref={ref}
         controls
@@ -48,6 +47,5 @@ export default function VideoPlayer({ videoSource, captionSource, audioDescripti
           This video includes captions and audio descriptions for accessibility.
         </p>
       </video>
-    </div>
   );
 }
