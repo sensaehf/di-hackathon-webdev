@@ -31,6 +31,7 @@ export interface MenuAndRoute {
   membersOfParliament: string
   sessionsAndBills: string
   about: string
+  handbooksAndReports: string
   news: string
   parties: string
   committees: string

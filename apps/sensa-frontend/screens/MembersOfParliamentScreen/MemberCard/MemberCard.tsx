@@ -7,16 +7,8 @@ export interface MemberCardProps {
   member: ParliamentMember
 }
 
-// name.abbreat
-
-
 const MemberCard = ({ member }: MemberCardProps) => {
   const i18n = useI18n()
-
-  //i18n.activeLocale == "is" ? "hallo" : "Hello"
-
-  console.log(i18n.activeLocale);
-  console.log(i18n.activeLocale === "is" ? member.bio : member.bioEn);
 
   const tags = [
     { label: 'label', href: '#' },
