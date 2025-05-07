@@ -14,7 +14,7 @@ const PeopleAndCommitteesScreen = () => {
 
       <Webreader />
 
-      <CategoryCard h text='lorem' heading='Members of Parliament'/>
+      <CategoryCard text='lorem' heading='Members of Parliament'/>
       <CategoryCard text='lorem' heading='Members of Parliament'/>
       <CategoryCard text='lorem' heading='Members of Parliament'/>
       <CategoryCard text='lorem' heading='Members of Parliament'/>
