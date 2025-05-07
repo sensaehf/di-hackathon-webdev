@@ -8,13 +8,13 @@ import { useContext } from 'react';
 import { I18nContext } from '../../../../i18n/I18n';
 import { SubLayout } from '../../../../components/Layouts/SubLayout'
 import MembersOfParliamentScreen from 'apps/sensa-frontend/screens/MembersOfParliamentScreen/MembersOfParliamentScreen';
-
+import * as styles from './index.css'
 export default function MembersOfParliament() {
   const i18n = useContext(I18nContext)
 
   return (
     <SubLayout>
-      <Box>
+      <Box className={styles.root}>
         <Breadcrumbs items={[
           { title: i18n?.t.home.title ?? '', href: "/" },
           { title: i18n?.t.menu.workOfParliament ?? '', href: i18n?.t.routes.workOfParliament },
