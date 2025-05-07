@@ -102,13 +102,11 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
 }
 
 const RelatedCardFrame = ({ member }: { member?: ParliamentMember }) => {
-  member?.committees.current.committeeId
   let committee
   if (member?.committees.current.committeeId) {
     committee = getCommitteeById(member?.committees.current.committeeId)
   }
-  console.log(member)
-  console.log(!!committee)
+  console.log(member?.committees.current.committeeId)
 
 
   return (
