@@ -1,22 +1,18 @@
-import { Box } from '@island.is/island-ui/core';
-import { useRouter } from 'next/router';
-import * as styles from './memberId.css'
-import { SubLayout } from '../../../../../components/Layouts/SubLayout';
-import MemberScreen from '../../../../../screens/MemberScreen/MemberScreen';
+import { Box } from '@island.is/island-ui/core'
+import { useRouter } from 'next/router'
+import { SubLayout } from '../../../../../components/Layouts/SubLayout'
+import MemberScreen from '../../../../../screens/MemberScreen/MemberScreen'
 export default function Member() {
-  const router = useRouter();
-  const { memberId } = router.query;
+  const router = useRouter()
+  const { memberId } = router.query
 
   if (typeof memberId !== 'string') {
-    return null; // or a loading/error state
+    return null // or a loading/error state
   }
-
 
   return (
     <SubLayout>
-      <Box className={styles.root}>
-      <MemberScreen memberId={memberId}/>
-      </Box>
+      <MemberScreen memberId={memberId} />
     </SubLayout>
   )
 }

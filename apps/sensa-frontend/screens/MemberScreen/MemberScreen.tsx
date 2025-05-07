@@ -1,15 +1,21 @@
 import { useRouter } from 'next/router'
 import { useContext, useState } from 'react'
 import { I18nContext } from '../../i18n/I18n'
-import { Box, Breadcrumbs, Text } from '@island.is/island-ui/core'
+import {
+  Accordion,
+  Box,
+  Breadcrumbs,
+  Button,
+  Text,
+} from '@island.is/island-ui/core'
 import { getParliamentMemberById } from 'apps/sensa-frontend/data/endpoints'
 import { ParliamentMember } from 'apps/sensa-frontend/data/types'
 import { Webreader } from 'apps/sensa-frontend/components/Webreader'
 import BioFrame from './BioFrame/BioFrame'
+import * as styles from './MemberScreen.css'
 
 const MemberScreen = ({ memberId }: { memberId: string }) => {
   const [error, setError] = useState<boolean>(false)
-
 
   const i18n = useContext(I18nContext)
   const router = useRouter()
@@ -22,7 +28,7 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
   }
 
   return (
-    <>
+    <Box className={styles.root}>
       <Breadcrumbs
         items={[
           { title: i18n?.t.home.title ?? '', href: '/' },
@@ -46,7 +52,37 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
       </Text>
       <Webreader />
       <BioFrame member={member} />
-    </>
+      {/* Related Card */}
+      {/* Related Card */}
+      <Box className={styles.accordionBox}>
+        <Accordion>
+          <Box className={styles.accordionChild}>
+            <Text>Parlimentarian</Text>
+            <Button colorScheme='light' circle={true} >+</Button>
+          </Box>
+        </Accordion>
+      </Box>
+
+      <Box className={styles.accordionBox}>
+        <Accordion>
+          <Box className={styles.accordionChild}>
+            <Text>Parlimentarian</Text>
+            <Button colorScheme='light' circle={true} >+</Button>
+          </Box>
+        </Accordion>
+      </Box>
+      <Box className={styles.accordionBox}>
+        <Accordion>
+          <Box className={styles.accordionChild}>
+            <Text>Parlimentarian</Text>
+            <Button colorScheme='light' circle={true} >+</Button>
+          </Box>
+        </Accordion>
+      </Box>
+
+
+
+    </Box>
   )
 }
 
