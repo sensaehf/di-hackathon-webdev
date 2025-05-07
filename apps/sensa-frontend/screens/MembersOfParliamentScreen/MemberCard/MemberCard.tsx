@@ -23,6 +23,7 @@ const MemberCard = ({ member }: MemberCardProps) => {
         text={member.bio}
         heading={member.name.fullName}
         tags={tags}
+        href={`/work/peopleAndCommittees/membersOfParliament/member/${member.id}`}
       />
     </>
   )
