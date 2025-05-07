@@ -13,7 +13,7 @@ const UnderConstruction = () => {
       </Stack>
       <Stack space="containerGutter">
         <Text>
-          <h2>{i18n?.t.home.wipHeader}</h2>
+          <Text variant='h2'>{i18n?.t.home.wipHeader}</Text>
         </Text>
       </Stack>
       <Stack space="containerGutter">
