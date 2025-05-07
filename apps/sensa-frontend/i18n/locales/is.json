@@ -8,6 +8,14 @@
     "wipText1": "Við erum að vinna að þessari síðu til að veita þér nýjustu og gagnlegustu upplýsingarnar. Vinsamlegast kíktu aftur síðar þegar við höldum áfram að þróa og bæta þennan hluta.",
     "wipText2": "Takk fyrir þolinmæðina"
   },
+  "about": {
+    "annualReport": "Ársskýrslur",
+    "annualReports": "Ársskýrslur",
+    "handbookAndMaterials": "Handbók Alþingis og leiðbeiningar",
+    "otherReportsAndMaterials": "",
+    "officialPublishedContent": "Opinberlega útgefið efni",
+    "infoAboutParliament": "Upplýsingar um Alþingi"
+  },
   "menu": {
     "workOfParliament": "Störf Alþingis",
     "peopleAndCommittees": "Starfsfólk og nefndir",
@@ -32,7 +40,7 @@
     "law": "Lög",
     "resolutions": "Niðurstöður",
     "resolution": "Niðurstaða",
-    "handbooksAndReports": "Handbækur og skýrslur"
+    "handbooksAndReports": "Alþingi og starfsemi þess"
   },
   "routes": {
     "workOfParliament": "/work",
@@ -47,7 +55,8 @@
     "news": "/news",
     "about": "/about",
     "handbooksAndReports": "/about/handbooksAndReports",
-    "sessions": "/sessions"
+    "sessions": "/sessions",
+    "wip": "/wip"
   },
   "footer": {
     "topLinksInfo": [

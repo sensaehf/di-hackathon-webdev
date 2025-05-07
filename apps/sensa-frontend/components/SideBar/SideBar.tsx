@@ -65,9 +65,8 @@ const SideBar = () => {
       href: i18n?.t.routes.sessionsAndBills ?? ''
     },
     {
-      active: isActive(i18n?.t.routes.sessions ?? ''),
       title: i18n?.t.menu.sessions ?? '',
-      href: i18n?.t.routes.sessions ?? ''
+      href: i18n?.t.routes.wip ?? '',
     },
     {
       active: isActive(i18n?.t.routes.about ?? ''),
@@ -81,18 +80,17 @@ const SideBar = () => {
       },
       {
         title: 'People, Structures and Governance',
-        href: '/',
+        href: i18n?.t.routes.wip ?? '',
       },
       {
         title: 'Public Engagement and Educational Resources',
-        href: '/',
+        href: i18n?.t.routes.wip ?? '',
       },
     ]
     },
     {
-      active: isActive(i18n?.t.routes.news ?? ''),
       title: i18n?.t.menu.news ?? '',
-      href: i18n?.t.routes.news ?? ''
+      href: i18n?.t.routes.wip ?? '',
     }
   ]
 
