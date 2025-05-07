@@ -72,7 +72,7 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
                     isSwitching={isSwitching}
                   />
                   <Button variant="utility">
-                    Menu{' '}
+                    {i18n.t.home.menu}{' '}
                     <Box marginLeft={1}>
                       <Icon size='small' type="outline" icon="menu" color="blue400" />
                     </Box>
