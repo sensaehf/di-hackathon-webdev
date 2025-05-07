@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "firstName": "",
+            "lastName": "",
+            "fullName": "Alma D. Möller",
+            "abbreviation": "AMöll"
+        },
+        "constituency": "Suð­vest",
+        "constituencyNumber": "3. þm.",
+        "party": "Sam­fylk­ingin",
+        "bio": "Alþingismaður Suðvesturkjördæmis síðan 2024 (Samfylkingin). Heilbrigðisráðherra síðan 2024.",
+        "dateOfBirth": "1961-06-24",
+        "email": "alma.moller@althingi.is",
+        "phone": "",
+        "socialMedia": [],
+        "image": {
+            "url": "https://www.althingi.is/myndir/thingmenn-cache/1510/1510-220.jpg"
+        },
+        "ministry": "https://www.government.is/ministries/ministry-of-health/",
+        "roles": [],
+        "committees": {
+            "current": [],
+            "previous": []
+        }
+    },
+    {
+        "id": 2,
+        "name": {
+            "firstName": "",
+            "lastName": "",
+            "fullName": "Arna Lára Jóns­dóttir",
+            "abbreviation": "ArnaJ"
+        },
+        "constituency": "Norð­vest.",
+        "constituencyNumber": "3. þm.",
+        "party": "Sam­fylk­ingin",
+        "bio": "Alþingismaður Norðvesturkjördæmis síðan 2024 (Samfylkingin). Varaþingmaður Norðvesturkjördæmis febrúar–mars 2010, janúar og október–nóvember 2012, september 2018, maí og október 2019 og janúar–febrúar 2020 (Samfylkingin).",
+        "dateOfBirth": "",
+        "email": "arna.lara.jonsdottir@althingi.is",
+        "phone": "",
+        "socialMedia": [],
+        "image": {
+            "url": "https://www.althingi.is/myndir/thingmenn-cache/1004/1004-220.jpg"
+        },
+        "ministry": "",
+        "roles": [],
+        "committees": {
+            "current": [
+                { 
+                    "committeeId": 1,
+                    "roleId": 1
+                }                        
+            ],
+            "previous": []
+        }
+    }
+]

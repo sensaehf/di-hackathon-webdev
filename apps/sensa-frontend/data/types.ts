@@ -1,18 +1,3 @@
-export type ParliamentData = {
-  parliamentMembersShort: ParliamentMemberShort[]
-  parliamentMembers: ParliamentMember[]
-  roles: Role[]
-  committees: Committee[]
-}
-
-export type ParliamentMemberShort = {
-    name: string
-    abbreviation: string
-    constituency: string
-    constituencyNumber: string
-    party: string
-}
-
 export type ParliamentMember = {
   id: number
   name: {
@@ -32,11 +17,17 @@ export type ParliamentMember = {
   image: Image
   ministry: string
   roles: {
-    id: string
+    id: number
   }[]
   committees: {
-    current: Committee[]
-    previous: Committee[]
+    current: {
+      committeeId: number
+      roleId: number
+    }
+    previous: {
+      committeeId: number
+      roleId: number
+    }
   }
 }
 
@@ -50,13 +41,15 @@ export type Image = {
 }
 
 export type Role = {
-  id: string
+  id: number
   name: string
+  nameEn: string
 }
 
 export type Committee = {
-  id: string
+  id: number
   name: string
+  nameEn: string 
 }
 
 export type BreadcrumbItem = {

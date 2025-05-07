@@ -7,6 +7,8 @@ import { useContext } from 'react';
 import { I18nContext } from '../../../../i18n/I18n';
 import { SubLayout } from '../../../../components/Layouts/SubLayout'
 
+import UnderConstruction from '../../../../components/UnderConstruction/UnderConstruction'
+
 export default function Parties() {
     const i18n = useContext(I18nContext)
   
@@ -20,7 +22,7 @@ export default function Parties() {
             { title: i18n?.t.menu.parties ?? '', href: i18n?.t.routes.parties }
           ]} />
           <GridContainer>
-            Parties
+            <UnderConstruction />
           </GridContainer>
         </Box>
       </SubLayout>

@@ -1,15 +1,12 @@
 import React, { FC } from 'react'
-import parliamentData from './parliamentData.json'
-import parliamentDataShort from './data.json'
 import {
-  ParliamentData,
-  ParliamentMember,
-  ParliamentMemberShort,
+  ParliamentMember  
 } from './types'
 import { Webreader } from '../components/Webreader'
+import { getAllParliamentMembers } from './endpoints'
 
 export const ParliamentMemberList: FC = () => {
-  const members: ParliamentMember[] = parliamentData.parliamentMembers
+  const members = getAllParliamentMembers() as ParliamentMember[]
 
   return (
     <>

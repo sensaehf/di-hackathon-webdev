@@ -3,8 +3,6 @@ import {
   Box
 } from '@island.is/island-ui/core'
 
-
-
 const MembersScreen = () => {
   const router = useRouter();
   const { mid } = router.query;
