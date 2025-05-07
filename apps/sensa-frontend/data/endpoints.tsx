@@ -32,7 +32,7 @@ export const getAllCommittees = (): Committee[] => {
   return committees as unknown as Committee[]
 }
 
-export const getCommitteeById = (id: number): Role | undefined => {
+export const getCommitteeById = (id: number): Committee | undefined => {
   return getAllCommittees().find((item) => item.id === id)
 }
 

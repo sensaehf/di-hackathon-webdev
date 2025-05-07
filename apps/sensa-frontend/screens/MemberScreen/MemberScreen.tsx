@@ -8,7 +8,10 @@ import {
   Button,
   Text,
 } from '@island.is/island-ui/core'
-import { getParliamentMemberById } from 'apps/sensa-frontend/data/endpoints'
+import {
+  getCommitteeById,
+  getParliamentMemberById,
+} from 'apps/sensa-frontend/data/endpoints'
 import { ParliamentMember } from 'apps/sensa-frontend/data/types'
 import { Webreader } from 'apps/sensa-frontend/components/Webreader'
 import BioFrame from './BioFrame/BioFrame'
@@ -61,7 +64,7 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
         <Button variant="text">Future Committee</Button>
       </RelatedCard>
       <RelatedCard>
-        <RelatedCardFrame />
+        <RelatedCardFrame member={member}/>
       </RelatedCard>
       <Box className={styles.accordionBox}>
         <Accordion>
@@ -98,7 +101,16 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
   )
 }
 
-const RelatedCardFrame = ({member}: {member?: ParliamentMember}) => {
+const RelatedCardFrame = ({ member }: { member?: ParliamentMember }) => {
+  member?.committees.current.committeeId
+  let committee
+  if (member?.committees.current.committeeId) {
+    committee = getCommitteeById(member?.committees.current.committeeId)
+  }
+  console.log(member)
+  console.log(!!committee)
+
+
   return (
     <>
       <Text variant="eyebrow">
@@ -106,7 +118,7 @@ const RelatedCardFrame = ({member}: {member?: ParliamentMember}) => {
       </Text>
       <Box className={styles.relatedCardInnerFrame}>
         <Box className={styles.relatedCardContent}>
-          <Button variant="text">asdf</Button>
+          <Button variant="text">{committee?.name}</Button>
           <Button variant="text">asdf</Button>
           <Button variant="text">asdf</Button>
           <Button variant="text">asdf</Button>
