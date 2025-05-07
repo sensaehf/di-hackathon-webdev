@@ -2,8 +2,8 @@ import { Box, Button, Text } from '@island.is/island-ui/core'
 import * as styles from './Events.css'
 const Events = () => {
   return (
-    <Box className={styles.root}>
-      <Box className={styles.innerBox}>
+    <Box className={styles.root} >
+      <Box className={styles.innerBox} marginBottom={6}>
         <Box className={styles.day}>
           <Text variant="eyebrow">Monday may 5</Text>
           <Box className={styles.line}>
