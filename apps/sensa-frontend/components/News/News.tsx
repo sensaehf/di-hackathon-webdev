@@ -55,7 +55,7 @@ const News = () => {
         <Box className={styles.box}>
           <NewsCard
             date={new Date().toISOString()}
-            title={'Committee day May 9th'}
+            title={'Human Rights  Institute Committee day May 9th'}
             titleAs="h3"
             titleVariant="h3"
             introduction={
