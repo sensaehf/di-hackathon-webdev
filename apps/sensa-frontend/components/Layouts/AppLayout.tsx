@@ -59,11 +59,14 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
         <header>
           <Box className={styles.islandBox}>
             <Header
-              logoRender={(defaultLogo) => <Link href="/">{defaultLogo}</Link>}
+              logoRender={(defaultLogo) => (
+                <Link href="https://island.is/">{defaultLogo}</Link>
+              )}
             />
           </Box>
           <Box className={styles.althingiHeader}>
             <AlthingiHeader
+              logoRender={(defaultLogo) => <Link href="/">{defaultLogo}</Link>}
               headerItems={
                 <>
                   <LanguageSwitcher
@@ -74,7 +77,12 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
                   <Button variant="utility">
                     {i18n.t.home.menu}{' '}
                     <Box marginLeft={1}>
-                      <Icon size='small' type="outline" icon="menu" color="blue400" />
+                      <Icon
+                        size="small"
+                        type="outline"
+                        icon="menu"
+                        color="blue400"
+                      />
                     </Box>
                   </Button>
                 </>
@@ -100,6 +108,5 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
         />
       </Box>
     </>
-
   )
 }

@@ -14,7 +14,7 @@ const RecordedSessionScreen = () => {
       <VideoPlayer  videoSource='/video.mp4'/>
 
       <Box className={styles.content}>
-        <Text>You can watch individual discussions or speeches by going to the meeting minutes.</Text>
+        <Text>You can watch individual discussions or speeches by going to the meeting minutes.</Text>
 
         <Button variant='utility'>Download the video file</Button>
 
