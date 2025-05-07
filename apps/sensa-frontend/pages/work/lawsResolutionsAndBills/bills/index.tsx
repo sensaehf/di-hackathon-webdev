@@ -1,7 +1,5 @@
-import { ParliamentMemberList } from '../../../../data/parliamentMemberList'
 import {
   Box,
-  GridContainer,
   Breadcrumbs
 } from '@island.is/island-ui/core'
 import { useContext } from 'react';
