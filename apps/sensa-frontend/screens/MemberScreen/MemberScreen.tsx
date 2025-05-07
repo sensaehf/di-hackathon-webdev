@@ -13,6 +13,7 @@ import { ParliamentMember } from 'apps/sensa-frontend/data/types'
 import { Webreader } from 'apps/sensa-frontend/components/Webreader'
 import BioFrame from './BioFrame/BioFrame'
 import * as styles from './MemberScreen.css'
+import RelatedCard from './RelatedCard/RelatedCard'
 
 const MemberScreen = ({ memberId }: { memberId: string }) => {
   const [error, setError] = useState<boolean>(false)
@@ -53,12 +54,22 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
       <Webreader />
       <BioFrame member={member} />
       {/* Related Card */}
-      {/* Related Card */}
+      <RelatedCard>
+        <Text variant="eyebrow">Current committee seats</Text>
+        <Button variant="text">Future Committee</Button>
+        <Button variant="text">Future Committee</Button>
+        <Button variant="text">Future Committee</Button>
+      </RelatedCard>
+      <RelatedCard>
+        <RelatedCardFrame />
+      </RelatedCard>
       <Box className={styles.accordionBox}>
         <Accordion>
           <Box className={styles.accordionChild}>
             <Text>Parlimentarian</Text>
-            <Button colorScheme='light' circle={true} >+</Button>
+            <Button colorScheme="light" circle={true}>
+              +
+            </Button>
           </Box>
         </Accordion>
       </Box>
@@ -67,7 +78,9 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
         <Accordion>
           <Box className={styles.accordionChild}>
             <Text>Parlimentarian</Text>
-            <Button colorScheme='light' circle={true} >+</Button>
+            <Button colorScheme="light" circle={true}>
+              +
+            </Button>
           </Box>
         </Accordion>
       </Box>
@@ -75,14 +88,39 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
         <Accordion>
           <Box className={styles.accordionChild}>
             <Text>Parlimentarian</Text>
-            <Button colorScheme='light' circle={true} >+</Button>
+            <Button colorScheme="light" circle={true}>
+              +
+            </Button>
           </Box>
         </Accordion>
       </Box>
-
-
-
     </Box>
+  )
+}
+
+const RelatedCardFrame = ({member}: {member?: ParliamentMember}) => {
+  return (
+    <>
+      <Text variant="eyebrow">
+        Parliamentary work and register of interests{' '}
+      </Text>
+      <Box className={styles.relatedCardInnerFrame}>
+        <Box className={styles.relatedCardContent}>
+          <Button variant="text">asdf</Button>
+          <Button variant="text">asdf</Button>
+          <Button variant="text">asdf</Button>
+          <Button variant="text">asdf</Button>
+        </Box>{' '}
+        {/* Content */}
+        <Box className={styles.relatedCardContent}>
+          <Button variant="text">asdf</Button>
+          <Button variant="text">asdf</Button>
+          <Button variant="text">asdf</Button>
+          <Button variant="text">asdf</Button>
+        </Box>{' '}
+        {/* Content */}
+      </Box>
+    </>
   )
 }
 

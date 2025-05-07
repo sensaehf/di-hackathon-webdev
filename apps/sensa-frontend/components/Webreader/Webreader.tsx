@@ -100,8 +100,9 @@ const Webreader: FC<React.PropsWithChildren<WebReaderProps>> = ({
       h += '&readclass=' + readClass
     }
     setHref(h)
-  }, [href])
+  }, [href, activeLocale])
 
+  // TODO: Use i18n.t
   const buttonLabel = activeLocale === 'is' ? 'Hlusta' : 'Listen'
   const buttonTitle =
     activeLocale === 'is'
