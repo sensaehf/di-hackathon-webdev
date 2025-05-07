@@ -2,7 +2,10 @@
   "home": {
     "title": "Parliament",
     "menu": "Menu",
-    "about": "About"
+    "about": "About",
+    "wipHeader": "Whoops! This page is still under construction.",
+    "wipText1": "We're currently working on this page to bring you the most up-to-date and useful information. Please check back soon as we continue to develop and improve this section.",
+    "wipText2": "Thank you for your patience!"
   },
   "menu": {
     "workOfParliament": "Work of Parliament",

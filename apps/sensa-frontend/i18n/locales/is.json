@@ -2,7 +2,10 @@
   "home": {
     "title": "Alþingi",
     "menu": "Valmynd",
-    "about": "IS About"
+    "about": "IS About",
+    "wipHeader": "Úbbs! Þessi síða er enn í vinnslu",
+    "wipText1": "Við erum að vinna að þessari síðu til að veita þér nýjustu og gagnlegustu upplýsingarnar. Vinsamlegast kíktu aftur síðar þegar við höldum áfram að þróa og bæta þennan hluta.",
+    "wipText2": "Takk fyrir þolinmæðina"
   },
   "menu": {
     "workOfParliament": "IS Work of Parliament",

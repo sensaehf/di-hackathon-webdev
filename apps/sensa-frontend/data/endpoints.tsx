@@ -15,3 +15,19 @@ import {
   export const getParliamentMemberById = (id: number): ParliamentMember | undefined => {
     return getAllParliamentMembers().find(item => item.id === id);
   };
+
+  export const getAllRoles = (): Role[] => {
+    return roles as unknown as Role[];
+  }
+
+  export const getRoleById = (id: number): Role | undefined => {
+    return getAllRoles().find(item => item.id === id);
+  }
+
+  export const getAllCommittees = (): Committee[] => {
+    return committees as unknown as Committee[];
+  }
+
+  export const getCommitteeById = (id: number): Role | undefined => {
+    return getAllCommittees().find(item => item.id === id);
+  }
