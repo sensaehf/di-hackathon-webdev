@@ -1,4 +1,5 @@
 import {
+  Accordion,
   Box,
   Button,
   Divider,
@@ -13,60 +14,57 @@ import { Table as T } from '@island.is/island-ui/core'
 import * as styles from './BillScreen.css'
 import MockSearch from 'apps/sensa-frontend/components/MockSearch/MockSearch'
 import Link from 'next/link'
+import { CategoryCard } from 'apps/sensa-frontend/components/CategoryCard/CategoryCard'
+import RelatedCard from '../MemberScreen/RelatedCard/RelatedCard'
+import StatusBar from './StatusBar/StatusBar'
 // Inside box layout
 const BillScreen = () => {
   return (
     <>
-      <Text variant="h2" as="h2">
-        Grunnskólar
-      </Text>
+      <Box>
+        <Text variant="eyebrow">
+          Case 97, Bill 156th Legislative Session 2025.
+        </Text>
+
+        <Text variant="h2" as="h2">
+          Grunnskólar
+        </Text>
+      </Box>
       <Webreader />
-      <Box className={styles.tabs}>
-        <Tabs
-          label="Main Tabs"
-          selected="tab1"
-          size="md"
-          contentBackground="white"
-          tabs={[
-            {
-              id: 'tab1',
-              label: 'Active',
-              content: <div></div>,
-            },
-            {
-              id: 'tab2',
-              label: 'Archive',
-              content: <div></div>,
-            },
-            {
-              id: 'tab3',
-              label: 'Reports',
-              content: <div></div>,
-            },
-          ]}
-          onChange={(id) => console.log(`Selected tab: ${id}`)}
-          onlyRenderSelectedTab={true}
-          variant="alternative"
-        />
-      </Box>
 
-      <Text variant="h3" as="h2">
-        156th Legislative Session 2025
+      <StatusBar />
+
+      <Text>
+        Anyone is free to send a written comment to the standing committee on a
+        parliamentary matter. Comments should be sent through the Althingi's
+        comment portal . If the formal comment process for a parliamentary
+        matter has not begun or the comment deadline has passed, it is possible
+        to send a comment to the email address comments@althingi.is
       </Text>
+      {/* TODO: Email Icon in heading */}
+      <CategoryCard heading="Farðu í athugasemdir alþingis" text="" />
 
-      <Box className={styles.search}>
-        <MockSearch />
-        <Button variant="utility">
-          Filter
-          <Box marginLeft={1}>
-            <Icon size="small" type="outline" icon="filter" color="blue400" />
+      {['1st discussion', '2nd discussion', 'Frumvarp eftir 2. umræðu'].map(
+        (x) => (
+          <Box className={styles.accordionBox}>
+            <Accordion>
+              <Box className={styles.accordionChild}>
+                <Text>{x}</Text>
+                <Button colorScheme="light" circle={true}>
+                  +
+                </Button>
+              </Box>
+            </Accordion>
           </Box>
-        </Button>
-      </Box>
+        ),
+      )}
 
-      <Box width="full">
-        <Divider />
-      </Box>
+      <RelatedCard>
+        <Text variant="eyebrow">Related documentaion</Text>
+        <Button variant="text">Related documentaion</Button>
+        <Button variant="text">Related documentaion</Button>
+        <Button variant="text">Related documentaion</Button>
+      </RelatedCard>
     </>
   )
 }

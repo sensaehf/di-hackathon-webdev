@@ -82,7 +82,7 @@ const BillsTable = () => {
           <T.Row>
             <T.Data>123</T.Data>
             <T.Data>1. jan 2024</T.Data>
-            <T.Data><Link href="#">Leikskólamál</Link></T.Data>
+            <T.Data><Link href="/work/lawsResolutionsAndBills/bills/2">Leikskólamál</Link></T.Data>
             <T.Data><Link href="#">Atvinnuvegaráð</Link></T.Data>
             <T.Data><Tag>1st discussion</Tag></T.Data>
           </T.Row>
