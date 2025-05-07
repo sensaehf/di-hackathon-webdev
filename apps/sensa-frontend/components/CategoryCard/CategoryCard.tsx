@@ -7,7 +7,7 @@ import { UseMeasureRef } from 'react-use/lib/useMeasure'
 
 
 import * as styles from './CategoryCard.css'
-import { Box, FocusableBox, Hyphen, Inline, LinkV2, Tag, Text } from '@island.is/island-ui/core'
+import { Box, FocusableBox, Hyphen, Inline, LinkV2, Tag, TagProps, Text, TextProps } from '@island.is/island-ui/core'
 
 export const STACK_WIDTH = 280
 

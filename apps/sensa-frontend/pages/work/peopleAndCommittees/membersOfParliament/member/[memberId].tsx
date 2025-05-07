@@ -1,8 +1,8 @@
 import { Box } from '@island.is/island-ui/core';
-import { SubLayout } from 'apps/sensa-frontend/components/Layouts/SubLayout'
-import MemberScreen from 'apps/sensa-frontend/screens/MemberScreen/MemberScreen'
 import { useRouter } from 'next/router';
 import * as styles from './memberId.css'
+import { SubLayout } from '../../../../../components/Layouts/SubLayout';
+import MemberScreen from '../../../../../screens/MemberScreen/MemberScreen';
 export default function Member() {
   const router = useRouter();
   const { memberId } = router.query;
