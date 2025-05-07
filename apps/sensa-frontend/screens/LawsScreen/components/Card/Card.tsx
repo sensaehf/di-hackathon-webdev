@@ -15,9 +15,9 @@ const Card = ({ title, shortcuts, className }: CardProps) => {
     <Text marginBottom={2} variant='eyebrow'>Shortcuts</Text>
     {/* Pills */}
     <Box className={styles.tags}>
-      <Tag variant='darkerBlue'>asdgaggfdafdgs</Tag>
-      <Tag variant='darkerBlue'>afdgfadadfgfdgaagdf</Tag>
-      <Tag variant='darkerBlue'>agfdfgddgfsdgsgsgdfsdg</Tag>
+      <Tag >asdgaggfdafdgs</Tag>
+      <Tag >afdgfadadfgfdgaagdf</Tag>
+      <Tag >agfdfgddgfsdgsgsgdfsdg</Tag>
     </Box>
   </Box>
 }

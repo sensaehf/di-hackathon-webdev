@@ -14,7 +14,7 @@ export const content = style({
 
 
 export const islandBox = style({
-  backgroundColor: blue200,
+  backgroundColor: blue100,
   paddingLeft: 20,
   paddingRight: 20
 })

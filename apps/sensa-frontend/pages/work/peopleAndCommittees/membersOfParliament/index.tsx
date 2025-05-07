@@ -1,12 +1,13 @@
 import { ParliamentMemberList } from '../../../../data/parliamentMemberList'
 import {
   Box,
-  GridContainer, 
+  GridContainer,
   Breadcrumbs
 } from '@island.is/island-ui/core'
 import { useContext } from 'react';
 import { I18nContext } from '../../../../i18n/I18n';
 import { SubLayout } from '../../../../components/Layouts/SubLayout'
+import MembersOfParliamentScreen from 'apps/sensa-frontend/screens/MembersOfParliamentScreen/MembersOfParliamentScreen';
 
 export default function MembersOfParliament() {
   const i18n = useContext(I18nContext)
@@ -20,10 +21,7 @@ export default function MembersOfParliament() {
           { title: i18n?.t.menu.peopleAndCommittees ?? '', href: i18n?.t.routes.peopleAndCommittees },
           { title: i18n?.t.menu.membersOfParliament ?? '', href: i18n?.t.routes.membersOfParliament }
         ]} />
-        <GridContainer>
-          Members of Parliament
-          <ParliamentMemberList />
-        </GridContainer>
+        <MembersOfParliamentScreen />
       </Box>
     </SubLayout>
   )
