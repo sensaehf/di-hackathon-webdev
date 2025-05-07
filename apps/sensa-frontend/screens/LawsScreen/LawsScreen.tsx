@@ -3,6 +3,7 @@ import Card from './components/Card/Card'
 import { Webreader } from 'apps/sensa-frontend/components/Webreader'
 import * as styles from './LawsScreen.css'
 const LawsScreen = () => {
+  // TODO i18n
   return (
     <>
       <Text variant="h2" as="h2">
@@ -10,11 +11,11 @@ const LawsScreen = () => {
       </Text>
       <Webreader />
       <Box className={styles.cardContainer}>
-        <Card className={styles.card} title="" shortcuts={[]} />
+        <Card className={styles.card} title="Laws" shortcuts={[]} />
         <Divider />
-        <Card className={styles.card} title="" shortcuts={[]} />
+        <Card className={styles.card} title="Resolutions" shortcuts={[]} />
         <Divider />
-        <Card className={styles.card} title="" shortcuts={[]} />
+        <Card className={styles.card} title="Bills" shortcuts={[]} href={'/work/lawsResolutionsAndBills/bills'} />
       </Box>
     </>
   )
