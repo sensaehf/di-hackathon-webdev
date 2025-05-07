@@ -3,19 +3,12 @@ import {
   AccordionItem,
   Box,
   Button,
-  Divider,
-  Icon,
-  Tabs,
-  Tag,
   Text,
 } from '@island.is/island-ui/core'
-import { Webreader } from 'apps/sensa-frontend/components/Webreader'
-import { Table as T } from '@island.is/island-ui/core'
+import { Webreader } from '../../components/Webreader'
 
 import * as styles from './BillScreen.css'
-import MockSearch from 'apps/sensa-frontend/components/MockSearch/MockSearch'
-import Link from 'next/link'
-import { CategoryCard } from 'apps/sensa-frontend/components/CategoryCard/CategoryCard'
+import { CategoryCard } from '../../components/CategoryCard/CategoryCard'
 import RelatedCard from '../MemberScreen/RelatedCard/RelatedCard'
 import StatusBar from './StatusBar/StatusBar'
 // Inside box layout
@@ -54,6 +47,7 @@ const BillScreen = () => {
             label={x}
             startExpanded={false}
           >
+            {''}
           </AccordionItem>
         </Accordion>
       </Box>
