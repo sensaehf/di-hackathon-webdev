@@ -4,9 +4,11 @@ import {
   Breadcrumbs,
   Text,
   TopicCard,
+  Button
 } from '@island.is/island-ui/core'
 import { Webreader } from 'apps/sensa-frontend/components/Webreader'
 import { useI18n } from 'apps/sensa-frontend/i18n'
+
 
 const HandbookAndReportsScreen = () => {
   const i18n = useI18n()
@@ -81,7 +83,48 @@ const HandbookAndReportsScreen = () => {
           label={i18n.t.about.handbookAndMaterials}
           id="accordion-5"
         >
-          <></>
+          <Box marginBottom={2}>
+            <Text variant='h4'>AlÞingi Handbook</Text>
+          </Box>
+          <Box marginBottom={2}>
+            <Text>
+              The AlÞingi Handbook is published after each parliamentary election and was first issued in 1984. Since 1999, it has also been available electronically. The handbook provides an overview of Parliament’s work, including details of recent elections, the composition of Parliament, and records about its members. It contains biographies, statistics, and information on parties and committees. Appendices cover the staff of the AlÞingi Secretariat, parliamentary parties, and related institutions.
+            </Text>
+          </Box>
+          <Box marginBottom={2}>
+            <TopicCard href={i18n.t.routes.wip} tag="pdf" colorScheme="blue">
+              AlÞingi Handbook 2017
+            </TopicCard>
+          </Box>
+          <Box marginBottom={2}>
+            <Button 
+              colorScheme="default"
+              variant="ghost"
+            >
+              View older handbooks +
+            </Button>
+          </Box>
+          <Box marginBottom={2}>
+            <Text variant='h4'>Guide for Members of Parliament</Text>
+          </Box>
+          <Box marginBottom={2}>
+            <Text>
+            The publication Háttvartur Þingmanð contains information about work at parliamentary sessions and in parliamentary committees, about the preparation and handling of parliamentary matters, and about MPs' working conditions and terms of employment; furthermore, information about the activities of the office and the services it provides to MPs.
+            </Text>
+          </Box>
+          <Box marginBottom={2}>
+            <TopicCard href={i18n.t.routes.wip} tag="pdf" colorScheme="blue">
+              Guide for Members of Parliament 2024
+            </TopicCard>
+          </Box>
+          <Box marginBottom={2}>
+            <Button 
+              colorScheme="default"
+              variant="ghost"
+            >
+              View older guides +
+            </Button>
+          </Box>
         </AccordionCard>
       </Box>
       <Box marginBottom={2}>
@@ -130,6 +173,14 @@ const HandbookAndReportsScreen = () => {
             <TopicCard href={i18n.t.routes.wip}  tag="pdf" colorScheme="blue">
               {i18n.t.about.annualReport} 2015
             </TopicCard>
+          </Box>
+          <Box marginBottom={2}>
+            <Button 
+              colorScheme="default"
+              variant="ghost"
+            >
+              Load more reports +
+            </Button>
           </Box>
         </AccordionCard>
       </Box>
