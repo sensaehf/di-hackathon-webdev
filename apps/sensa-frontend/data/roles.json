@@ -3,5 +3,20 @@
         "id": "1",
         "name": "Formaður",
         "nameEn": "Chair" 
+    },
+    {
+        "id": "2",
+        "name": "1. Vara¬formaður",
+        "nameEn": "1st Deputy Chair" 
+    },
+    {
+        "id": "3",
+        "name": "2. Vara¬formaður",
+        "nameEn": "2nd Deputy Chair" 
+    },
+    {
+        "id": "4",
+        "name": "Nefndarmaður",
+        "nameEn": "Member" 
     }
 ]

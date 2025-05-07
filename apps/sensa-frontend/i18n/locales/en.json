@@ -1,5 +1,6 @@
 {
   "home": {
+    "locale": "en",
     "title": "Parliament",
     "menu": "Menu",
     "about": "About",
@@ -13,13 +14,24 @@
     "membersOfParliament": "Members Of Parliament",
     "sessionsAndBills": "Laws, Resolutions and Bills",
     "parties": "Parties",
+    "party": "Party",
     "committees": "Committees",
+    "committee": "Committee",
     "constituencies": "Constituencies",
+    "constituency": "Constituency",
     "speaker": "The Speaker and The Speakers Committee",
     "history": "History",
     "news": "News",
     "about": "About Parliament",
-    "sessions": "Sessions"
+    "sessions": "Sessions",
+    "session": "Session",
+    "bills": "Bills",
+    "bill": "Bill",
+    "laws": "Laws (Legislation)",
+    "law": "Law",
+    "resolutions": "Resolutions",
+    "resolution": "Resolution",
+    "handbooksAndReports": "Handbooks and Reports"
   },
   "routes": {
     "workOfParliament": "/work",
