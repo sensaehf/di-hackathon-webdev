@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useContext } from 'react';
 import { I18nContext } from '../../i18n/I18n';
-
+import * as styles from './SideBar.css'
 import {
   Box,
   Navigation
@@ -13,7 +13,7 @@ const SideBar = () => {
   const i18n = useContext(I18nContext)
 
   const aboutText = () => {
-    return i18n?.t.home.about + ' ' + i18n?.t.home.title 
+    return i18n?.t.home.about + ' ' + i18n?.t.home.title
   }
 
   const isActive = (path: string | undefined) => {
@@ -82,7 +82,7 @@ const SideBar = () => {
   ]
 
   return (
-    <Box>
+    <Box className={styles.sidebar}>
       <Navigation
         baseId=''
         activeItemTitle=""
