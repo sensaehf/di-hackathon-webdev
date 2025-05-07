@@ -3,6 +3,7 @@ import { useContext, useState } from 'react'
 import { I18nContext } from '../../i18n/I18n'
 import {
   Accordion,
+  AccordionItem,
   Box,
   Breadcrumbs,
   Button,
@@ -17,6 +18,7 @@ import { Webreader } from 'apps/sensa-frontend/components/Webreader'
 import BioFrame from './BioFrame/BioFrame'
 import * as styles from './MemberScreen.css'
 import RelatedCard from './RelatedCard/RelatedCard'
+import VoiceSample from './VoiceSample/VoiceSample'
 
 const MemberScreen = ({ memberId }: { memberId: string }) => {
   const [error, setError] = useState<boolean>(false)
@@ -64,37 +66,46 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
         <Button variant="text">Future Committee</Button>
       </RelatedCard>
       <RelatedCard>
-        <RelatedCardFrame member={member}/>
+        <RelatedCardFrame member={member} />
       </RelatedCard>
       <Box className={styles.accordionBox}>
-        <Accordion>
-          <Box className={styles.accordionChild}>
-            <Text>Parlimentarian</Text>
-            <Button colorScheme="light" circle={true}>
-              +
-            </Button>
-          </Box>
+      <Accordion>
+          <AccordionItem
+            id="item-1"
+            label="Parliamentarian"
+            startExpanded={false}
+          >
+            <Text>
+            {member.party}
+            </Text>
+          </AccordionItem>
         </Accordion>
       </Box>
 
       <Box className={styles.accordionBox}>
-        <Accordion>
-          <Box className={styles.accordionChild}>
-            <Text>Parlimentarian</Text>
-            <Button colorScheme="light" circle={true}>
-              +
-            </Button>
-          </Box>
+      <Accordion>
+          <AccordionItem
+            id="item-1"
+            label="Biography"
+            startExpanded={false}
+          >
+            <Text>
+            {member.bio}
+            </Text>
+          </AccordionItem>
         </Accordion>
       </Box>
+
+
       <Box className={styles.accordionBox}>
         <Accordion>
-          <Box className={styles.accordionChild}>
-            <Text>Parlimentarian</Text>
-            <Button colorScheme="light" circle={true}>
-              +
-            </Button>
-          </Box>
+          <AccordionItem
+            id="item-1"
+            label="Voice sample"
+            startExpanded={false}
+          >
+            <VoiceSample />
+          </AccordionItem>
         </Accordion>
       </Box>
     </Box>
@@ -107,7 +118,6 @@ const RelatedCardFrame = ({ member }: { member?: ParliamentMember }) => {
     committee = getCommitteeById(member?.committees.current.committeeId)
   }
   console.log(member?.committees.current.committeeId)
-
 
   return (
     <>
