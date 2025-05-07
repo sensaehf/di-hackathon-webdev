@@ -35,12 +35,14 @@ const AboutScreen = () => {
         <CategoryCard
           heading="People, Structures and Governance"
           text="Parliamentary institutions, committees, secretariat, and administrative structure."
+          href={i18n.t.routes.wip} 
         ></CategoryCard>
       </Box>
       <Box marginBottom={2}>
         <CategoryCard
           heading="Public Engagement and Educational Resources"
           text="Visits, outreach, education materials and public interaction."
+          href={i18n.t.routes.wip} 
         ></CategoryCard>
       </Box>
     </>

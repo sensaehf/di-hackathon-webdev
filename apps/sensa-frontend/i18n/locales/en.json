@@ -8,6 +8,14 @@
     "wipText1": "We're currently working on this page to bring you the most up-to-date and useful information. Please check back soon as we continue to develop and improve this section.",
     "wipText2": "Thank you for your patience!"
   },
+  "about": {
+    "annualReport": "Annual Report",
+    "annualReports": "Annual Reports",
+    "handbookAndMaterials": "AlÞingi Handbook and Manuals",
+    "otherReportsAndMaterials": "",
+    "officialPublishedContent": "Official Published Content",
+    "infoAboutParliament": "Information about AlÞingi"
+  },
   "menu": {
     "workOfParliament": "Work of Parliament",
     "peopleAndCommittees": "People and Committees",
@@ -46,7 +54,8 @@
     "news": "/news",
     "about": "/about",
     "handbooksAndReports": "/about/handbooksAndReports",
-    "sessions": "/sessions"
+    "sessions": "/sessions",
+    "wip": "/wip"
   },
   "footer": {
     "middleLinksTitle": "Categories",

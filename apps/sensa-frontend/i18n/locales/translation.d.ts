@@ -9,6 +9,7 @@
 
 export interface Translation {
   home: TranslationHome
+  about: TranslationAbout
   menu: MenuAndRoute
   routes: MenuAndRoute
   header: Header
@@ -25,6 +26,15 @@ export interface TranslationHome {
   wipText2: string
 }
 
+export type TranslationAbout ={
+  annualReport: string
+  annualReports: string
+  handbookAndMaterials: string
+  otherReportsAndMaterials: string
+  officialPublishedContent: string
+  infoAboutParliament: string
+}
+
 export interface MenuAndRoute {
   workOfParliament: string
   peopleAndCommittees: string
@@ -39,6 +49,7 @@ export interface MenuAndRoute {
   history: string
   speaker: string
   sessions: string
+  wip: string
 }
 
 export interface AccessControl {
