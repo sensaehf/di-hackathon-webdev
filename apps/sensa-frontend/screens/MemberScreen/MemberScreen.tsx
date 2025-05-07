@@ -12,9 +12,9 @@ import {
 import {
   getCommitteeById,
   getParliamentMemberById,
-} from 'apps/sensa-frontend/data/endpoints'
-import { ParliamentMember } from 'apps/sensa-frontend/data/types'
-import { Webreader } from 'apps/sensa-frontend/components/Webreader'
+} from '../../data/endpoints'
+import { ParliamentMember } from '../../data/types'
+import { Webreader } from '../../components/Webreader'
 import BioFrame from './BioFrame/BioFrame'
 import * as styles from './MemberScreen.css'
 import RelatedCard from './RelatedCard/RelatedCard'

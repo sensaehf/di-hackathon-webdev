@@ -1,5 +1,6 @@
 import {
   Accordion,
+  AccordionItem,
   Box,
   Button,
   Divider,
@@ -36,7 +37,7 @@ const BillScreen = () => {
 
       <Text>
         Anyone is free to send a written comment to the standing committee on a
-        parliamentary matter. Comments should be sent through the Althingi's
+        parliamentary matter. Comments should be sent through the Althingi&apos;s
         comment portal . If the formal comment process for a parliamentary
         matter has not begun or the comment deadline has passed, it is possible
         to send a comment to the email address comments@althingi.is
@@ -46,16 +47,16 @@ const BillScreen = () => {
 
       {['1st discussion', '2nd discussion', 'Frumvarp eftir 2. umræðu'].map(
         (x) => (
-          <Box className={styles.accordionBox}>
-            <Accordion>
-              <Box className={styles.accordionChild}>
-                <Text>{x}</Text>
-                <Button colorScheme="light" circle={true}>
-                  +
-                </Button>
-              </Box>
-            </Accordion>
-          </Box>
+          <Box key={x} className={styles.accordionBox}>
+        <Accordion>
+          <AccordionItem
+            id="item-1"
+            label={x}
+            startExpanded={false}
+          >
+          </AccordionItem>
+        </Accordion>
+      </Box>
         ),
       )}
 

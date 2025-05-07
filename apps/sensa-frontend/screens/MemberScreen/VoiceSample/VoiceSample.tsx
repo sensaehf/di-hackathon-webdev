@@ -1,6 +1,6 @@
 import { Box, Button, Text } from '@island.is/island-ui/core'
 import * as styles from './VoiceSample.css'
-import AudioPlayer from 'apps/sensa-frontend/components/Audio/Audio'
+import AudioPlayer from '../../../components/Audio/Audio'
 const VoiceSample = () => {
   return (
     <Box className={styles.box}>
@@ -13,7 +13,7 @@ const VoiceSample = () => {
         </Box>
         <Box className={styles.audioBoxInner}>
           <Text variant="small">
-          11.11.1986Joint Parliament: 15th session, 109th legislative session.See column 774 in Section B of the Althingi Gazette. (658)
+          11.11.1986 Joint Parliament: 15th session, 109th legislative session.See column 774 in Section B of the Althingi Gazette. (658)
           </Text>
         </Box>
       </Box>
