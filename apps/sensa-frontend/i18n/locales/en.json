@@ -100,26 +100,58 @@
     "captionSource": "/captions.vtt",
     "transcript": "Meeting started at 10:57 AM. Miscellaneous: Election of a temporary member of the jury on the qualifications of candidates for the office of judge, to make a proposal for the appointment of a substitute judge to the Supreme Court to consider a request for leave to appeal the judgment of the Supreme Court in case no. 273/2023. Postponement of meetings of the Althing. Icelandic Human Rights Institute (postponement of entry into force). Social security (lump sum payment to old-age pensioners). Purchase of residential property in Grindavík (legal domicile). At 11:03 a.m. meeting break. At 11:14 the parliamentary session continues. 11:15 a.m. break. At 11:26 the parliamentary session continues. Meeting adjourned at 11:28."
   },
-"laws": {
-  "title": "Laws, Resolutions and Bills",
-  "sections": {
-    "laws": {
-      "title": "Laws",
-      "description": "Laws are rules set by authorities to maintain justice and order in society. They define what is permitted and prohibited and outline penalties for violations.",
-      "shortcuts": ["Collection of laws", "Repealed laws", "Instructions"]
-    },
-    "resolutions": {
-      "title": "Resolutions",
-      "description": "Resolutions are formal statements or opinions issued by legislative bodies without legal force. They are often used to express the will or policy of the parliament.",
-      "shortcuts": ["Collection of Resolutions", "Repealed laws", "Instructions"]
-    },
-    "bills": {
-      "title": "Bills",
-      "description": "Bills are proposals for new laws or amendments to existing laws submitted to Parliament. They must go through debate and be approved before becoming law.",
-      "shortcuts": ["Bills in progress", "Rejected bills", "Instructions"]
+  "laws": {
+    "title": "Laws, Resolutions and Bills",
+    "sections": {
+      "laws": {
+        "title": "Laws",
+        "description": "Laws are rules set by authorities to maintain justice and order in society. They define what is permitted and prohibited and outline penalties for violations.",
+        "shortcuts": ["Collection of laws", "Repealed laws", "Instructions"]
+      },
+      "resolutions": {
+        "title": "Resolutions",
+        "description": "Resolutions are formal statements or opinions issued by legislative bodies without legal force. They are often used to express the will or policy of the parliament.",
+        "shortcuts": [
+          "Collection of Resolutions",
+          "Repealed laws",
+          "Instructions"
+        ]
+      },
+      "bills": {
+        "title": "Bills",
+        "description": "Bills are proposals for new laws or amendments to existing laws submitted to Parliament. They must go through debate and be approved before becoming law.",
+        "shortcuts": ["Bills in progress", "Rejected bills", "Instructions"]
+      }
     }
-  }
-},
+  },
+ "bills": {
+    "title": "Bills",
+    "tabs": {
+      "active": "Active",
+      "archive": "Archive",
+      "reports": "Reports"
+    },
+    "sessionHeading": "156th Legislative Session 2025",
+    "filterButton": "Filter",
+    "table": {
+      "headers": {
+        "caseNumber": "Case",
+        "date": "Date",
+        "title": "Bill title",
+        "submitter": "Submitter",
+        "status": "Status"
+      },
+      "rows": [
+        {
+          "caseNumber": "123",
+          "date": "1 Jan 2024",
+          "title": "Preschool Act",
+          "submitter": "Ministry of Industry",
+          "status": "1st discussion"
+        }
+      ]
+    }
+  },
 
 
   "member": {

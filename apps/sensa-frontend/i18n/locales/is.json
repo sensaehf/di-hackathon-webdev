@@ -160,27 +160,54 @@
     "transcript": "Fundur hófst kl. 10:57. Ýmis mál: Kosning til bráðabirgða í dómnefnd sem fjallar um hæfi umsækjenda um embætti dómara og gerir tillögu um skipan varadómara við Hæstarétt til að fjalla um beiðni um áfrýjunarleyfi í máli nr. 273/2023. Frestun funda Alþingis. Mannréttindastofnun Íslands (frestun gildistöku). Almannatryggingar (eingreiðsla til ellilífeyrisþega). Kaup á íbúðarhúsnæði í Grindavík (lögheimili). Kl. 11:03 fundarhlé. Kl. 11:14 heldur þingfundur áfram. Kl. 11:15 fundarhlé. Kl. 11:26 heldur þingfundur áfram. Fundi slitið kl. 11:28."
   },
   "laws": {
-  "title": "Lög, þingsályktanir og frumvörp",
-  "sections": {
-    "laws": {
-      "title": "Lög",
-      "description": "Lög eru reglur settar af stjórnvöldum til að viðhalda réttlæti og reglu í samfélaginu. Þær kveða á um hvað sé leyfilegt og óleyfilegt og hvernig brot skuli sæta viðurlögum.",
-      "shortcuts": ["Lagasafn", "Feld lög", "Leiðbeiningar"]
-    },
-    "resolutions": {
-      "title": "Þingsályktanir",
-      "description": "Ályktanir eru formlegar yfirlýsingar eða skoðanir sem settar eru fram af löggjafarsamkundum án þess að hafa lagalegt gildi. Þær eru oft notaðar til að lýsa vilja eða stefnu þingsins.",
-      "shortcuts": ["Safn þingsálytana", "Feld lög", "Leiðbeiningar"]
-    },
-    "bills": {
-      "title": "Frumvörp",
-      "description": "Lagafrumvörp eru tillögur að nýjum lögum eða breytingum á gildandi lögum sem lögð eru fyrir Alþingi. Þau þurfa að fara í gegnum umræðu og samþykkt í þinginu áður en þau verða að lögum.",
-      "shortcuts": ["Frumvörp í vinnslu", "Feld frumvörp", "Leiðbeiningar"]
+    "title": "Lög, þingsályktanir og frumvörp",
+    "sections": {
+      "laws": {
+        "title": "Lög",
+        "description": "Lög eru reglur settar af stjórnvöldum til að viðhalda réttlæti og reglu í samfélaginu. Þær kveða á um hvað sé leyfilegt og óleyfilegt og hvernig brot skuli sæta viðurlögum.",
+        "shortcuts": ["Lagasafn", "Feld lög", "Leiðbeiningar"]
+      },
+      "resolutions": {
+        "title": "Þingsályktanir",
+        "description": "Ályktanir eru formlegar yfirlýsingar eða skoðanir sem settar eru fram af löggjafarsamkundum án þess að hafa lagalegt gildi. Þær eru oft notaðar til að lýsa vilja eða stefnu þingsins.",
+        "shortcuts": ["Safn þingsálytana", "Feld lög", "Leiðbeiningar"]
+      },
+      "bills": {
+        "title": "Frumvörp",
+        "description": "Lagafrumvörp eru tillögur að nýjum lögum eða breytingum á gildandi lögum sem lögð eru fyrir Alþingi. Þau þurfa að fara í gegnum umræðu og samþykkt í þinginu áður en þau verða að lögum.",
+        "shortcuts": ["Frumvörp í vinnslu", "Feld frumvörp", "Leiðbeiningar"]
+      }
     }
+  },
+
+  "bills": {
+  "title": "Frumvörp",
+  "tabs": {
+    "active": "Virk",
+    "archive": "Skjalasafn",
+    "reports": "Skýrslur"
+  },
+  "sessionHeading": "156. löggjafarþing 2025",
+  "filterButton": "Sía",
+  "table": {
+    "headers": {
+      "caseNumber": "Mál",
+      "date": "Dagsetning",
+      "title": "Heiti frumvarps",
+      "submitter": "Flutningsaðili",
+      "status": "Staða"
+    },
+    "rows": [
+      {
+        "caseNumber": "123",
+        "date": "1. janúar 2024",
+        "title": "Leikskólalög",
+        "submitter": "Atvinnuvega- og nýsköpunarráðuneytið",
+        "status": "1. umræða"
+      }
+    ]
   }
 },
-
-
 
   "about": {
     "annualReport": "Ársskýrslur",

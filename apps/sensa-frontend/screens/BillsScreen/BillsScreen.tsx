@@ -1,18 +1,22 @@
 import { Box, Button, Divider, Icon, Tabs, Tag, Text } from '@island.is/island-ui/core'
-import { Webreader } from 'apps/sensa-frontend/components/Webreader'
+import { Webreader } from '../../components/Webreader'
 import { Table as T } from '@island.is/island-ui/core'
-
 import * as styles from './BillsScreen.css'
-import MockSearch from 'apps/sensa-frontend/components/MockSearch/MockSearch'
+import MockSearch from '../../components/MockSearch/MockSearch'
 import Link from 'next/link'
-// Inside box layout
+import { useI18n } from '../../i18n'
+
 const BillsScreen = () => {
+  const i18n = useI18n()
+  const { title, tabs, sessionHeading, filterButton, table } = i18n.t.bills
+
   return (
     <>
       <Text variant="h2" as="h2">
-        Bills
+        {title}
       </Text>
       <Webreader />
+
       <Box className={styles.tabs}>
         <Tabs
           label="Main Tabs"
@@ -22,17 +26,17 @@ const BillsScreen = () => {
           tabs={[
             {
               id: 'tab1',
-              label: 'Active',
+              label: tabs.active,
               content: <div></div>,
             },
             {
               id: 'tab2',
-              label: 'Archive',
+              label: tabs.archive,
               content: <div></div>,
             },
             {
               id: 'tab3',
-              label: 'Reports',
+              label: tabs.reports,
               content: <div></div>,
             },
           ]}
@@ -43,52 +47,57 @@ const BillsScreen = () => {
       </Box>
 
       <Text variant="h3" as="h2">
-        156th Legislative Session 2025
+        {sessionHeading}
       </Text>
 
       <Box className={styles.search}>
         <MockSearch />
         <Button variant="utility">
-          Filter
+          {filterButton}
           <Box marginLeft={1}>
             <Icon size="small" type="outline" icon="filter" color="blue400" />
           </Box>
         </Button>
       </Box>
 
-     <BillsTable />
+      <BillsTable headers={table.headers} />
 
-     <Box width='full'>
+      <Box width="full">
         <Divider />
-        </Box>
+      </Box>
     </>
   )
 }
 
-const BillsTable = () => {
+const BillsTable = ({ headers }: { headers: any }) => {
   return (
     <T.Table>
       <T.Head>
         <T.Row>
-          <T.HeadData>Mál</T.HeadData>
-          <T.HeadData>Dagsetning</T.HeadData>
-          <T.HeadData>Heiti máls</T.HeadData>
-          <T.HeadData>Flutningsmaður</T.HeadData>
-          <T.HeadData>Staða</T.HeadData>
+          <T.HeadData>{headers.caseNumber}</T.HeadData>
+          <T.HeadData>{headers.date}</T.HeadData>
+          <T.HeadData>{headers.title}</T.HeadData>
+          <T.HeadData>{headers.submitter}</T.HeadData>
+          <T.HeadData>{headers.status}</T.HeadData>
         </T.Row>
       </T.Head>
       <T.Body>
         {[1, 2, 3].map((x) => (
-          <T.Row>
+          <T.Row key={x}>
             <T.Data>123</T.Data>
             <T.Data>1. jan 2024</T.Data>
-            <T.Data><Link href="/work/lawsResolutionsAndBills/bills/2">Leikskólamál</Link></T.Data>
-            <T.Data><Link href="#">Atvinnuvegaráð</Link></T.Data>
-            <T.Data><Tag>1st discussion</Tag></T.Data>
+            <T.Data>
+              <Link href="/work/lawsResolutionsAndBills/bills/2">Leikskólamál</Link>
+            </T.Data>
+            <T.Data>
+              <Link href="#">Atvinnuvegaráð</Link>
+            </T.Data>
+            <T.Data>
+              <Tag>1st discussion</Tag>
+            </T.Data>
           </T.Row>
         ))}
       </T.Body>
-
     </T.Table>
   )
 }
