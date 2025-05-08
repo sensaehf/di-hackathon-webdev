@@ -62,7 +62,7 @@ export const contactLine = style({
 export const socialMedia = style({
   display: 'flex',
   alignItems: 'flex-start',
-  gap: '8px',
+  gap: '32px',
 })
 
 export const socialMediaLine = style({

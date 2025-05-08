@@ -1,5 +1,4 @@
 import { Box, Tag, Text } from '@island.is/island-ui/core'
-import Webreader from 'apps/sensa-frontend/components/Webreader/Webreader'
 import { ClassValue } from 'classnames/types'
 import * as styles from './Card.css'
 import Link from 'next/link'
@@ -7,22 +6,42 @@ import { Url } from 'next/dist/shared/lib/router/router'
 export interface CardProps {
   title: string
   shortcuts: string[]
+  description?: string
   className?: ClassValue
   href?: Url
 }
 
-const Card = ({ title, shortcuts, className, href }: CardProps) => {
-  return <Box className={className}>
-    <Text marginBottom={1} variant='h2' as='h2'><Link href={href ?? '#'}>{title}</Link></Text>
-    <Text marginBottom={2} variant='default' as='p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem distinctio, quaerat quisquam odio saepe architecto. Eius odio mollitia quasi cupiditate, possimus tenetur voluptate blanditiis error, excepturi maxime impedit tempora debitis.</Text>
-    <Text marginBottom={2} variant='eyebrow'>Shortcuts</Text>
-    {/* Pills */}
-    <Box className={styles.tags}>
-      <Tag >asdgaggfdafdgs</Tag>
-      <Tag >afdgfadadfgfdgaagdf</Tag>
-      <Tag >agfdfgddgfsdgsgsgdfsdg</Tag>
+
+const Card = ({ title, shortcuts, description, className, href }: CardProps) => {
+  return (
+    <Box className={className}>
+      <Text marginBottom={1} variant="h2" as="h2">
+        <Link href={href ?? '#'}>{title}</Link>
+      </Text>
+
+      {/* Dynamic description */}
+      {description && (
+        <Text marginBottom={2} variant="default" as="p">
+          {description}
+        </Text>
+      )}
+
+      {/* Dynamic shortcuts */}
+      {shortcuts.length > 0 && (
+        <>
+          <Text marginBottom={2} variant="eyebrow">
+            Flýtileiðir
+          </Text>
+          <Box className={styles.tags}>
+            {shortcuts.map((shortcut, index) => (
+              <Tag key={index}>{shortcut}</Tag>
+            ))}
+          </Box>
+        </>
+      )}
     </Box>
-  </Box>
+  )
 }
+
 
 export default Card
