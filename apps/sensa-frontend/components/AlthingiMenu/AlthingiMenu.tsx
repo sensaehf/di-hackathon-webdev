@@ -10,7 +10,7 @@ const AlthingiMenu: React.FC<AlthingiMenuProps> = ({ menuButton }) => {
     <Menu
       baseId="mainMenu"
       menuButton={menuButton}
-      mainTitle="Main Menu"
+      mainTitle=""
       mainLinks={[
         { text: 'Home', href: '/' },
         { text: 'About', href: '/about' },
