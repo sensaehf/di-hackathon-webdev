@@ -7,7 +7,60 @@
     "wipHeader": "Whoops! This page is still under construction.",
     "wipText1": "We're currently working on this page to bring you the most up-to-date and useful information. Please check back soon as we continue to develop and improve this section.",
     "wipText2": "Thank you for your patience!",
-    "header": "Alþingi – National Parliament of Iceland"
+    "header": "Alþingi – National Parliament of Iceland",
+    "workHeader": "Work Of Alþingi",
+    "workHeaderContent": {
+      "people": {
+        "title": "People and Committees",
+        "content": "Explore the structure of Parliament through profiles of Members of Parliament, parliamentary parties, parliamentary committees, and the Speaker’s Committee."
+      },
+      "sessions": {
+        "title": "Sessions and Speeches",
+        "content": "Access recordings, agendas, transcripts, and search tools related to parliamentary sessions and speeches, including speaking schedules, speech archives, and rules on speaking time."
+      },
+      "laws": {
+        "title": "Laws, Resolutions and Bills",
+        "content": "Browse Iceland’s legislative work, including collections of laws, resolutions, and bills, as well as inquiries, reports, opinions, and the current status of parliamentary matters."
+      }
+    },
+    "whatsHappening": {
+      "title": "What is happening",
+      "upcomingEvents": "Upcoming events",
+      "agenda": "Agenda for next session",
+      "allPlannedEvents": "View all planned events"
+    },
+    "livestream": {
+      "upcoming": "Upcoming livestream",
+      "other": "Other broadcasting options ",
+      "previous": "Previous recordings"
+    },
+    "news": {
+      "title": "News and announcements",
+      "viewAll": "View all news and announcements",
+      "items": [
+        {
+          "title": "The Icelandic Human Rights Institute is launched",
+          "introduction": "The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024. The office's website is www.mannrettindi.is, but it is still under construction.",
+          "date": "2025-05-01",
+          "href": "#",
+          "image": ""
+        },
+        {
+          "title": "Impromptu questions on Thursday, May 8th",
+          "introduction": "Impromptu questions will be addressed during the parliamentary session on Thursday, May 8th.",
+          "date": "2025-05-08",
+          "href": "#",
+          "image": ""
+        },
+        {
+          "title": "Human Rights Institute Committee Day – May 9th",
+          "introduction": "The Icelandic Human Rights Institute will host a committee day on Friday, May 9th.",
+          "date": "2025-05-09",
+          "href": "#",
+          "image": "https://picsum.photos/200"
+        }
+      ]
+    }
   },
   "about": {
     "annualReport": "Annual Report",

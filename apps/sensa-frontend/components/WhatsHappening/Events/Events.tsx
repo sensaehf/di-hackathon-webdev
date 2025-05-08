@@ -1,6 +1,9 @@
 import { Box, Button, Text } from '@island.is/island-ui/core'
 import * as styles from './Events.css'
+import { useI18n } from '../../../i18n'
 const Events = () => {
+
+  const i18n = useI18n()
   return (
     <Box className={styles.root} >
       <Box className={styles.innerBox} marginBottom={6}>
@@ -45,7 +48,7 @@ const Events = () => {
       </Box>
 
       <Button variant="text" size="small">
-        View all planned events
+      {i18n.t.home.whatsHappening?.allPlannedEvents}
       </Button>
     </Box>
   )
