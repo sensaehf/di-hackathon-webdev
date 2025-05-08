@@ -6,8 +6,8 @@ const AboutScreen = () => {
   const i18n = useI18n()
 
   return (
-    <>
-      <Box marginBottom={2}>
+    <Box marginLeft={8}>
+      <Box  marginBottom={2}>
         <Breadcrumbs
           items={[
             { title: i18n?.t.home.title ?? '', href: '/' },
@@ -45,7 +45,7 @@ const AboutScreen = () => {
           href={i18n.t.routes.wip} 
         ></CategoryCard>
       </Box>
-    </>
+    </Box>
   )
 }
 

@@ -7,14 +7,12 @@ import { useContext } from 'react';
 import { I18nContext } from '../../../../i18n/I18n';
 import { SubLayout } from '../../../../components/Layouts/SubLayout'
 
-import UnderConstruction from '../../../../components/UnderConstruction/UnderConstruction'
-
 export default function Parties() {
     const i18n = useContext(I18nContext)
   
     return (
       <SubLayout>
-        <Box paddingBottom={12}>
+        <Box marginLeft={8} paddingBottom={12}>
           <Breadcrumbs items={[
             { title: i18n?.t.home.title ?? '', href: "/" },
             { title: i18n?.t.menu.workOfParliament ?? '', href: i18n?.t.routes.workOfParliament },
@@ -22,7 +20,7 @@ export default function Parties() {
             { title: i18n?.t.menu.parties ?? '', href: i18n?.t.routes.parties }
           ]} />
           <GridContainer>
-            <UnderConstruction />
+            Parties
           </GridContainer>
         </Box>
       </SubLayout>

@@ -8,14 +8,14 @@ export default function Committees() {
 
   return (
     <SubLayout>
-      <Box>
+      <Box marginLeft={8} >
         <Breadcrumbs items={[
           { title: i18n?.t.home.title ?? '', href: "/" },
           { title: i18n?.t.menu.workOfParliament ?? '', href: i18n?.t.routes.workOfParliament },
           { title: i18n?.t.menu.peopleAndCommittees ?? '', href: i18n?.t.routes.peopleAndCommittees },
           { title: i18n?.t.menu.committees ?? '', href: i18n?.t.routes.committees }
         ]} />
-        
+        Committees
       </Box>
     </SubLayout>
   )

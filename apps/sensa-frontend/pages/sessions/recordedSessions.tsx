@@ -9,7 +9,7 @@ const Page = () => {
   const i18n = useContext(I18nContext)
 
   return (<SubLayout>
-    <Box className={styles.root}>
+    <Box marginLeft={8} >
       <Breadcrumbs items={[
         { title: i18n?.t.home.title ?? '', href: "/" },
         { title: i18n?.t.menu.workOfParliament ?? '', href: i18n?.t.routes.workOfParliament },

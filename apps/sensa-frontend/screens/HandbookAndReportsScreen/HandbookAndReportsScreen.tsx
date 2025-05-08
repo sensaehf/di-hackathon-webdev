@@ -14,7 +14,7 @@ const HandbookAndReportsScreen = () => {
   const i18n = useI18n()
 
   return (
-    <Box marginBottom={6}>
+    <Box marginLeft={8} marginBottom={6}>
       <Box marginBottom={2}>
         <Breadcrumbs
           items={[
