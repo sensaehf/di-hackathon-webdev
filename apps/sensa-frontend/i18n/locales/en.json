@@ -67,7 +67,8 @@
     "items": [
       {
         "heading": "Members of Parliament",
-        "text": "See who sits in Parliament today. Find contact details, biographies, and seating charts for MPs, deputies, and substitutes."
+        "text": "See who sits in Parliament today. Find contact details, biographies, and seating charts for MPs, deputies, and substitutes.",
+        "href": "/work/peopleAndCommittees/membersOfParliament"
       },
       {
         "heading": "Parties",
