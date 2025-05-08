@@ -10,6 +10,10 @@ export interface MemberCardProps {
 const MemberCard = ({ member }: MemberCardProps) => {
   const i18n = useI18n()
 
+  const heading = (member: ParliamentMember) => {
+    return member.name.fullName
+  }
+
   const tags = [
     { label: 'label', href: '#' },
     { label: 'label', href: '#' },
@@ -21,7 +25,7 @@ const MemberCard = ({ member }: MemberCardProps) => {
         alt=""
         src={member.image.url}
         text={i18n.t.home.locale === "is" ? member.bio : member.bioEn} 
-        heading={member.name.fullName}
+        heading={`${member.name.fullName} (${member.name.abbreviation})`} 
         tags={tags}
         href={`${i18n.t.routes.member}/${member.id}`}
       />
