@@ -1,5 +1,5 @@
-import { Menu } from '@island.is/island-ui/core'
 import React from 'react'
+import Menu from '../Menu/Menu'
 
 interface AlthingiMenuProps {
   menuButton: React.ReactElement
@@ -10,30 +10,34 @@ const AlthingiMenu: React.FC<AlthingiMenuProps> = ({ menuButton }) => {
     <Menu
       baseId="mainMenu"
       menuButton={menuButton}
-      mainTitle="Main Menu"
+      mainTitle=""
       mainLinks={[
         { text: 'Home', href: '/' },
         { text: 'About', href: '/about' },
       ]}
       asideTopLinks={[
         {
-          text: 'About Alþingi',
+          text: 'Um Alþingi',
           href: '/services',
           sub: [
-            { text: 'Alþingi and how it works', href: '/services/consulting' },
-            { text: 'Development', href: '/services/dev' },
-          ],
+            { text: 'Alþingi og hvernig það virkar', href: '/services/consulting' },
+            { text: 'Fólk, skipulag og stjórnkerfi', href: '/services/dev' },
+            { text: 'Samráð við almenning og fræðsluefni', href: '/services/dev' },
+          ]
+
         },
         {
-          text: 'Contact',
+          text: 'Fréttir og tilkynningar',
           href: '/contact',
         },
       ]}
-      asideBottomTitle="Related sites"
+      asideBottomTitle="Tengdar síður"
       asideBottomLinks={[
-        { text: 'Terms of Service', href: '/terms' },
-        { text: 'Privacy Policy', href: '/privacy' },
+        { text: 'island.is', href: '/terms' },
+        { text: 'Ríkisstjórn Íslands', href: '/privacy' },
+        { text: 'Landskjörstjórn', href: '/privacy' },
       ]}
+
     />
   )
 }
