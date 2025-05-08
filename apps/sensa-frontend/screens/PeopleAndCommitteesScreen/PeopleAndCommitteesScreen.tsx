@@ -16,7 +16,7 @@ const PeopleAndCommitteesScreen = () => {
       <Webreader />
 
       {i18n.t.peopleAndCommittees.items.map((item, index) => (
-  <CategoryCard key={index} heading={item.heading} text={item.text} />
+  <CategoryCard href={item?.href ?? ''} key={index} heading={item.heading} text={item.text} />
 ))}
 
 

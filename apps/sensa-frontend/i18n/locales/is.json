@@ -68,7 +68,8 @@
   "items": [
     {
       "heading": "Alþingismenn",
-      "text": "Sjáðu hverjir sitja á þingi í dag. Finndu tengiliðaupplýsingar, æviágrip og þingsætaskipan þingmanna, varamanna og staðgengla."
+      "text": "Sjáðu hverjir sitja á þingi í dag. Finndu tengiliðaupplýsingar, æviágrip og þingsætaskipan þingmanna, varamanna og staðgengla.",
+      "href": "/work/peopleAndCommittees/membersOfParliament"
     },
     {
       "heading": "Þingflokkar",
