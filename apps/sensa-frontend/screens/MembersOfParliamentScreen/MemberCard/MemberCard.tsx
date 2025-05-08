@@ -15,16 +15,16 @@ const MemberCard = ({ member }: MemberCardProps) => {
   }
 
   const tags = [
-    { label: 'label', href: '#' },
-    { label: 'label', href: '#' },
-    { label: 'label', href: '#' },
+    { label: 'label' },
+    { label: 'label' },
+    { label: 'label' },
   ]
   return (
     <>
       <CategoryCard
         alt=""
         src={member.image.url}
-        text={i18n.t.home.locale === "is" ? member.bio : member.bioEn} 
+        text={i18n.t.home.locale === "is" ? member.party : member.partyEn} 
         heading={`${member.name.fullName} (${member.name.abbreviation})`} 
         tags={tags}
         href={`${i18n.t.routes.member}/${member.id}`}
