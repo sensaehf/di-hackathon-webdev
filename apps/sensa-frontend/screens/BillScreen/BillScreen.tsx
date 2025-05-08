@@ -6,59 +6,50 @@ import {
   Text,
 } from '@island.is/island-ui/core'
 import { Webreader } from '../../components/Webreader'
-
 import * as styles from './BillScreen.css'
 import { CategoryCard } from '../../components/CategoryCard/CategoryCard'
 import RelatedCard from '../MemberScreen/RelatedCard/RelatedCard'
 import StatusBar from './StatusBar/StatusBar'
-// Inside box layout
+import { useI18n } from '../../i18n'
+
 const BillScreen = () => {
+  const i18n = useI18n()
+  const { meta, commentSection, discussions, related } = i18n.t.bill
+
   return (
     <>
       <Box>
-        <Text variant="eyebrow">
-          Case 97, Bill 156th Legislative Session 2025.
-        </Text>
-
-        <Text variant="h2" as="h2">
-          Grunnskólar
-        </Text>
+        <Text variant="eyebrow">{meta.caseReference}</Text>
+        <Text variant="h2" as="h2">{meta.title}</Text>
       </Box>
+
       <Webreader />
 
       <StatusBar />
 
-      <Text>
-        Anyone is free to send a written comment to the standing committee on a
-        parliamentary matter. Comments should be sent through the Althingi&apos;s
-        comment portal . If the formal comment process for a parliamentary
-        matter has not begun or the comment deadline has passed, it is possible
-        to send a comment to the email address comments@althingi.is
-      </Text>
-      {/* TODO: Email Icon in heading */}
-      <CategoryCard heading="Farðu í athugasemdir alþingis" text="" />
+      <Text>{commentSection.infoText}</Text>
 
-      {['1st discussion', '2nd discussion', 'Frumvarp eftir 2. umræðu'].map(
-        (x) => (
-          <Box key={x} className={styles.accordionBox}>
-        <Accordion>
-          <AccordionItem
-            id="item-1"
-            label={x}
-            startExpanded={false}
-          >
-            {''}
-          </AccordionItem>
-        </Accordion>
-      </Box>
-        ),
-      )}
+      <CategoryCard heading={commentSection.button} text="" />
+
+      {discussions.map((label, index) => (
+        <Box key={index} className={styles.accordionBox}>
+          <Accordion>
+            <AccordionItem
+              id={`item-${index}`}
+              label={label}
+              startExpanded={false}
+            >
+              {''}
+            </AccordionItem>
+          </Accordion>
+        </Box>
+      ))}
 
       <RelatedCard>
-        <Text variant="eyebrow">Related documentaion</Text>
-        <Button variant="text">Related documentaion</Button>
-        <Button variant="text">Related documentaion</Button>
-        <Button variant="text">Related documentaion</Button>
+        <Text variant="eyebrow">{related.title}</Text>
+        {related.links.map((linkLabel, index) => (
+          <Button key={index} variant="text">{linkLabel}</Button>
+        ))}
       </RelatedCard>
     </>
   )
