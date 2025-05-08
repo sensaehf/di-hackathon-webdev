@@ -28,9 +28,9 @@ const BioFrame = ({ member }: { member: ParliamentMember }) => {
 
         {/* Social media */}
         <Box className={styles.socialMedia}>
-          <SocialMediaLine img='/facebook.png'/>
-          <SocialMediaLine img='/instagram.svg'/>
-          <SocialMediaLine img='/x.svg'/>
+          <SocialMediaLine media='Facebook' img='/facebook.png'/>
+          <SocialMediaLine media='Instagram' img='/instagram.svg'/>
+          <SocialMediaLine media='X/Twitter' img='/x.svg'/>
 
         </Box>
       </Box>
@@ -61,14 +61,16 @@ const ContactLine = ({ member }: { member?: ParliamentMember }) => {
 const SocialMediaLine = ({
   member,
   img,
+  media
 }: {
   member?: ParliamentMember
   img?: string
+  media: string
 }) => {
   return (
     <Box className={styles.socialMediaLine}>
       <img src={img} />
-      <Text>asfd</Text>
+      <Text>{media}</Text>
     </Box>
   )
 }
