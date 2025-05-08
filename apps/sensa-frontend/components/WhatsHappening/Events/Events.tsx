@@ -8,7 +8,7 @@ const Events = () => {
     <Box className={styles.root} >
       <Box className={styles.innerBox} marginBottom={6}>
         <Box className={styles.day}>
-          <Text variant="eyebrow">Monday may 5</Text>
+          <Text variant="eyebrow">Mánudagur 5. maí</Text>
           <Box className={styles.line}>
             <Box className={styles.timeBox}>
               <Text>3.00</Text>
@@ -18,7 +18,7 @@ const Events = () => {
         </Box>
 
         <Box className={styles.day}>
-          <Text variant="eyebrow">Monday may 5</Text>
+          <Text variant="eyebrow">Mánudagur 5. maí</Text>
           <Box className={styles.line}>
             <Box className={styles.timeBox}>
               <Text>4.00</Text>

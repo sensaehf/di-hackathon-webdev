@@ -16,7 +16,7 @@
       },
       "sessions": {
         "title": "Þingfundir og ræður",
-        "content": "Fáðu aðgang að upptökum, dagskrám, fundargerðum og leitartólum sem tengjast þingfundum og ræðum. Hér má meðal annars finna ræðutímaáætlanir, ræðuarkíf og reglur um ræðutíma."
+        "content": "Fáðu aðgang að upptökum, dagskrám, fundargerðum og leitartólum sem tengjast þingfundum og ræðum. Hér má meðal annars finna ræðutímaáætlanir, ræðusafn og reglur um ræðutíma."
       },
       "laws": {
         "title": "Lög, þingsályktanir og frumvörp",
@@ -24,7 +24,7 @@
       }
     },
     "whatsHappening": {
-      "title": "Hvað er að gerast",
+      "title": "Hvað er framundan",
 
       "upcomingEvents": "Væntanlegir viðburðir",
       "agenda": "Dagskrá næsta þingfundar",
