@@ -44,10 +44,10 @@ export const SubLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
     <>
       <GridContainer>
         <GridRow>
-          <GridColumn span={"4/12"}>
+          <GridColumn span={['12/12','12/12', '12/12', '3/12']}>
             <SideBar />
           </GridColumn>
-          <GridColumn span={"8/12"}>
+          <GridColumn span={['12/12','12/12', '12/12', '9/12']}>
           {children}
           </GridColumn>
         </GridRow>

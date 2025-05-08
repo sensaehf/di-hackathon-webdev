@@ -9,7 +9,7 @@ export default function SessionsAndBills() {
 
   return (
     <SubLayout>
-      <Box className={styles.root}>
+      <Box marginLeft={8}>
         <Breadcrumbs
           items={[
             { title: i18n?.t.home.title ?? '', href: '/' },

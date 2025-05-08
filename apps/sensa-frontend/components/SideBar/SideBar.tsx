@@ -1,3 +1,4 @@
+import useIsMobile from 'libs/application/ui-shell/src/hooks/useIsMobile' 
 import { useRouter } from 'next/router'
 import { useContext } from 'react';
 import { I18nContext } from '../../i18n/I18n';
@@ -7,14 +8,10 @@ import {
   Navigation
 } from '@island.is/island-ui/core'
 
-
 const SideBar = () => {
   const router = useRouter()
   const i18n = useContext(I18nContext)
-
-  const aboutText = () => {
-    return i18n?.t.home.about + ' ' + i18n?.t.home.title
-  }
+  const { isMobile } = useIsMobile()
 
   const isActive = (path: string | undefined) => {
     if(path === undefined) return false;
@@ -33,28 +30,23 @@ const SideBar = () => {
           title: i18n?.t.menu.membersOfParliament ?? ''
         },
         {
-          active: isActive(i18n?.t.routes.parties ?? ''),
-          href: i18n?.t.routes.parties ?? '',
+          href: i18n?.t.routes.wip  ?? '',
           title: i18n?.t.menu.parties ?? ''
         },
         {
-          active: isActive(i18n?.t.routes.constituencies ?? ''),
-          href: i18n?.t.routes.constituencies ?? '',
+          href: i18n?.t.routes.wip ?? '',
           title: i18n?.t.menu.constituencies ?? ''
         },
         {
-          active: isActive(i18n?.t.routes.committees ?? ''),
-          href: i18n?.t.routes.committees ?? '',
+          href: i18n?.t.routes.wip ?? '',
           title: i18n?.t.menu.committees ?? ''
         },
         {
-          active: isActive(i18n?.t.routes.speaker ?? ''),
-          href: i18n?.t.routes.speaker ?? '',
+          href: i18n?.t.routes.wip ?? '',
           title: i18n?.t.menu.speaker ?? ''
         },
         {
-          active: isActive(i18n?.t.routes.history ?? ''),
-          href: i18n?.t.routes.history ?? '',
+          href: i18n?.t.routes.wip ?? '',
           title: i18n?.t.menu.history ?? ''
         },
       ]
@@ -97,6 +89,7 @@ const SideBar = () => {
   return (
     <Box className={styles.sidebar}>
       <Navigation
+        isMenuDialog={isMobile}
         baseId=''
         activeItemTitle=""
         colorScheme="blue"

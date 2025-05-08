@@ -1,7 +1,5 @@
-import { ParliamentMemberList } from '../../../../data/parliamentMemberList'
 import {
   Box,
-  GridContainer,
   Breadcrumbs
 } from '@island.is/island-ui/core'
 import { useContext } from 'react';
@@ -14,7 +12,7 @@ export default function MembersOfParliament() {
 
   return (
     <SubLayout>
-      <Box className={styles.root}>
+      <Box marginLeft={8} >
         <Breadcrumbs items={[
           { title: i18n?.t.home.title ?? '', href: "/" },
           { title: i18n?.t.menu.workOfParliament ?? '', href: i18n?.t.routes.workOfParliament },

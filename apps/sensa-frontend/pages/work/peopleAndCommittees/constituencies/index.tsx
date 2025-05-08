@@ -8,7 +8,7 @@ export default function Constituencies() {
 
   return (
     <SubLayout>
-      <Box>
+      <Box marginLeft={8}>
         <Breadcrumbs items={[
           { title: i18n?.t.home.title ?? '', href: "/" },
           { title: i18n?.t.menu.workOfParliament ?? '', href: i18n?.t.routes.workOfParliament },
