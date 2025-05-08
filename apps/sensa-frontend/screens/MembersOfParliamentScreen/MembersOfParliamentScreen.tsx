@@ -61,7 +61,7 @@ const MembersOfParliamentScreen = () => {
         </Box>
       </Box>
 
-      <Text marginBottom={2}>
+      <Text variant='h3' marginBottom={2}>
         {totalLabel.replace('{count}', pms.length.toString())}
       </Text>
 
