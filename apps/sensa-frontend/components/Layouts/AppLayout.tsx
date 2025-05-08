@@ -17,6 +17,7 @@ import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 import * as styles from './AppLayout.css'
 import Link from 'next/link'
 import AlthingiHeader from '../Header/AlthingiHeader'
+import AlthingiMenu from '../AlthingiMenu/AlthingiMenu'
 
 interface LayoutProps {
   children: ReactNode
@@ -26,6 +27,8 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
   children,
 }) => {
   const i18n = useContext(I18nContext)
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+
   const [currentLocale, setCurrentLocale] = useState<Locale>(
     i18n?.activeLocale ?? 'is',
   )
@@ -74,17 +77,21 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
                     onClick={toggleLocale}
                     isSwitching={isSwitching}
                   />
-                  <Button variant="utility">
-                    {i18n.t.home.menu}{' '}
-                    <Box marginLeft={1}>
-                      <Icon
-                        size="small"
-                        type="outline"
-                        icon="menu"
-                        color="blue400"
-                      />
-                    </Box>
-                  </Button>
+                  <AlthingiMenu
+                    menuButton={
+                      <Button variant="utility">
+                        {i18n.t.home.menu}{' '}
+                        <Box marginLeft={1}>
+                          <Icon
+                            size="small"
+                            type="outline"
+                            icon="menu"
+                            color="blue400"
+                          />
+                        </Box>
+                      </Button>
+                    }
+                  />
                 </>
               }
             />

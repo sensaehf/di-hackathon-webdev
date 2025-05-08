@@ -3,12 +3,15 @@ import * as styles from './WhatsHappening.css'
 import LivePlayer from '../LivePlayer/LivePlayer'
 import Events from './Events/Events'
 import Link from 'next/link'
+import { useI18n } from '../../i18n'
 const WhatsHappening = () => {
+
+  const i18n = useI18n()
   return (
     <>
       <Box className={styles.rootroot}>
         <Text variant="h2" as="h2">
-          What is happening
+        {i18n.t.home.whatsHappening?.title}
         </Text>
 
         <Box className={styles.root}>
@@ -21,12 +24,12 @@ const WhatsHappening = () => {
               tabs={[
                 {
                   id: 'tab1',
-                  label: 'Upcoming events',
+                  label: i18n.t.home.whatsHappening?.upcomingEvents,
                   content: <Events />,
                 },
                 {
                   id: 'tab2',
-                  label: 'Agenda for next session',
+                  label: i18n.t.home.whatsHappening?.agenda,
                   content: <div>Content for Tab Two</div>,
                 },
               ]}
@@ -40,7 +43,7 @@ const WhatsHappening = () => {
             {/*  LiveStream */}
             <Text>1. janúar 2020 At 1:30 PM</Text>
             <Text variant="h4" as="h3">
-              Upcoming livestream
+            {i18n.t.home?.livestream?.upcoming}
             </Text>
             <Box className={styles.player}>
               <LivePlayer />
@@ -54,7 +57,7 @@ const WhatsHappening = () => {
                 variant="text"
                 as="span"
               >
-                Other Broadcasting options
+                {i18n.t.home?.livestream?.other}
               </Button>
               <Button
                 colorScheme="default"
@@ -65,7 +68,7 @@ const WhatsHappening = () => {
                 as="span"
               >
                 <Link href='/sessions/recordedSessions'>
-                Previous recordings
+                {i18n.t.home?.livestream?.previous}
                 </Link>
               </Button>
             </Inline>

@@ -6,7 +6,64 @@
     "about": "IS About",
     "wipHeader": "Úbbs! Þessi síða er enn í vinnslu",
     "wipText1": "Við erum að vinna að þessari síðu til að veita þér nýjustu og gagnlegustu upplýsingarnar. Vinsamlegast kíktu aftur síðar þegar við höldum áfram að þróa og bæta þennan hluta.",
-    "wipText2": "Takk fyrir þolinmæðina"
+    "wipText2": "Takk fyrir þolinmæðina",
+    "header": "Alþingi – Þjóðþing Íslendinga",
+    "workHeader": "Vinna Alþingis",
+    "workHeaderContent": {
+      "people": {
+        "title": "Fólk og nefndir",
+        "content": "Kynntu þér skipulag Alþingis með því að skoða upplýsingar um þingmenn, þingflokka, fastanefndir og forsætisnefnd."
+      },
+      "sessions": {
+        "title": "Þingfundir og ræður",
+        "content": "Fáðu aðgang að upptökum, dagskrám, fundargerðum og leitartólum sem tengjast þingfundum og ræðum. Hér má meðal annars finna ræðutímaáætlanir, ræðuarkíf og reglur um ræðutíma."
+      },
+      "laws": {
+        "title": "Lög, þingsályktanir og frumvörp",
+        "content": "Skoðaðu lagasetningarvinnu Alþingis, þar sem finna má safn laga, þingsályktanir og frumvörp, ásamt fyrirspurnum, skýrslum, umsögnum og núverandi stöðu þingmála."
+      }
+    },
+    "whatsHappening": {
+      "title": "Hvað er að gerast",
+
+      "upcomingEvents": "Væntanlegir viðburðir",
+      "agenda": "Dagskrá næsta þingfundar",
+      "allPlannedEvents": "Skoða alla fyrirhugaða viðburði",
+      "session": "Þingfundur"
+
+    },
+    "livestream": {
+      "upcoming": "Næsta beina útsending",
+      "other": "Aðrar útsendingarleiðir",
+      "previous": "Eldri upptökur"
+    },
+    "news": {
+      "title": "Fréttir og tilkynningar",
+      "viewAll": "Skoða allar fréttir og tilkynningar",
+      "items": [
+        {
+          "title": "Mannréttindastofnun Íslands sett á laggirnar",
+          "introduction": "Mannréttindastofnun Íslands hóf starfsemi 1. maí og starfar á vegum Alþingis samkvæmt lögum nr. 88/2024. Vefsíða stofnunarinnar er www.mannrettindi.is, en hún er enn í vinnslu.",
+          "date": "2025-05-01",
+          "href": "#",
+          "image": ""
+        },
+        {
+          "title": "Óundirbúnar fyrirspurnir fimmtudaginn 8. maí",
+          "introduction": "Óundirbúnar fyrirspurnir verða teknar fyrir á þingfundi fimmtudaginn 8. maí.",
+          "date": "2025-05-08",
+          "href": "#",
+          "image": ""
+        },
+        {
+          "title": "Mannréttindastofnun - Nefndardagur 9. maí",
+          "introduction": "Mannréttindastofnun Íslands heldur nefndardag föstudaginn 9. maí.",
+          "date": "2025-05-09",
+          "href": "#",
+          "image": "https://picsum.photos/200"
+        }
+      ]
+    }
   },
   "about": {
     "annualReport": "Ársskýrslur",
@@ -147,5 +204,5 @@
       "title": "Íslenska",
       "href": ""
     }
-  } 
+  }
 }

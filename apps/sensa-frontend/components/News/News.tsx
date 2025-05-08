@@ -1,96 +1,53 @@
 import {
   Box,
   Button,
-  GridColumn,
-  GridContainer,
-  GridRow,
-  Inline,
-  Tabs,
   Tag,
   Text,
 } from '@island.is/island-ui/core'
 import * as styles from './News.css'
-import LivePlayer from '../LivePlayer/LivePlayer'
 import NewsCard from '../NewsCard/NewsCard'
+import { useI18n } from '../../i18n'
 
 const News = () => {
+  const i18n = useI18n()
+  const newsItems = i18n.t.home?.news?.items || []
+
   return (
     <Box marginTop={6} className={styles.root}>
       <Box className={styles.header}>
-        <Text  variant="h2" as="h2">
-          News and announcements
+        <Text variant="h2" as="h2">
+          {i18n.t.home?.news?.title}
         </Text>
-        <Button variant="text">View all news and announcements</Button>
+        <Button variant="text">{i18n.t.home?.news?.viewAll}</Button>
       </Box>
 
       <Box className={styles.content}>
-        <Box height='full' className={styles.box}>
-          <NewsCard
-            date={new Date().toISOString()}
-            title={'The Icelandic Human Rights Institute is launched'}
-            titleAs="h3"
-            titleVariant="h3"
-            introduction={
-              <InnerNewsCard text="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024 . The office's website is www.mannrettindi.is , but it is still under construction." />
-
-            }
-            href="#"
-            readMoreText=""
-          />
-        </Box>
-        <Box height='full' className={styles.box}>
-          <NewsCard
-            date={new Date().toISOString()}
-            title={'Impromptu questions on Thursday, May 8th'}
-            titleAs="h3"
-            titleVariant="h3"
-            introduction={
-              <InnerNewsCard text="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024 . The office's website is www.mannrettindi.is , but it is still under construction." />
-
-            }
-            href="#"
-            readMoreText=""
-          />
-        </Box>
-        <Box className={styles.box}>
-          <NewsCard
-            date={new Date().toISOString()}
-            title={'Human Rights  Institute Committee day May 9th'}
-            titleAs="h3"
-            titleVariant="h3"
-            introduction={
-              <InnerNewsCard text="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024 . The office's website is www.mannrettindi.is , but it is still under construction." />
-
-            }
-            href="#"
-            readMoreText=""
-            image="https://picsum.photos/200"
-          />
-        </Box>
-        <Box className={styles.box}>
-          <NewsCard
-            date={new Date().toISOString()}
-            title={'The Icelandic Human Rights Institute is launched'}
-            titleAs="h3"
-            titleVariant="h3"
-            introduction={
-              <InnerNewsCard text="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024 . The office's website is www.mannrettindi.is , but it is still under construction." />
-            }
-
-            href="#"
-            readMoreText=""
-          />
-        </Box>
+        {newsItems.map((item, index) => (
+          <Box key={index} height="full" className={styles.box}>
+            <NewsCard
+              date={item.date}
+              title={item.title}
+              titleAs="h3"
+              titleVariant="h3"
+              introduction={<InnerNewsCard text={item.introduction} />}
+              href={item.href}
+              readMoreText=""
+              image={item.image}
+            />
+          </Box>
+        ))}
       </Box>
     </Box>
   )
 }
 
-const InnerNewsCard = ({text}: {text: string}) => {
-  return (<Box className={styles.innerNewsCard}>
-    <Text>{text}</Text>
-    <Tag>Tag name</Tag>
-  </Box>)
+const InnerNewsCard = ({ text }: { text: string }) => {
+  return (
+    <Box className={styles.innerNewsCard}>
+      <Text>{text}</Text>
+      <Tag>Tag</Tag>
+    </Box>
+  )
 }
 
 export default News

@@ -24,6 +24,7 @@ export interface TranslationHome {
   wipHeader: string
   wipText1: string
   wipText2: string
+  header: string
 }
 
 export type TranslationAbout ={

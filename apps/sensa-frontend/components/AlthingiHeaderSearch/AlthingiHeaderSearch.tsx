@@ -8,6 +8,7 @@ import {
 import * as styles from './AlthingiHeaderSearch.css'
 import { useState } from 'react'
 import Image from 'next/image'
+import { useI18n } from '../../i18n'
 
 const dummyOptions = [
   { label: 'Þingmaður A', value: 'a' },
@@ -18,6 +19,10 @@ const dummyOptions = [
 const AlthingiHeaderSearch = () => {
   const [value, setValue] = useState('')
   const [selected, setSelected] = useState<null | typeof dummyOptions[0]>(null)
+
+  const i18n = useI18n()
+
+  console.log(i18n.activeLocale)
 
   const handleSubmit = (inputValue: string, selectedOption: any) => {
     console.log('Submitted:', { inputValue, selectedOption })
@@ -30,7 +35,7 @@ const AlthingiHeaderSearch = () => {
       <Box className={styles.leftBox}>
         <Box>
           <Text color="white" as="h1" variant="h2">
-            Some heading and lead text for Alþingi
+            {i18n.t.home.header}
           </Text>
         </Box>
         <Box>
