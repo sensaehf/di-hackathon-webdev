@@ -12,6 +12,8 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
             rel="stylesheet"
           />
+            <title>Alþingi</title>
+            <meta name="description" content="Alþingi island.is" />
         </Head>
         <body>
           <Main />
