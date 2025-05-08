@@ -190,6 +190,46 @@
             ],
             "previous": []
         }
+    },                       
+    {
+        "id": 6,
+        "name": {
+            "firstName": "",
+            "lastName": "",
+            "fullName": "Þórdís Kolbrún Reykfjörð Gylfa¬dóttir",
+            "abbreviation": "ÞSv"
+        },
+        "constituency": "Suðvest.",
+        "constituencyNumber": "1. þm.",
+        "constituencyEn": "Southwest.",
+        "party": "Sjálfstæðisflokkur",
+        "partyEn": "Independence Party",
+        "bio": "Fædd á Akranesi 4. nóvember 1987. Foreldrar: Gylfi R. Guðmundsson (f. 1956) þjónustustjóri, sonur Jónu Valgerðar Kristjánsdóttur alþingismanns og Fjóla Katrín Ásgeirsdóttir (f. 1957) sjúkraliði. Maki: Hjalti Sigvaldason Mogensen (f. 1984) lögmaður. Foreldrar: Sigvaldi Þorsteinsson og Kristín I. Mogensen. Börn: Sonur (2012) og dóttir (2016).Skiptinám á vegum AFS í Vínarborg 2005–2006. Stúdentspróf frá Fjölbrautaskóla Vesturlands 2007. BA-próf í lögfræði HR 2010. Erasmus-skiptinám við Universität Salzburg vorönn 2011. ML-próf í lögfræði HR 2012.",
+        "bioEn": "Born in Akranes on 4 November 1987. Parents: Gylfi R. Guðmundsson (b. 1956) service manager, son of Jóna Valgerður Kristjánsdóttir member of parliament and Fjóla Katrín Ásgeirsdóttir (b. 1957) paramedic. Spouse: Hjalti Sigvaldason Mogensen (b. 1984) attorney. Parents: Sigvaldi Þorsteinsson and Kristín I. Mogensen. Children: Son (2012) and daughter (2016). AFS exchange program in Vienna 2005–2006. Matriculation examination from Fjölbrautaskóli Vesturlands 2007. BA degree in law from RU 2010. Erasmus exchange program at Universität Salzburg spring semester 2011. ML degree in law at RU 2012.",
+        "dateOfBirth": "",
+        "email": "thordis.kolbrun.r.gylfadottir@althingi.is",
+        "phone": "",
+        "socialMedia": [
+            {
+                "type": "Website",
+                "link": "https://thordiskolbrun.is"
+            }
+        ],
+        "image": {
+            "url": "https://www.althingi.is/myndir/mynd/thingmenn/1252/org/mynd.jpg"
+        },
+        "ministry": "",
+        "minustryEn": "",
+        "roles": [],
+        "committees": {
+            "current": [
+                { 
+                    "committeeId": 1,
+                    "roleId": 4
+                }                                                                       
+            ],
+            "previous": []
+        }
     }                       
 
 ]

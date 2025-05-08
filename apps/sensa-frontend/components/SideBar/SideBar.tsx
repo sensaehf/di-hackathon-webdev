@@ -79,11 +79,11 @@ const SideBar = () => {
         href: i18n?.t.routes.handbooksAndReports ?? '',
       },
       {
-        title: 'People, Structures and Governance',
+        title: i18n?.t.about.peopleStructuresAndGovernanceHeader ?? '',
         href: i18n?.t.routes.wip ?? '',
       },
       {
-        title: 'Public Engagement and Educational Resources',
+        title: i18n?.t.about.publicEngagementAndEducationalResourcesHeader ?? '',
         href: i18n?.t.routes.wip ?? '',
       },
     ]

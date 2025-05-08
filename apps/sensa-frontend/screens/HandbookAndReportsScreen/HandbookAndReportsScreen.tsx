@@ -41,36 +41,36 @@ const HandbookAndReportsScreen = () => {
       </Box>
       <Box marginBottom={2}>
         <AccordionCard
-          label="Role and Functions of the AlÞingi"
+          label={i18n.t.about.rolesAndFunctionsHeader}
           id="accordion-1"
-          visibleContent={<>Overview of Parliament’s purpose and activities.</>}
+          visibleContent={<>{i18n.t.about.rolesAndFunctionsText}</>}
         >
           <></>
         </AccordionCard>
       </Box>
       <Box marginBottom={2}>
         <AccordionCard
-          label="Parliamentary Rules and Procedures"
+          label={i18n.t.about.parliamentaryRulesAndProceduresHeader}
           id="accordion-2"
-          visibleContent={<>How AlÞingi operates internally.</>}
+          visibleContent={<>{i18n.t.about.parliamentaryRulesAndProceduresText}</>}
         >
           <></>
         </AccordionCard>
       </Box>
       <Box marginBottom={2}>
         <AccordionCard
-          label="Public Participation and Influence"
-          id="accordion-2"
-          visibleContent={<>How citizens can engage with AlÞingi.</>}
+          label={i18n.t.about.publicParticipationAndInfluenceHeader}
+          id="accordion-3"
+          visibleContent={<>{i18n.t.about.publicParticipationAndInfluenceText}</>}
         >
           <></>
         </AccordionCard>
       </Box>
       <Box marginBottom={6}>
         <AccordionCard
-          label="Access to Information and Resources"
-          id="accordion-2"
-          visibleContent={<>Tools and resources available to the public.</>}
+          label={i18n.t.about.accessToInformationAndResourcesHeader}
+          id="accordion-4"
+          visibleContent={<>{i18n.t.about.accessToInformationAndResourcesText}</>}
         >
           <></>
         </AccordionCard>
@@ -84,16 +84,16 @@ const HandbookAndReportsScreen = () => {
           id="accordion-5"
         >
           <Box marginBottom={2}>
-            <Text variant='h4'>AlÞingi Handbook</Text>
+            <Text variant='h4'>{i18n.t.about.handbookHeader}</Text>
           </Box>
           <Box marginBottom={2}>
             <Text>
-              The AlÞingi Handbook is published after each parliamentary election and was first issued in 1984. Since 1999, it has also been available electronically. The handbook provides an overview of Parliament’s work, including details of recent elections, the composition of Parliament, and records about its members. It contains biographies, statistics, and information on parties and committees. Appendices cover the staff of the AlÞingi Secretariat, parliamentary parties, and related institutions.
+              {i18n.t.about.handbookText}
             </Text>
           </Box>
           <Box marginBottom={2}>
             <TopicCard href={i18n.t.routes.wip} tag="pdf" colorScheme="blue">
-              AlÞingi Handbook 2017
+              {i18n.t.about.handbookName}
             </TopicCard>
           </Box>
           <Box marginBottom={2}>
@@ -101,7 +101,7 @@ const HandbookAndReportsScreen = () => {
               colorScheme="default"
               variant="ghost"
             >
-              View older handbooks +
+              {i18n.t.about.viewOlderHandbooks} +
             </Button>
           </Box>
           <Box marginBottom={2}>
@@ -114,7 +114,7 @@ const HandbookAndReportsScreen = () => {
           </Box>
           <Box marginBottom={2}>
             <TopicCard href={i18n.t.routes.wip} tag="pdf" colorScheme="blue">
-              Guide for Members of Parliament 2024
+              {i18n.t.about.guideName}
             </TopicCard>
           </Box>
           <Box marginBottom={2}>
@@ -122,7 +122,7 @@ const HandbookAndReportsScreen = () => {
               colorScheme="default"
               variant="ghost"
             >
-              View older guides +
+              {i18n.t.about.viewOlderGuides} +
             </Button>
           </Box>
         </AccordionCard>
@@ -179,13 +179,13 @@ const HandbookAndReportsScreen = () => {
               colorScheme="default"
               variant="ghost"
             >
-              Load more reports +
+              {i18n.t.about.loadMore} +
             </Button>
           </Box>
         </AccordionCard>
       </Box>
       <Box marginBottom={2}>
-        <AccordionCard label="Other Reports and Documents" id="accordion-7">
+        <AccordionCard label={i18n.t.about.otherReportsAndMaterials} id="accordion-7">
           <></>
         </AccordionCard>
       </Box>

@@ -50,7 +50,7 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
             title: i18n?.t.menu.membersOfParliament ?? '',
             href: i18n?.t.routes.membersOfParliament,
           },
-          { title: member?.name.abbreviation, href: router.asPath },
+          { title: member?.name.fullName, href: router.asPath },
         ]}
       />
       <Text marginTop={2} as="h1" variant="h1">
