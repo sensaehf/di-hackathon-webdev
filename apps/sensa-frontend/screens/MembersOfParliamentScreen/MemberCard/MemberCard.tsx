@@ -23,7 +23,7 @@ const MemberCard = ({ member }: MemberCardProps) => {
         text={i18n.t.home.locale === "is" ? member.bio : member.bioEn} 
         heading={member.name.fullName}
         tags={tags}
-        href={`/work/peopleAndCommittees/membersOfParliament/member/${member.id}`}
+        href={`${i18n.t.routes.member}/${member.id}`}
       />
     </>
   )

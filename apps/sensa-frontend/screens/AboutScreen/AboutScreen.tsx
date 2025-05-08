@@ -26,22 +26,22 @@ const AboutScreen = () => {
       </Box>
       <Box marginBottom={2}>
         <CategoryCard
-          heading="AlÞingi and How It Works"
-          text="General information abouth AlÞingi, parliamentary functions and official published content."
+          heading={i18n?.t.about.howItWorksHeader}
+          text={i18n?.t.about.howItWorksText}
           href={i18n.t.routes.handbooksAndReports}
         ></CategoryCard>
       </Box>
       <Box marginBottom={2}>
         <CategoryCard
-          heading="People, Structures and Governance"
-          text="Parliamentary institutions, committees, secretariat, and administrative structure."
+          heading={i18n?.t.about.peopleStructuresAndGovernanceHeader}
+          text={i18n?.t.about.peopleStructuresAndGovernanceText}
           href={i18n.t.routes.wip} 
         ></CategoryCard>
       </Box>
       <Box marginBottom={2}>
         <CategoryCard
-          heading="Public Engagement and Educational Resources"
-          text="Visits, outreach, education materials and public interaction."
+          heading={i18n?.t.about.publicEngagementAndEducationalResourcesHeader}
+          text={i18n?.t.about.publicEngagementAndEducationalResourcesText}
           href={i18n.t.routes.wip} 
         ></CategoryCard>
       </Box>

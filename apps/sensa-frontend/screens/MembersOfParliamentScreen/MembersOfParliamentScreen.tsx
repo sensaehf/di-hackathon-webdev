@@ -49,7 +49,7 @@ const MembersOfParliamentScreen = () => {
           </Button>
         </Box>
       </Box>
-      <Text marginBottom={2}>62 members in total</Text>
+      <Text marginBottom={2}>{pms.length} members in total</Text>
 
       {pms.map((x, index) => (
         <Box marginBottom={2} key={index} >

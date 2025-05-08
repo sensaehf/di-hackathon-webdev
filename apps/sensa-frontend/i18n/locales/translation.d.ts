@@ -34,12 +34,36 @@ export type TranslationAbout ={
   otherReportsAndMaterials: string
   officialPublishedContent: string
   infoAboutParliament: string
+  howItWorksHeader: string
+  howItWorksText: string,
+  peopleStructuresAndGovernanceHeader: string
+  peopleStructuresAndGovernanceText: string
+  publicEngagementAndEducationalResourcesHeader: string
+  publicEngagementAndEducationalResourcesText: string
+  rolesAndFunctionsHeader: string
+  rolesAndFunctionsText: string
+  parliamentaryRulesAndProceduresHeader: string
+  parliamentaryRulesAndProceduresText: string
+  publicParticipationAndInfluenceHeader: string
+  publicParticipationAndInfluenceText: string
+  accessToInformationAndResourcesHeader: string
+  accessToInformationAndResourcesText: string
+  loadMore: string
+  viewOlderHandbooks: string
+  viewOlderGuides: string
+  guideName: string
+  guideHeader: string
+  guideText: string
+  handbookName: string
+  handbookHeader: string
+  handbookText: string
 }
 
 export interface MenuAndRoute {
   workOfParliament: string
   peopleAndCommittees: string
   membersOfParliament: string
+  member: string
   sessionsAndBills: string
   about: string
   handbooksAndReports: string
