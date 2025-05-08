@@ -125,33 +125,48 @@
     }
   },
   "bills": {
-    "title": "Bills",
-    "tabs": {
-      "active": "Active",
-      "archive": "Archive",
-      "reports": "Reports"
-    },
-    "sessionHeading": "156th Legislative Session 2025",
-    "filterButton": "Filter",
-    "table": {
-      "headers": {
-        "caseNumber": "Case",
-        "date": "Date",
-        "title": "Bill title",
-        "submitter": "Submitter",
-        "status": "Status"
-      },
-      "rows": [
-        {
-          "caseNumber": "123",
-          "date": "1 Jan 2024",
-          "title": "Preschool Act",
-          "submitter": "Ministry of Industry",
-          "status": "1st discussion"
-        }
-      ]
-    }
+  "title": "Bills",
+  "tabs": {
+    "active": "Active",
+    "archive": "Archive",
+    "reports": "Reports"
   },
+  "sessionHeading": "156th Legislative Session 2025",
+  "filterButton": "Filter",
+  "table": {
+    "headers": {
+      "caseNumber": "Case",
+      "date": "Date",
+      "title": "Bill title",
+      "submitter": "Submitter",
+      "status": "Status"
+    },
+    "rows": [
+      {
+        "caseNumber": "123",
+        "date": "1 Jan 2024",
+        "title": "Preschool Act",
+        "submitter": "Ministry of Industry",
+        "status": "1st discussion"
+      },
+      {
+        "caseNumber": "123",
+        "date": "1 Jan 2024",
+        "title": "Preschool Act",
+        "submitter": "Ministry of Industry",
+        "status": "1st discussion"
+      },
+      {
+        "caseNumber": "123",
+        "date": "1 Jan 2024",
+        "title": "Preschool Act",
+        "submitter": "Ministry of Industry",
+        "status": "1st discussion"
+      }
+    ]
+  }
+},
+
   "bill": {
     "meta": {
       "caseReference": "Case 97, Bill 156th Legislative Session 2025.",
