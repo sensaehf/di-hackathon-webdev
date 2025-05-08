@@ -1,4 +1,4 @@
-import { Box, Divider, Text } from '@island.is/island-ui/core'
+import { Box, CategoryCard, Divider, Text } from '@island.is/island-ui/core'
 import Card from './components/Card/Card'
 import { Webreader } from '../../components/Webreader'
 import * as styles from './WorkScreen.css'
@@ -9,38 +9,44 @@ const WorkScreen = () => {
   const { sections, title } = i18n.t.workOfParliament
 
   return (
-    <>
-      <Text variant="h2" as="h2">
+    <Box marginY={2} >
+      <Text variant="h1" as="h1">
         {title}
       </Text>
       <Webreader />
 
       <Box className={styles.cardContainer}>
+        <CategoryCard 
+          heading={sections.peopleAndCommittees.title}
+          text={sections.peopleAndCommittees.description}
+          href="/work/peopleAndCommittees"
+        />
         <Card
-          className={styles.card}
-          title={sections.peopleAndCommittees.title}
-          description={sections.peopleAndCommittees.description}
           shortcuts={sections.peopleAndCommittees.shortcuts}
           href="/work/peopleAndCommittees"
         />
         <Divider />
+        <CategoryCard 
+          heading={sections.lawsResolutionsAndBills.title}
+          text={sections.lawsResolutionsAndBills.description}
+          href="/work/peopleAndCommittees"
+        />
         <Card
-          className={styles.card}
-          title={sections.lawsResolutionsAndBills.title}
-          description={sections.lawsResolutionsAndBills.description}
           shortcuts={sections.lawsResolutionsAndBills.shortcuts}
           href="/work/sessionsAndBills"
         />
         <Divider />
+        <CategoryCard 
+          heading={sections.sessionsAndSpeeches.title}
+          text={sections.sessionsAndSpeeches.description}
+          href="/work/peopleAndCommittees"
+        />
         <Card
-          className={styles.card}
-          title={sections.sessionsAndSpeeches.title}
-          description={sections.sessionsAndSpeeches.description}
           shortcuts={sections.sessionsAndSpeeches.shortcuts}
           href="/sessions/recordedSessions"
         />
       </Box>
-    </>
+    </Box>
   )
 }
 

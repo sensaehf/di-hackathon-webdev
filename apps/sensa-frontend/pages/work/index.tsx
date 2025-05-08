@@ -9,7 +9,7 @@ export default function SessionsAndBills() {
 
   return (
     <SubLayout>
-      <Box>
+      <Box className={styles.root}>
         <Breadcrumbs
           items={[
             { title: i18n?.t.home.title ?? '', href: '/' },
