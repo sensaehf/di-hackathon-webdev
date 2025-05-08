@@ -75,6 +75,9 @@ export interface MenuAndRoute {
   speaker: string
   sessions: string
   wip: string
+  bills: string
+  law: string
+  resolutions: string
 }
 
 export interface AccessControl {

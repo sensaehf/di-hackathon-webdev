@@ -17,7 +17,7 @@ const BillScreen = () => {
   const { meta, commentSection, discussions, related } = i18n.t.bill
 
   return (
-    <>
+    <Box>
       <Box>
         <Text variant="eyebrow">{meta.caseReference}</Text>
         <Text variant="h2" as="h2">{meta.title}</Text>
@@ -51,7 +51,7 @@ const BillScreen = () => {
           <Button key={index} variant="text">{linkLabel}</Button>
         ))}
       </RelatedCard>
-    </>
+    </Box>
   )
 }
 

@@ -311,8 +311,8 @@
     "accessToInformationAndResourcesHeader": "Aðgangur að upplýsingum og gögnum",
     "accessToInformationAndResourcesText": "Tól og úrræði sem eru aðgengileg almenningi til að nálgast upplýsingar um starfsemi Alþingis.",
     "loadMore": "Hlaåa fleiri skýrslum",
-    "viewOlderHandbooks": "",
-    "viewOlderGuides": "",
+    "viewOlderHandbooks": "Skoða eldri handbækur",
+    "viewOlderGuides": "Skoða eldri leiðbeiningar",
     "guideName": "Leiðarvísir fyrir þingmenn 2024",
     "guideHeader": "Leiðarvísir fyrir þingmenn",
     "guideText": "Ritið Háttvirtur þingmaður veitir leiðbeiningar um störf á þingfundum og í nefndum, meðferð og undirbúning mála, starfsskilyrði þingmanna og ráðningar. Einnig eru veittar upplýsingar um starfsemi skrifstofu Alþingis og þá þjónustu sem hún veitir þingmönnum.",
@@ -361,7 +361,8 @@
     "about": "/about",
     "handbooksAndReports": "/about/handbooksAndReports",
     "sessions": "/sessions",
-    "wip": "/wip"
+    "wip": "/wip",
+    "bills": "/work/sessionsAndBills/bills"
   },
   "footer": {
     "topLinksInfo": [

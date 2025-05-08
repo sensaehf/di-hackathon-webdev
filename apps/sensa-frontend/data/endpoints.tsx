@@ -14,6 +14,12 @@ export const getAllParliamentMembersAsSearchItem = (): SearchItem[] => {
   }))
 }
 
+export const getAllBillsAsSearchItem = (): SearchItem[] => {
+  return [
+    { label: "Grunnskólar", value: "1" }
+  ] 
+}
+
 export const getParliamentMemberById = (
   id: number,
 ): ParliamentMember | undefined => {

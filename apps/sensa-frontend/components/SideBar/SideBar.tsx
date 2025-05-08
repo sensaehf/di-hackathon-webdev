@@ -54,7 +54,22 @@ const SideBar = () => {
     {
       active: isActive(i18n?.t.routes.sessionsAndBills ?? ''),
       title: i18n?.t.menu.sessionsAndBills ?? '',
-      href: i18n?.t.routes.sessionsAndBills ?? ''
+      href: i18n?.t.routes.sessionsAndBills ?? '',
+      items: [
+        {
+          title: i18n?.t.menu.law ?? '',
+          href: i18n?.t.routes.wip ?? '',
+        },
+        {
+          title: i18n?.t.menu.resolutions ?? '',
+          href: i18n?.t.routes.wip ?? '',
+        },
+        {
+          active: isActive(i18n?.t.routes.bills ?? ''),
+          title: i18n?.t.menu.bills ?? '',
+          href: i18n?.t.routes.bills ?? '',
+        },
+      ]
     },
     {
       title: i18n?.t.menu.sessions ?? '',
