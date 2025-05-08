@@ -28,7 +28,9 @@
 
       "upcomingEvents": "Væntanlegir viðburðir",
       "agenda": "Dagskrá næsta þingfundar",
-      "allPlannedEvents": "Skoða alla fyrirhugaða viðburði"
+      "allPlannedEvents": "Skoða alla fyrirhugaða viðburði",
+      "session": "Þingfundur"
+
     },
     "livestream": {
       "upcoming": "Næsta beina útsending",

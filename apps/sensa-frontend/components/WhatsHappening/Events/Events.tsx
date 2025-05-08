@@ -11,9 +11,9 @@ const Events = () => {
           <Text variant="eyebrow">Monday may 5</Text>
           <Box className={styles.line}>
             <Box className={styles.timeBox}>
-              <Text>3.00 PM</Text>
+              <Text>3.00</Text>
             </Box>
-            <Button variant="text">Parliamentary session</Button>
+            <Button variant="text">{i18n.t.home.whatsHappening?.session}</Button>
           </Box>
         </Box>
 
@@ -21,28 +21,28 @@ const Events = () => {
           <Text variant="eyebrow">Monday may 5</Text>
           <Box className={styles.line}>
             <Box className={styles.timeBox}>
-              <Text>3.00 PM</Text>
+              <Text>4.00</Text>
             </Box>
-            <Button variant="text">Parliamentary session</Button>
+            <Button variant="text">{i18n.t.home.whatsHappening?.session}</Button>
           </Box>
           <Box className={styles.line}>
             <Box className={styles.timeBox}>
-              <Text>3.00 PM</Text>
+              <Text>5.00</Text>
             </Box>
-            <Button variant="text">Parliamentary session</Button>
+            <Button variant="text">{i18n.t.home.whatsHappening?.session}</Button>
           </Box>
           <Box className={styles.line}>
             <Box className={styles.timeBox}>
-              <Text>3.00 PM</Text>
+              <Text>6.00</Text>
             </Box>
-            <Button variant="text">Parliamentary session</Button>
+            <Button variant="text">{i18n.t.home.whatsHappening?.session}</Button>
           </Box>
 
           <Box className={styles.line}>
             <Box className={styles.timeBox}>
-              <Text>3.00 PM</Text>
+              <Text>7.00</Text>
             </Box>
-            <Button variant="text">Parliamentary session</Button>
+            <Button variant="text">{i18n.t.home.whatsHappening?.session}</Button>
           </Box>
         </Box>
       </Box>

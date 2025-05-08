@@ -27,7 +27,8 @@
       "title": "What is happening",
       "upcomingEvents": "Upcoming events",
       "agenda": "Agenda for next session",
-      "allPlannedEvents": "View all planned events"
+      "allPlannedEvents": "View all planned events",
+      "session": "Parliamentary session"
     },
     "livestream": {
       "upcoming": "Upcoming livestream",
