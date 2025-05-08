@@ -23,6 +23,7 @@ const BillSearch = () => {
 
   return (
     <AsyncSearch
+      colored
       placeholder={i18n.t.search.placeholder}
       options={billOptions}
       inputValue={value}

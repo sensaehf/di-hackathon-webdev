@@ -23,6 +23,7 @@ const MockSearch = () => {
 
   return (
     <AsyncSearch
+      colored
       placeholder={i18n.t.search.placeholder}
       options={pmOptions}
       inputValue={value}
