@@ -1,25 +1,25 @@
-import { Box, Text } from '@island.is/island-ui/core'
+import {  Text } from '@island.is/island-ui/core'
 import { Webreader } from '../../components/Webreader'
 import { CategoryCard } from '../../components/CategoryCard/CategoryCard'
+import { useI18n } from '../../i18n'
 
 
 const PeopleAndCommitteesScreen = () => {
-  // TODO i18n
+  const i18n = useI18n()
 
   return (
     <>
       <Text variant="h2" as="h2">
-        Laws, Resolutions and Bills
+        {i18n.t.home.workHeaderContent.people.title}
       </Text>
 
       <Webreader />
 
-      <CategoryCard text='lorem' heading='Members of Parliament'/>
-      <CategoryCard text='lorem' heading='Members of Parliament'/>
-      <CategoryCard text='lorem' heading='Members of Parliament'/>
-      <CategoryCard text='lorem' heading='Members of Parliament'/>
-      <CategoryCard text='lorem' heading='Members of Parliament'/>
-      <CategoryCard text='lorem' heading='Members of Parliament'/>
+      {i18n.t.peopleAndCommittees.items.map((item, index) => (
+  <CategoryCard key={index} heading={item.heading} text={item.text} />
+))}
+
+
     </>
   )
 }

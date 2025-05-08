@@ -30,7 +30,6 @@
       "agenda": "Dagskrá næsta þingfundar",
       "allPlannedEvents": "Skoða alla fyrirhugaða viðburði",
       "session": "Þingfundur"
-
     },
     "livestream": {
       "upcoming": "Næsta beina útsending",
@@ -65,6 +64,36 @@
       ]
     }
   },
+  "peopleAndCommittees": {
+  "items": [
+    {
+      "heading": "Alþingismenn",
+      "text": "Sjáðu hverjir sitja á þingi í dag. Finndu tengiliðaupplýsingar, æviágrip og þingsætaskipan þingmanna, varamanna og staðgengla."
+    },
+    {
+      "heading": "Þingflokkar",
+      "text": "Lærðu um þingflokka, leiðtoga þeirra og starfsfólk. Hér er einnig að finna upplýsingar um núverandi og fyrrverandi flokka, auk hópa utan þings."
+    },
+    {
+      "heading": "Kjördæmi",
+      "text": "Þessi kafli veitir yfirlit yfir hvert kjördæmi og skýrir hvernig þau eiga fulltrúa á Alþingi."
+    },
+    {
+      "heading": "Fastanefndir",
+      "text": "Fáðu yfirlit yfir fastanefndir þingsins, áherslusvið þeirra og hvernig þær starfa. Hér er meðal annars fjallað um utanríkismál, fjárlög og umhverfismál."
+    },
+    {
+      "heading": "Forseti og forsætisnefnd",
+      "text": "Lestu um forseta Alþingis, varaforseta og hlutverk forsætisnefndarinnar."
+    },
+    {
+      "heading": "Saga",
+      "text": "Kynntu þér helstu tímamót og áhrifafólk úr sögu Alþingis — allt frá þjóðfundum að fyrirmennum, konunglegum fulltrúum og sögulegum upphafsfundum."
+    }
+  ]
+},
+
+
   "about": {
     "annualReport": "Ársskýrslur",
     "annualReports": "Ársskýrslur",

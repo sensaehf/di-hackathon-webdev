@@ -63,6 +63,35 @@
       ]
     }
   },
+  "peopleAndCommittees": {
+    "items": [
+      {
+        "heading": "Members of Parliament",
+        "text": "See who sits in Parliament today. Find contact details, biographies, and seating charts for MPs, deputies, and substitutes."
+      },
+      {
+        "heading": "Parties",
+        "text": "Learn about the parliamentary parties, their leaders, and staff. You’ll also find information on current and past parties, as well as groups outside Parliament."
+      },
+      {
+        "heading": "Constituencies",
+        "text": "This section provides an overview of each area and explains how they are represented in Alþingi."
+      },
+      {
+        "heading": "Committees",
+        "text": "Get an overview of Parliament’s standing committees, their areas of focus, and how they work. This includes everything from foreign affairs to the budget and the environment."
+      },
+      {
+        "heading": "The Speaker and the Speaker's Committee",
+        "text": "Read about the Speaker of Parliament, the Vice Presidents, and the role of the Speakers' Committee. "
+      },
+      {
+        "heading": "History",
+        "text": "Explore key moments and figures from the AlÞingi’s past — from early national assemblies to long-serving MPs, royal representatives, and historic first sessions."
+      }
+    ]
+  },
+
   "about": {
     "annualReport": "Annual Report",
     "annualReports": "Annual Reports",
