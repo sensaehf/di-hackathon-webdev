@@ -17,16 +17,17 @@ const AlthingiMenu: React.FC<AlthingiMenuProps> = ({ menuButton }) => {
       ]}
       asideTopLinks={[
         {
-          text: 'About Alþingi',
+          text: 'Um Alþingi',
           href: '/services',
           sub: [
-            { text: 'Alþingi and how it works', href: '/services/consulting' },
-            { text: 'People, Structures and Governance', href: '/services/dev' },
-            { text: 'Public Engagement and Educational Resources', href: '/services/dev' },
-          ],
+            { text: 'Alþingi og hvernig það virkar', href: '/services/consulting' },
+            { text: 'Fólk, skipulag og stjórnkerfi', href: '/services/dev' },
+            { text: 'Samráð við almenning og fræðsluefni', href: '/services/dev' },
+          ]
+
         },
         {
-          text: 'News and announcements',
+          text: 'Fréttir og tilkynningar',
           href: '/contact',
         },
       ]}
