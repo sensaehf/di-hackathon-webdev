@@ -6,7 +6,9 @@
     "about": "IS About",
     "wipHeader": "Úbbs! Þessi síða er enn í vinnslu",
     "wipText1": "Við erum að vinna að þessari síðu til að veita þér nýjustu og gagnlegustu upplýsingarnar. Vinsamlegast kíktu aftur síðar þegar við höldum áfram að þróa og bæta þennan hluta.",
-    "wipText2": "Takk fyrir þolinmæðina"
+    "wipText2": "Takk fyrir þolinmæðina",
+    "header": "Alþingi – Þjóðþing Íslendinga"
+
   },
   "about": {
     "annualReport": "Ársskýrslur",
@@ -123,5 +125,5 @@
       "title": "Íslenska",
       "href": ""
     }
-  } 
+  }
 }
