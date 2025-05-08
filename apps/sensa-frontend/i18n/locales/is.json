@@ -16,7 +16,7 @@
       },
       "sessions": {
         "title": "Þingfundir og ræður",
-        "content": "Fáðu aðgang að upptökum, dagskrám, fundargerðum og leitartólum sem tengjast þingfundum og ræðum. Hér má meðal annars finna ræðutímaáætlanir, ræðuarkíf og reglur um ræðutíma."
+        "content": "Fáðu aðgang að upptökum, dagskrám, fundargerðum og leitartólum sem tengjast þingfundum og ræðum. Hér má meðal annars finna ræðutímaáætlanir, ræðusafn og reglur um ræðutíma."
       },
       "laws": {
         "title": "Lög, þingsályktanir og frumvörp",
@@ -24,7 +24,7 @@
       }
     },
     "whatsHappening": {
-      "title": "Hvað er að gerast",
+      "title": "Hvað er framundan",
 
       "upcomingEvents": "Væntanlegir viðburðir",
       "agenda": "Dagskrá næsta þingfundar",
@@ -67,7 +67,7 @@
   "peopleAndCommittees": {
     "items": [
       {
-        "heading": "Alþingismenn",
+        "heading": "Þingmenn",
         "text": "Sjáðu hverjir sitja á þingi í dag. Finndu tengiliðaupplýsingar, æviágrip og þingsætaskipan þingmanna, varamanna og staðgengla.",
         "href": "/work/peopleAndCommittees/membersOfParliament"
       },
@@ -179,6 +179,32 @@
       }
     }
   },
+  "workOfParliament": {
+    "title": "Störf Alþingis",
+    "sections": {
+      "peopleAndCommittees": {
+        "title": "Fólk og nefndir",
+        "description": "Kynntu þér uppbyggingu Alþingis í gegnum prófíla þingmanna, þingflokka, fastanefnda og forsætisnefndar.",
+        "shortcuts": [
+          "Þingmenn",
+          "Þingflokkar",
+          "Kjördæmi",
+          "Nefndir",
+          "Forseti og forsætisnefnd"
+        ]
+      },
+      "lawsResolutionsAndBills": {
+        "title": "Lög, þingsályktanir og frumvörp",
+        "description": "Skoðaðu löggjafarstarf Alþingis, þar á meðal safn laga, þingsályktana og frumvarpa, ásamt fyrirspurnum, skýrslum, umsögnum og stöðu mála.",
+        "shortcuts": ["Lög", "Þingsályktanir", "Frumvörp"]
+      },
+      "sessionsAndSpeeches": {
+        "title": "Þingfundir og ræður",
+        "description": "Fáðu aðgang að upptökum, dagskrám, ræðugerðum og leitarverkfærum sem tengjast þingfundum og ræðum, þar með talið ræðutöflu, skrá yfir ræður og reglur um ræðutíma.",
+        "shortcuts": ["Þingfundir", "Ræður", "Fundarsköp og reglur"]
+      }
+    }
+  },
 
   "bills": {
     "title": "Frumvörp",
@@ -202,12 +228,27 @@
           "caseNumber": "123",
           "date": "1. janúar 2024",
           "title": "Leikskólalög",
-          "submitter": "Atvinnuvega- og nýsköpunarráðuneytið",
+          "submitter": "Atvinnuvegaráð",
+          "status": "1. umræða"
+        },
+        {
+          "caseNumber": "123",
+          "date": "1. janúar 2024",
+          "title": "Leikskólalög",
+          "submitter": "Atvinnuvegaráð",
+          "status": "1. umræða"
+        },
+        {
+          "caseNumber": "123",
+          "date": "1. janúar 2024",
+          "title": "Leikskólalög",
+          "submitter": "Atvinnuvegaráð",
           "status": "1. umræða"
         }
       ]
     }
   },
+
   "bill": {
     "meta": {
       "caseReference": "Mál 97, frumvarp 156. löggjafarþings 2025.",
@@ -234,13 +275,12 @@
     "buttonLabel": "Leita"
   },
   "webreader": {
-  "label": "Hlusta",
-  "title": "Hlustaðu á þessa síðu lesna af ReadSpeaker webReader"
-},
-
+    "label": "Hlusta",
+    "title": "Hlustaðu á þessa síðu lesna af ReadSpeaker webReader"
+  },
 
   "membersOfParliament": {
-    "title": "Alþingismenn",
+    "title": "Þingmenn",
     "subtitle": "Allir þingmenn",
     "searchPlaceholder": "Leita að þingmönnum",
     "sortBy": "Raða eftir",

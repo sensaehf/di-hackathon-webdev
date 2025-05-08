@@ -41,7 +41,7 @@ const WhatsHappening = () => {
           {/*  Tabs */}
           <Box className={styles.box}>
             {/*  LiveStream */}
-            <Text>1. janúar 2020 At 1:30 PM</Text>
+            <Text>Næsti þingfundur 8. maí kl. 10:30</Text>
             <Text variant="h4" as="h3">
             {i18n.t.home?.livestream?.upcoming}
             </Text>

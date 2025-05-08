@@ -45,7 +45,7 @@ const InnerNewsCard = ({ text }: { text: string }) => {
   return (
     <Box className={styles.innerNewsCard}>
       <Text>{text}</Text>
-      <Tag>Tag</Tag>
+      <Tag>{'Skoða nánar'}</Tag>
     </Box>
   )
 }

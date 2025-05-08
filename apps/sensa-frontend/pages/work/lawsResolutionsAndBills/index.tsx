@@ -1,3 +1,3 @@
-import LawsScreen from "apps/sensa-frontend/screens/LawsScreen/LawsScreen";
+import LawsScreen from "../../../screens/LawsScreen/LawsScreen";
 
 export default LawsScreen

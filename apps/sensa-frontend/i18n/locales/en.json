@@ -125,33 +125,48 @@
     }
   },
   "bills": {
-    "title": "Bills",
-    "tabs": {
-      "active": "Active",
-      "archive": "Archive",
-      "reports": "Reports"
-    },
-    "sessionHeading": "156th Legislative Session 2025",
-    "filterButton": "Filter",
-    "table": {
-      "headers": {
-        "caseNumber": "Case",
-        "date": "Date",
-        "title": "Bill title",
-        "submitter": "Submitter",
-        "status": "Status"
-      },
-      "rows": [
-        {
-          "caseNumber": "123",
-          "date": "1 Jan 2024",
-          "title": "Preschool Act",
-          "submitter": "Ministry of Industry",
-          "status": "1st discussion"
-        }
-      ]
-    }
+  "title": "Bills",
+  "tabs": {
+    "active": "Active",
+    "archive": "Archive",
+    "reports": "Reports"
   },
+  "sessionHeading": "156th Legislative Session 2025",
+  "filterButton": "Filter",
+  "table": {
+    "headers": {
+      "caseNumber": "Case",
+      "date": "Date",
+      "title": "Bill title",
+      "submitter": "Submitter",
+      "status": "Status"
+    },
+    "rows": [
+      {
+        "caseNumber": "123",
+        "date": "1 Jan 2024",
+        "title": "Preschool Act",
+        "submitter": "Ministry of Industry",
+        "status": "1st discussion"
+      },
+      {
+        "caseNumber": "123",
+        "date": "1 Jan 2024",
+        "title": "Preschool Act",
+        "submitter": "Ministry of Industry",
+        "status": "1st discussion"
+      },
+      {
+        "caseNumber": "123",
+        "date": "1 Jan 2024",
+        "title": "Preschool Act",
+        "submitter": "Ministry of Industry",
+        "status": "1st discussion"
+      }
+    ]
+  }
+},
+
   "bill": {
     "meta": {
       "caseReference": "Case 97, Bill 156th Legislative Session 2025.",
@@ -308,6 +323,32 @@
   "webreader": {
     "label": "Listen",
     "title": "Listen to this page using ReadSpeaker webReader"
+  },
+  "workOfParliament": {
+    "title": "Work of Alþingi",
+    "sections": {
+      "peopleAndCommittees": {
+        "title": "People and Committees",
+        "description": "Explore the structure of Parliament through profiles of Members of Parliament, parliamentary parties, parliamentary committees, and the Speaker’s Committee.",
+        "shortcuts": [
+          "Members of Parliament",
+          "Parties",
+          "Constituencies",
+          "Committees",
+          "The Speaker and The Speakers' Committee"
+        ]
+      },
+      "lawsResolutionsAndBills": {
+        "title": "Laws, Resolutions and Bills",
+        "description": "Browse Iceland’s legislative work, including collections of laws, resolutions, and bills, as well as inquiries, reports, opinions, and the current status of parliamentary matters.",
+        "shortcuts": ["Laws", "Resolutions", "Bills"]
+      },
+      "sessionsAndSpeeches": {
+        "title": "Sessions and Speeches",
+        "description": "Access recordings, agendas, transcripts, and search tools related to parliamentary sessions and speeches, including speaking schedules, speech archives, and rules on speaking time.",
+        "shortcuts": ["Sessions", "Speeches", "Rules and Procedures"]
+      }
+    }
   },
 
 

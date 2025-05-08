@@ -60,7 +60,7 @@ const BillsScreen = () => {
         </Button>
       </Box>
 
-      <BillsTable headers={table.headers} />
+      <BillsTable headers={table.headers} rows={table.rows} />
 
       <Box width="full">
         <Divider />
@@ -69,7 +69,25 @@ const BillsScreen = () => {
   )
 }
 
-const BillsTable = ({ headers }: { headers: any }) => {
+const BillsTable = ({
+  headers,
+  rows,
+}: {
+  headers: {
+    caseNumber: string
+    date: string
+    title: string
+    submitter: string
+    status: string
+  }
+  rows: Array<{
+    caseNumber: string
+    date: string
+    title: string
+    submitter: string
+    status: string
+  }>
+}) => {
   return (
     <T.Table>
       <T.Head>
@@ -82,18 +100,18 @@ const BillsTable = ({ headers }: { headers: any }) => {
         </T.Row>
       </T.Head>
       <T.Body>
-        {[1, 2, 3].map((x) => (
-          <T.Row key={x}>
-            <T.Data>123</T.Data>
-            <T.Data>1. jan 2024</T.Data>
+        {rows.map((row, index) => (
+          <T.Row key={index}>
+            <T.Data>{row.caseNumber}</T.Data>
+            <T.Data>{row.date}</T.Data>
             <T.Data>
-              <Link href="/work/lawsResolutionsAndBills/bills/2">Leikskólamál</Link>
+              <Link href="/work/lawsResolutionsAndBills/bills/2">{row.title}</Link>
             </T.Data>
             <T.Data>
-              <Link href="#">Atvinnuvegaráð</Link>
+              <Link href="#">{row.submitter}</Link>
             </T.Data>
             <T.Data>
-              <Tag>1st discussion</Tag>
+              <Tag>{row.status}</Tag>
             </T.Data>
           </T.Row>
         ))}
