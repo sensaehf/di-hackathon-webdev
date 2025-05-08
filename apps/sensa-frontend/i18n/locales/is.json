@@ -179,6 +179,32 @@
       }
     }
   },
+  "workOfParliament": {
+    "title": "Work of Alþingi",
+    "sections": {
+      "peopleAndCommittees": {
+        "title": "People and Committees",
+        "description": "Explore the structure of Parliament through profiles of Members of Parliament, parliamentary parties, parliamentary committees, and the Speaker’s Committee.",
+        "shortcuts": [
+          "Members of Parliament",
+          "Parties",
+          "Constituencies",
+          "Committees",
+          "The Speaker and The Speakers' Committee"
+        ]
+      },
+      "lawsResolutionsAndBills": {
+        "title": "Laws, Resolutions and Bills",
+        "description": "Browse Iceland’s legislative work, including collections of laws, resolutions, and bills, as well as inquiries, reports, opinions, and the current status of parliamentary matters.",
+        "shortcuts": ["Laws", "Resolutions", "Bills"]
+      },
+      "sessionsAndSpeeches": {
+        "title": "Sessions and Speeches",
+        "description": "Access recordings, agendas, transcripts, and search tools related to parliamentary sessions and speeches, including speaking schedules, speech archives, and rules on speaking time.",
+        "shortcuts": ["Sessions", "Speeches", "Rules and Procedures"]
+      }
+    }
+  },
 
   "bills": {
     "title": "Frumvörp",
@@ -234,10 +260,9 @@
     "buttonLabel": "Leita"
   },
   "webreader": {
-  "label": "Hlusta",
-  "title": "Hlustaðu á þessa síðu lesna af ReadSpeaker webReader"
-},
-
+    "label": "Hlusta",
+    "title": "Hlustaðu á þessa síðu lesna af ReadSpeaker webReader"
+  },
 
   "membersOfParliament": {
     "title": "Alþingismenn",
