@@ -1,23 +1,18 @@
 import React, { FC, useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-
 import { Box, ResponsiveProp, Space } from '@island.is/island-ui/core'
-
 import { CUSTOMER_ID, SCRIPT_URL } from './config'
 import { I18nContext } from '../../i18n/I18n'
 
 declare global {
   interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     rsConf: any
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const ReadSpeaker: any
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const rspkr: any
+
 interface WebReaderProps {
   readId?: string
   readClass?: string
@@ -35,16 +30,12 @@ const Webreader: FC<React.PropsWithChildren<WebReaderProps>> = ({
   const router = useRouter()
   const i18n = useContext(I18nContext)
   const activeLocale = i18n?.activeLocale ?? 'is'
+
   useEffect(() => {
     const routeChangestart = () => {
       if (typeof ReadSpeaker !== 'undefined' && ReadSpeaker.PlayerAPI?.stop) {
         ReadSpeaker.PlayerAPI.stop()
-
         if (ReadSpeaker.PlayerAPI.audio.state.current && rspkr.ui) {
-          // We need to untangle the dom manipulation that happens
-          // on behalf of the ReadSpeaker client.
-          // This is most easily done by closing the player programatically through
-          // the rspkr object and have it handle its own cleanup
           ReadSpeaker.q(() => {
             if (rspkr.ui.getActivePlayer()) {
               rspkr.ui.getActivePlayer().close()
@@ -55,10 +46,7 @@ const Webreader: FC<React.PropsWithChildren<WebReaderProps>> = ({
     }
 
     router.events.on('routeChangeStart', routeChangestart)
-
-    return () => {
-      router.events.off('routeChangeStart', routeChangestart)
-    }
+    return () => router.events.off('routeChangeStart', routeChangestart)
   }, [])
 
   useEffect(() => {
@@ -70,11 +58,6 @@ const Webreader: FC<React.PropsWithChildren<WebReaderProps>> = ({
       document.body.appendChild(el)
       window.rsConf = { general: { usePost: true } }
     } else if (typeof rspkr !== 'undefined' && rspkr.ui) {
-      // https://wrdev.readspeaker.com/get-started/implementation/dynamic-loading
-      // When a parent component, with the webreader, has been unmounted
-      // the readspeaker will still remain initialized
-      // but in order for functionality to be added to the new button
-      // we need to call 'addClickEvents'
       window.onload = () => {
         rspkr.init()
         rspkr.ui.addClickEvents()
@@ -86,28 +69,19 @@ const Webreader: FC<React.PropsWithChildren<WebReaderProps>> = ({
     const lang = activeLocale === 'is' ? 'is_is' : 'en_uk'
     let h =
       '//app-eu.readspeaker.com/cgi-bin/rsent' +
-      '?customerid=' +
-      CUSTOMER_ID +
-      '&lang=' +
-      lang +
-      '&url=' +
-      encodeURIComponent(window.location.href)
+      '?customerid=' + CUSTOMER_ID +
+      '&lang=' + lang +
+      '&url=' + encodeURIComponent(window.location.href)
 
-    if (readId) {
-      h += '&readid=' + readId
-    }
-    if (readClass) {
-      h += '&readclass=' + readClass
-    }
+    if (readId) h += '&readid=' + readId
+    if (readClass) h += '&readclass=' + readClass
+
     setHref(h)
-  }, [href, activeLocale])
+  }, [readId, readClass, activeLocale])
 
-  // TODO: Use i18n.t
-  const buttonLabel = activeLocale === 'is' ? 'Hlusta' : 'Listen'
-  const buttonTitle =
-    activeLocale === 'is'
-      ? 'Hlustaðu á þessa síðu lesna af ReadSpeaker webReader'
-      : 'Listen to this page using ReadSpeaker'
+  // Read localized label and title from i18n
+  const buttonLabel = i18n?.t.webreader.label
+  const buttonTitle = i18n?.t.webreader.title
 
   return (
     <Box marginTop={marginTop} marginBottom={marginBottom} printHidden={true}>
@@ -118,9 +92,7 @@ const Webreader: FC<React.PropsWithChildren<WebReaderProps>> = ({
           accessKey="L"
           title={buttonTitle}
           href={href}
-          onClick={(event) => {
-            event.preventDefault() // So the Plausible outbound link tracking script doesn't open the href
-          }}
+          onClick={(event) => event.preventDefault()}
         >
           <span className="rsbtn_left rsimg rspart">
             <span className="rsbtn_text">

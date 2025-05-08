@@ -228,10 +228,14 @@
     }
   },
   "search": {
-  "placeholder": "Leita á Alþingi",
-  "noResults": "Engar niðurstöður fundust",
-  "loading": "Leita...",
-  "buttonLabel": "Leita"
+    "placeholder": "Leita á Alþingi",
+    "noResults": "Engar niðurstöður fundust",
+    "loading": "Leita...",
+    "buttonLabel": "Leita"
+  },
+  "webreader": {
+  "label": "Hlusta",
+  "title": "Hlustaðu á þessa síðu lesna af ReadSpeaker webReader"
 },
 
 

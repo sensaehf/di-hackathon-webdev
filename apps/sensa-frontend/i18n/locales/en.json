@@ -305,6 +305,10 @@
     "loading": "Searching...",
     "buttonLabel": "Search"
   },
+  "webreader": {
+    "label": "Listen",
+    "title": "Listen to this page using ReadSpeaker webReader"
+  },
 
 
   "routes": {
