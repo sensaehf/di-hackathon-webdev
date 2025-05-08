@@ -365,18 +365,7 @@
   },
   "footer": {
     "topLinksInfo": [
-      {
-        "title": "Um Stafrænt Ísland",
-        "href": "https://stafraent.island.is/"
-      },
-      {
-        "title": "Stofnanir",
-        "href": "/stofnanir"
-      },
-      {
-        "title": "Vörur og þjónusta Ísland.is",
-        "href": "https://island.is/flokkur/vorur-og-thjonusta-island-is"
-      }
+
     ],
     "topLinksContact": [
       {
@@ -395,26 +384,13 @@
         "href": "#"
       }
     ],
-    "middleLinksTitle": "Þjónustuflokkar",
+    "middleLinksTitle": "Valmynd",
     "middleLinks": [
-      { "title": "Akstur og bifreiðar", "href": "#" },
-      { "title": "Atvinnurekstur og sjálfstætt starfandi", "href": "#" },
-      { "title": "Dómstólar og réttarfar", "href": "#" },
-      { "title": "Fjármál og skattar", "href": "#" },
-      { "title": "Fjölskylda og velferð", "href": "#" },
-      { "title": "Heilbrigðismál", "href": "#" },
-      { "title": "Húsnæðismál", "href": "#" },
-      { "title": "Iðnaður", "href": "#" },
-      { "title": "Innflytjendamál", "href": "#" },
-      { "title": "Launþegi, réttindi og lífeyrir", "href": "#" },
-      { "title": "Málefni fatlaðs fólks", "href": "#" },
-      { "title": "Menntun", "href": "#" },
-      { "title": "Neytendamál", "href": "#" },
-      { "title": "Samfélag og réttindi", "href": "#" },
-      { "title": "Samgöngur", "href": "#" },
-      { "title": "Umhverfismál", "href": "#" },
-      { "title": "Vegabréf, ferðalög og búseta erlendis", "href": "#" },
-      { "title": "Vörur og þjónusta Ísland.is", "href": "#" }
+      { "title": "Fólk og nefndir", "href": "#" },
+      { "title": "Lög, þingsályktanir og frumvörp", "href": "#" },
+      { "title": "Þingfundir og ræður", "href": "#" },
+      { "title": "Um Alþingi", "href": "#" },
+      { "title": "Fréttir og tilkynningar", "href": "#" }
     ],
     "privacyPolicyLink": {
       "title": "Persónuverndarstefna",

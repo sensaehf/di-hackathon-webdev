@@ -3,7 +3,6 @@ import {
   GridContainer,
   Page,
   Header,
-  Footer,
   FooterLinkProps,
   Button,
   Text,
@@ -18,6 +17,7 @@ import * as styles from './AppLayout.css'
 import Link from 'next/link'
 import AlthingiHeader from '../Header/AlthingiHeader'
 import AlthingiMenu from '../AlthingiMenu/AlthingiMenu'
+import { Footer } from '../Footer/Footer'
 
 interface LayoutProps {
   children: ReactNode
