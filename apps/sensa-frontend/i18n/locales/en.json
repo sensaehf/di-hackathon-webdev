@@ -153,29 +153,28 @@
     }
   },
   "bill": {
-  "meta": {
-    "caseReference": "Case 97, Bill 156th Legislative Session 2025.",
-    "title": "Primary schools"
+    "meta": {
+      "caseReference": "Case 97, Bill 156th Legislative Session 2025.",
+      "title": "Primary schools"
+    },
+    "commentSection": {
+      "infoText": "Anyone is free to send a written comment to the standing committee on a parliamentary matter. Comments should be sent through the Althingi's comment portal. If the formal comment process for a parliamentary matter has not begun or the comment deadline has passed, it is possible to send a comment to the email address comments@althingi.is",
+      "button": "Go to Althingi's comment portal"
+    },
+    "discussions": [
+      "1st discussion",
+      "2nd discussion",
+      "Bill after 2nd discussion"
+    ],
+    "related": {
+      "title": "Related documentation",
+      "links": [
+        "Related Issues and topics",
+        "All review requests",
+        "Submitted papers and reviews"
+      ]
+    }
   },
-  "commentSection": {
-    "infoText": "Anyone is free to send a written comment to the standing committee on a parliamentary matter. Comments should be sent through the Althingi's comment portal. If the formal comment process for a parliamentary matter has not begun or the comment deadline has passed, it is possible to send a comment to the email address comments@althingi.is",
-    "button": "Go to Althingi's comment portal"
-  },
-  "discussions": [
-    "1st discussion",
-    "2nd discussion",
-    "Bill after 2nd discussion"
-  ],
-  "related": {
-    "title": "Related documentation",
-    "links": [
-      "Related Issues and topics",
-      "All review requests",
-      "Submitted papers and reviews"
-    ]
-  }
-},
-
 
   "member": {
     "frame": {
@@ -291,6 +290,23 @@
     "resolution": "Resolution",
     "handbooksAndReports": "Alþingi and How It Works"
   },
+  "membersOfParliament": {
+    "title": "Members of Parliament",
+    "subtitle": "All members",
+    "searchPlaceholder": "Search members",
+    "sortBy": "Sort by",
+    "filters": ["Name", "Party", "Constituency", "Committee"],
+    "filterButton": "Filter",
+    "totalLabel": "{count} members in total"
+  },
+  "search": {
+    "placeholder": "Search Alþingi",
+    "noResults": "No results found",
+    "loading": "Searching...",
+    "buttonLabel": "Search"
+  },
+
+
   "routes": {
     "workOfParliament": "/work",
     "peopleAndCommittees": "/work/peopleAndCommittees",

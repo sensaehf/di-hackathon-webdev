@@ -227,6 +227,23 @@
       ]
     }
   },
+  "search": {
+  "placeholder": "Leita á Alþingi",
+  "noResults": "Engar niðurstöður fundust",
+  "loading": "Leita...",
+  "buttonLabel": "Leita"
+},
+
+
+  "membersOfParliament": {
+    "title": "Alþingismenn",
+    "subtitle": "Allir þingmenn",
+    "searchPlaceholder": "Leita að þingmönnum",
+    "sortBy": "Raða eftir",
+    "filters": ["Nafni", "Flokki", "Kjördæmi", "Nefnd"],
+    "filterButton": "Sía",
+    "totalLabel": "{count} þingmenn alls"
+  },
 
   "about": {
     "annualReport": "Ársskýrslur",
