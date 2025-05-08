@@ -93,7 +93,56 @@
     ]
   },
   "member": {
-
+    "frame": {
+        "position": {
+          "label": "Position",
+          "value": "Parliament party leader"
+        },
+        "ministry": {
+          "label": "Ministry",
+          "value": "Ministry of Health"
+        },
+        "constituency": {
+          "label": "Constituency",
+          "value": "Reykjavík North"
+        },
+        "party": {
+          "label": "Party",
+          "value": "Social Democratic Alliance"
+        },
+        "dob": {
+          "label": "Date of birth",
+          "value": "November 4th, 1987"
+        }
+    },
+    "seats": {
+      "title": "Current committee seats",
+      "items": [
+        "Future Committee",
+        "Environment and Transportation Committee",
+        "Nordic Council Icelandic Section"
+      ]
+    },
+    "parliamentaryWork": {
+      "title": "Parliamentary work and register of interests",
+      "items": [
+        "Register of interests",
+        "Bills",
+        "Speeches",
+        "Parliamentarian",
+        "Presenter",
+        "Salary and expense payments",
+        "Suggestions",
+        "Other parliamentary documents",
+        "Voter list",
+        "Committee seat"
+      ]
+    },
+    "accordionLabels": {
+      "parliamentarian": "Parliamentarian",
+      "biography": "Biography",
+      "voiceSample": "Voice sample"
+    }
   },
 
   "about": {

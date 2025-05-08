@@ -65,35 +65,86 @@
     }
   },
   "peopleAndCommittees": {
-  "items": [
-    {
-      "heading": "Alþingismenn",
-      "text": "Sjáðu hverjir sitja á þingi í dag. Finndu tengiliðaupplýsingar, æviágrip og þingsætaskipan þingmanna, varamanna og staðgengla.",
-      "href": "/work/peopleAndCommittees/membersOfParliament"
+    "items": [
+      {
+        "heading": "Alþingismenn",
+        "text": "Sjáðu hverjir sitja á þingi í dag. Finndu tengiliðaupplýsingar, æviágrip og þingsætaskipan þingmanna, varamanna og staðgengla.",
+        "href": "/work/peopleAndCommittees/membersOfParliament"
+      },
+      {
+        "heading": "Þingflokkar",
+        "text": "Lærðu um þingflokka, leiðtoga þeirra og starfsfólk. Hér er einnig að finna upplýsingar um núverandi og fyrrverandi flokka, auk hópa utan þings."
+      },
+      {
+        "heading": "Kjördæmi",
+        "text": "Þessi kafli veitir yfirlit yfir hvert kjördæmi og skýrir hvernig þau eiga fulltrúa á Alþingi."
+      },
+      {
+        "heading": "Fastanefndir",
+        "text": "Fáðu yfirlit yfir fastanefndir þingsins, áherslusvið þeirra og hvernig þær starfa. Hér er meðal annars fjallað um utanríkismál, fjárlög og umhverfismál."
+      },
+      {
+        "heading": "Forseti og forsætisnefnd",
+        "text": "Lestu um forseta Alþingis, varaforseta og hlutverk forsætisnefndarinnar."
+      },
+      {
+        "heading": "Saga",
+        "text": "Kynntu þér helstu tímamót og áhrifafólk úr sögu Alþingis — allt frá þjóðfundum að fyrirmennum, konunglegum fulltrúum og sögulegum upphafsfundum."
+      }
+    ]
+  },
+  "member": {
+    "frame": {
+      "position": {
+        "label": "Staða",
+        "value": "Formaður þingflokks"
+      },
+      "ministry": {
+        "label": "Ráðuneyti",
+        "value": "Heilbrigðisráðuneytið"
+      },
+      "constituency": {
+        "label": "Kjördæmi",
+        "value": "Reykjavík norður"
+      },
+      "party": {
+        "label": "Flokkur",
+        "value": "Samfylkingin"
+      },
+      "dob": {
+        "label": "Fæðingardagur",
+        "value": "4. nóvember 1987"
+      }
     },
-    {
-      "heading": "Þingflokkar",
-      "text": "Lærðu um þingflokka, leiðtoga þeirra og starfsfólk. Hér er einnig að finna upplýsingar um núverandi og fyrrverandi flokka, auk hópa utan þings."
+    "seats": {
+      "title": "Sæti í fastanefndum",
+      "items": [
+        "Framtíðarnefnd",
+        "Umhverfis- og samgöngunefnd",
+        "Íslensk sendinefnd Norðurlandaráðs"
+      ]
     },
-    {
-      "heading": "Kjördæmi",
-      "text": "Þessi kafli veitir yfirlit yfir hvert kjördæmi og skýrir hvernig þau eiga fulltrúa á Alþingi."
+    "parliamentaryWork": {
+      "title": "Þingstörf og hagsmunaskrá",
+      "items": [
+        "Hagsmunaskrá",
+        "Frumvörp",
+        "Ræður",
+        "Þingmaður",
+        "Kynningaraðili",
+        "Laun og greiðslur",
+        "Ábendingar",
+        "Önnur þinggögn",
+        "Kjörskrár",
+        "Sæti í nefnd"
+      ]
     },
-    {
-      "heading": "Fastanefndir",
-      "text": "Fáðu yfirlit yfir fastanefndir þingsins, áherslusvið þeirra og hvernig þær starfa. Hér er meðal annars fjallað um utanríkismál, fjárlög og umhverfismál."
-    },
-    {
-      "heading": "Forseti og forsætisnefnd",
-      "text": "Lestu um forseta Alþingis, varaforseta og hlutverk forsætisnefndarinnar."
-    },
-    {
-      "heading": "Saga",
-      "text": "Kynntu þér helstu tímamót og áhrifafólk úr sögu Alþingis — allt frá þjóðfundum að fyrirmennum, konunglegum fulltrúum og sögulegum upphafsfundum."
+    "accordionLabels": {
+      "parliamentarian": "Þingmaður",
+      "biography": "Æviágrip",
+      "voiceSample": "Rödd þingmanns"
     }
-  ]
-},
-
+  },
 
   "about": {
     "annualReport": "Ársskýrslur",
@@ -122,7 +173,7 @@
     "guideName": "Leiðarvísir fyrir þingmenn 2024",
     "guideHeader": "Leiðarvísir fyrir þingmenn",
     "guideText": "Ritið Háttvirtur þingmaður veitir leiðbeiningar um störf á þingfundum og í nefndum, meðferð og undirbúning mála, starfsskilyrði þingmanna og ráðningar. Einnig eru veittar upplýsingar um starfsemi skrifstofu Alþingis og þá þjónustu sem hún veitir þingmönnum.",
-    "handbookName":"Handbók Alþingis 2017",
+    "handbookName": "Handbók Alþingis 2017",
     "handbookHeader": "Handbók Alþingis",
     "handbookText": "Handbók Alþingis er gefin út eftir hverjar alþingiskosningar og kom fyrst út árið 1984. Frá árinu 1999 hefur hún einnig verið aðgengileg rafrænt. Í handbókinni er að finna yfirlit yfir störf þingsins, þar á meðal upplýsingar um nýafstaðnar kosningar, skipan þingsins og þingmannaskrá. Hún inniheldur æviágrip, tölfræði og upplýsingar um flokka og nefndir. Viðaukar fjalla um starfsmenn skrifstofu Alþingis, þingflokka og tengdar stofnanir."
   },

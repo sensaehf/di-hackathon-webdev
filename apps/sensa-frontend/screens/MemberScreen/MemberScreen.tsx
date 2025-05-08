@@ -9,16 +9,14 @@ import {
   Button,
   Text,
 } from '@island.is/island-ui/core'
-import {
-  getCommitteeById,
-  getParliamentMemberById,
-} from '../../data/endpoints'
+import { getCommitteeById, getParliamentMemberById } from '../../data/endpoints'
 import { ParliamentMember } from '../../data/types'
 import { Webreader } from '../../components/Webreader'
 import BioFrame from './BioFrame/BioFrame'
 import * as styles from './MemberScreen.css'
 import RelatedCard from './RelatedCard/RelatedCard'
 import VoiceSample from './VoiceSample/VoiceSample'
+import { useI18n } from 'apps/sensa-frontend/i18n'
 
 const MemberScreen = ({ memberId }: { memberId: string }) => {
   const [error, setError] = useState<boolean>(false)
@@ -60,50 +58,40 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
       <BioFrame member={member} />
       {/* Related Card */}
       <RelatedCard>
-        <Text variant="eyebrow">Current committee seats</Text>
-        <Button variant="text">Future Committee</Button>
-        <Button variant="text">Future Committee</Button>
-        <Button variant="text">Future Committee</Button>
+        <Text variant="eyebrow">{i18n?.t.member.seats.title}</Text>
+
+        {i18n?.t.member.seats.items.map((seat: string, index: number) => (
+          <Button key={index} variant="text">
+            {seat}
+          </Button>
+        ))}
       </RelatedCard>
       <RelatedCard>
         <RelatedCardFrame member={member} />
       </RelatedCard>
       <Box className={styles.accordionBox}>
-      <Accordion>
-          <AccordionItem
-            id="item-1"
-            label="Parliamentarian"
-            startExpanded={false}
-          >
-            <Text>
-            {member.party}
-            </Text>
-          </AccordionItem>
-        </Accordion>
-      </Box>
-
-      <Box className={styles.accordionBox}>
-      <Accordion>
-          <AccordionItem
-            id="item-1"
-            label="Biography"
-            startExpanded={false}
-          >
-            <Text>
-            {member.bio}
-            </Text>
-          </AccordionItem>
-        </Accordion>
-      </Box>
-
-
-      <Box className={styles.accordionBox}>
         <Accordion>
           <AccordionItem
             id="item-1"
-            label="Voice sample"
+            label={i18n?.t.member?.accordionLabels?.parliamentarian}
             startExpanded={false}
           >
+            <Text>{member.name.fullName}</Text>
+          </AccordionItem>
+        </Accordion>
+      </Box>
+
+      <Box className={styles.accordionBox}>
+        <Accordion>
+          <AccordionItem id="item-1" label={i18n?.t.member?.accordionLabels?.biography} startExpanded={false}>
+            <Text>{member.bio}</Text>
+          </AccordionItem>
+        </Accordion>
+      </Box>
+
+      <Box className={styles.accordionBox}>
+        <Accordion>
+          <AccordionItem id="item-1" label={i18n?.t.member?.accordionLabels?.voiceSample} startExpanded={false}>
             <VoiceSample />
           </AccordionItem>
         </Accordion>
@@ -113,6 +101,7 @@ const MemberScreen = ({ memberId }: { memberId: string }) => {
 }
 
 const RelatedCardFrame = ({ member }: { member?: ParliamentMember }) => {
+  const i18n = useI18n()
   let committee
   if (member?.committees.current.committeeId) {
     committee = getCommitteeById(member?.committees.current.committeeId)
@@ -121,26 +110,27 @@ const RelatedCardFrame = ({ member }: { member?: ParliamentMember }) => {
 
   return (
     <>
-      <Text variant="eyebrow">
-        Parliamentary work and register of interests{' '}
-      </Text>
-      <Box className={styles.relatedCardInnerFrame}>
-        <Box className={styles.relatedCardContent}>
-          <Button variant="text">{committee?.name}</Button>
-          <Button variant="text">asdf</Button>
-          <Button variant="text">asdf</Button>
-          <Button variant="text">asdf</Button>
-        </Box>{' '}
-        {/* Content */}
-        <Box className={styles.relatedCardContent}>
-          <Button variant="text">asdf</Button>
-          <Button variant="text">asdf</Button>
-          <Button variant="text">asdf</Button>
-          <Button variant="text">asdf</Button>
-        </Box>{' '}
-        {/* Content */}
+    <Text variant="eyebrow">
+      {i18n?.t.member.parliamentaryWork.title}
+    </Text>
+    <Box className={styles.relatedCardInnerFrame}>
+      <Box className={styles.relatedCardContent}>
+        <Button variant="text">{committee?.name}</Button>
+        {i18n?.t.member.parliamentaryWork.items.slice(0, 3).map((item, index) => (
+          <Button key={index} variant="text">
+            {item}
+          </Button>
+        ))}
       </Box>
-    </>
+      <Box className={styles.relatedCardContent}>
+        {i18n?.t.member.parliamentaryWork.items.slice(3).map((item, index) => (
+          <Button key={index} variant="text">
+            {item}
+          </Button>
+        ))}
+      </Box>
+    </Box>
+  </>
   )
 }
 
