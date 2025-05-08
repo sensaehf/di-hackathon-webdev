@@ -57,7 +57,7 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
   const label = currentLocale === 'is' ? 'EN' : 'IS'
 
   return (
-    <>
+    <GridContainer>
       <Box className={styles.layoutWrapper}>
         <header>
           <Box className={styles.islandBox}>
@@ -114,6 +114,6 @@ export const AppLayout: FC<React.PropsWithChildren<LayoutProps>> = ({
           middleLinks={i18n.t.footer.middleLinks}
         />
       </Box>
-    </>
+    </GridContainer>
   )
 }

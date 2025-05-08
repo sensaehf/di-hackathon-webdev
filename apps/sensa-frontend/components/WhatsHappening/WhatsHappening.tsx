@@ -1,4 +1,4 @@
-import { Box, Button, Inline, Tabs, Text } from '@island.is/island-ui/core'
+import { Box, Button, GridColumn, GridContainer, GridRow, Inline, Tabs, Text } from '@island.is/island-ui/core'
 import * as styles from './WhatsHappening.css'
 import LivePlayer from '../LivePlayer/LivePlayer'
 import Events from './Events/Events'
@@ -14,8 +14,9 @@ const WhatsHappening = () => {
         {i18n.t.home.whatsHappening?.title}
         </Text>
 
-        <Box className={styles.root}>
-          <Box className={styles.box1}>
+        <GridContainer>
+          <GridRow>
+            <GridColumn span={['2/2','2/2', '2/2', '1/2']}>
             <Tabs
               label="Main Tabs"
               selected="tab1"
@@ -37,43 +38,45 @@ const WhatsHappening = () => {
               onlyRenderSelectedTab={true}
               variant="alternative"
             />
-          </Box>
-          {/*  Tabs */}
-          <Box className={styles.box}>
-            {/*  LiveStream */}
-            <Text>Næsti þingfundur 8. maí kl. 10:30</Text>
-            <Text variant="h4" as="h3">
-            {i18n.t.home?.livestream?.upcoming}
-            </Text>
-            <Box className={styles.player}>
-              <LivePlayer />
-            </Box>
-            <Inline space={2}>
-              <Button
-                colorScheme="default"
-                icon={'arrowForward'}
-                iconType={'filled'}
-                size="small"
-                variant="text"
-                as="span"
-              >
-                {i18n.t.home?.livestream?.other}
-              </Button>
-              <Button
-                colorScheme="default"
-                icon={'arrowForward'}
-                iconType={'filled'}
-                size="small"
-                variant="text"
-                as="span"
-              >
-                <Link href='/sessions/recordedSessions'>
-                {i18n.t.home?.livestream?.previous}
-                </Link>
-              </Button>
-            </Inline>
-          </Box>
-        </Box>
+            </GridColumn>
+            <GridColumn span={['2/2','2/2', '2/2', '1/2']}>
+              <Box>
+                {/*  LiveStream */}
+                <Text>Næsti þingfundur 8. maí kl. 10:30</Text>
+                <Text variant="h4" as="h3">
+                {i18n.t.home?.livestream?.upcoming}
+                </Text>
+                <Box className={styles.player}>
+                  <LivePlayer />
+                </Box>
+                <Inline space={2}>
+                  <Button
+                    colorScheme="default"
+                    icon={'arrowForward'}
+                    iconType={'filled'}
+                    size="small"
+                    variant="text"
+                    as="span"
+                  >
+                    {i18n.t.home?.livestream?.other}
+                  </Button>
+                  <Button
+                    colorScheme="default"
+                    icon={'arrowForward'}
+                    iconType={'filled'}
+                    size="small"
+                    variant="text"
+                    as="span"
+                  >
+                    <Link href='/sessions/recordedSessions'>
+                    {i18n.t.home?.livestream?.previous}
+                    </Link>
+                  </Button>
+                </Inline>
+              </Box>
+            </GridColumn>
+          </GridRow>
+        </GridContainer>
       </Box>
     </>
   )

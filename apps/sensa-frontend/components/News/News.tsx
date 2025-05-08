@@ -1,6 +1,9 @@
 import {
   Box,
   Button,
+  GridColumn,
+  GridContainer,
+  GridRow,
   Tag,
   Text,
 } from '@island.is/island-ui/core'
@@ -21,22 +24,26 @@ const News = () => {
         <Button variant="text">{i18n.t.home?.news?.viewAll}</Button>
       </Box>
 
-      <Box className={styles.content}>
-        {newsItems.map((item, index) => (
-          <Box key={index} height="full" className={styles.box}>
-            <NewsCard
-              date={item.date}
-              title={item.title}
-              titleAs="h3"
-              titleVariant="h3"
-              introduction={<InnerNewsCard text={item.introduction} />}
-              href={item.href}
-              readMoreText=""
-              image={item.image}
-            />
-          </Box>
-        ))}
-      </Box>
+        <GridContainer>
+          <GridRow>
+            {newsItems.map((item, index) => (
+              <GridColumn key={index} span={['12/12','12/12', '12/12', '6/12']}>
+                <Box marginBottom={1} >
+                  <NewsCard
+                    date={item.date}
+                    title={item.title}
+                    titleAs="h3"
+                    titleVariant="h3"
+                    introduction={<InnerNewsCard text={item.introduction} />}
+                    href={item.href}
+                    readMoreText=""
+                    image={item.image}
+                  />
+                </Box>
+              </GridColumn>
+            ))}
+          </GridRow>
+        </GridContainer>
     </Box>
   )
 }

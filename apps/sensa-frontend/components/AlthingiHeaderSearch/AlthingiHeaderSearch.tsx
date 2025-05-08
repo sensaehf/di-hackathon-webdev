@@ -31,29 +31,31 @@ const AlthingiHeaderSearch = () => {
   }
 
   return (
-    <Box className={styles.root}>
-      <Box className={styles.leftBox}>
-        <Box>
-          <Text color="white" as="h1" variant="h2">
-            {i18n.t.home.header}
-          </Text>
+    <>
+      <Box className={styles.root}>
+        <Box className={styles.leftBox}>
+          <Box>
+            <Text color="white" as="h1" variant="h2">
+              {i18n.t.home.header}
+            </Text>
+          </Box>
+          <Box>
+            <AsyncSearch
+              placeholder="Search Alþingi"
+              options={dummyOptions}
+              inputValue={value}
+              onSubmit={handleSubmit}
+              onChange={(selectedItem) => setSelected(selectedItem)}
+              showDividerIfActive
+              size="medium"
+            />
+          </Box>
         </Box>
-        <Box>
-          <AsyncSearch
-            placeholder="Search Alþingi"
-            options={dummyOptions}
-            inputValue={value}
-            onSubmit={handleSubmit}
-            onChange={(selectedItem) => setSelected(selectedItem)}
-            showDividerIfActive
-            size="medium"
-          />
+        <Box className={styles.rightBox}>
+          <img className={styles.image} src={'/althingiheaderlogo.svg'} />
         </Box>
       </Box>
-      <Box className={styles.rightBox}>
-        <img className={styles.image} src={'/althingiheaderlogo.svg'} />
-      </Box>
-    </Box>
+    </>
   )
 }
 

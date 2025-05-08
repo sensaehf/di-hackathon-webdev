@@ -21,5 +21,5 @@ export const islandBox = style({
 
 export const althingiHeader = style({
   paddingLeft: 20,
-  paddingRight: 100
+  paddingRight: 20
 })
