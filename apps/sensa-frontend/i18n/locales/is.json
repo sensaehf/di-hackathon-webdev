@@ -180,31 +180,32 @@
     }
   },
   "workOfParliament": {
-    "title": "Work of Alþingi",
-    "sections": {
-      "peopleAndCommittees": {
-        "title": "People and Committees",
-        "description": "Explore the structure of Parliament through profiles of Members of Parliament, parliamentary parties, parliamentary committees, and the Speaker’s Committee.",
-        "shortcuts": [
-          "Members of Parliament",
-          "Parties",
-          "Constituencies",
-          "Committees",
-          "The Speaker and The Speakers' Committee"
-        ]
-      },
-      "lawsResolutionsAndBills": {
-        "title": "Laws, Resolutions and Bills",
-        "description": "Browse Iceland’s legislative work, including collections of laws, resolutions, and bills, as well as inquiries, reports, opinions, and the current status of parliamentary matters.",
-        "shortcuts": ["Laws", "Resolutions", "Bills"]
-      },
-      "sessionsAndSpeeches": {
-        "title": "Sessions and Speeches",
-        "description": "Access recordings, agendas, transcripts, and search tools related to parliamentary sessions and speeches, including speaking schedules, speech archives, and rules on speaking time.",
-        "shortcuts": ["Sessions", "Speeches", "Rules and Procedures"]
-      }
+  "title": "Störf Alþingis",
+  "sections": {
+    "peopleAndCommittees": {
+      "title": "Fólk og nefndir",
+      "description": "Kynntu þér uppbyggingu Alþingis í gegnum prófíla þingmanna, þingflokka, fastanefnda og forsætisnefndar.",
+      "shortcuts": [
+        "Þingmenn",
+        "Þingflokkar",
+        "Kjördæmi",
+        "Nefndir",
+        "Forseti og forsætisnefnd"
+      ]
+    },
+    "lawsResolutionsAndBills": {
+      "title": "Lög, þingsályktanir og frumvörp",
+      "description": "Skoðaðu löggjafarstarf Alþingis, þar á meðal safn laga, þingsályktana og frumvarpa, ásamt fyrirspurnum, skýrslum, umsögnum og stöðu mála.",
+      "shortcuts": ["Lög", "Þingsályktanir", "Frumvörp"]
+    },
+    "sessionsAndSpeeches": {
+      "title": "Þingfundir og ræður",
+      "description": "Fáðu aðgang að upptökum, dagskrám, ræðugerðum og leitarverkfærum sem tengjast þingfundum og ræðum, þar með talið ræðutöflu, skrá yfir ræður og reglur um ræðutíma.",
+      "shortcuts": ["Þingfundir", "Ræður", "Fundarsköp og reglur"]
     }
-  },
+  }
+},
+
 
   "bills": {
     "title": "Frumvörp",
