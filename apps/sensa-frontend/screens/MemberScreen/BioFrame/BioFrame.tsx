@@ -39,8 +39,14 @@ const BioFrame = ({ member }: { member: ParliamentMember }) => {
         {/* Contact */}
         <Box className={styles.contactBox}>
           <ContactLine member={member} />
-          <ContactLine member={member} />
-          <ContactLine member={member} />
+          <Box className={styles.contactLine}>
+            <Icon icon="call" type="outline" />
+            <Text>765-4321</Text>
+          </Box>
+          <Box className={styles.contactLine}>
+            <Icon icon="link" type="outline" />
+            <Text>thingmadur.is</Text>
+          </Box>
         </Box>
         <Box width="full">
           <Divider />
