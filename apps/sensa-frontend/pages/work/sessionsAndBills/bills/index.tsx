@@ -3,10 +3,10 @@ import {
   Breadcrumbs
 } from '@island.is/island-ui/core'
 import { useContext } from 'react';
-import { SubLayout } from '../../../components/Layouts/SubLayout'
+import { I18nContext } from '../../../../i18n/I18n';
+import { SubLayout } from '../../../../components/Layouts/SubLayout'
 import * as styles from './index.css'
-import { I18nContext } from '../../../i18n/I18n';
-import PeopleAndCommitteesScreen from '../../../screens/PeopleAndCommitteesScreen/PeopleAndCommitteesScreen';
+import BillsScreen from '../../../../screens/BillsScreen/BillsScreen';
 export default function MembersOfParliament() {
   const i18n = useContext(I18nContext)
 
@@ -16,9 +16,9 @@ export default function MembersOfParliament() {
         <Breadcrumbs items={[
           { title: i18n?.t.home.title ?? '', href: "/" },
           { title: i18n?.t.menu.workOfParliament ?? '', href: i18n?.t.routes.workOfParliament },
-          { title: i18n?.t.menu.peopleAndCommittees ?? '', href: i18n?.t.routes.peopleAndCommittees }
+          { title: i18n?.t.menu.sessionsAndBills ?? '', href: i18n?.t.routes.sessionsAndBills }
         ]} />
-        <PeopleAndCommitteesScreen />
+        <BillsScreen />
       </Box>
     </SubLayout>
   )

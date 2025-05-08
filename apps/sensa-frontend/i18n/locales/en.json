@@ -367,6 +367,7 @@
     "about": "/about",
     "handbooksAndReports": "/about/handbooksAndReports",
     "sessions": "/sessions",
+    "bills": "/work/sessionsAndBills/bills",
     "wip": "/wip"
   },
   "footer": {

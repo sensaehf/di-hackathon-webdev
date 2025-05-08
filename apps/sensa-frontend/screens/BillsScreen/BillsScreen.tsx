@@ -2,7 +2,7 @@ import { Box, Button, Divider, Icon, Tabs, Tag, Text } from '@island.is/island-u
 import { Webreader } from '../../components/Webreader'
 import { Table as T } from '@island.is/island-ui/core'
 import * as styles from './BillsScreen.css'
-import MockSearch from '../../components/MockSearch/MockSearch'
+import BillSearch from '../../components/BillSearch/BillSearch'
 import Link from 'next/link'
 import { useI18n } from '../../i18n'
 
@@ -11,10 +11,12 @@ const BillsScreen = () => {
   const { title, tabs, sessionHeading, filterButton, table } = i18n.t.bills
 
   return (
-    <>
-      <Text variant="h2" as="h2">
-        {title}
-      </Text>
+    <Box>
+      <Box marginTop={1}>
+        <Text variant="h1" as="h2">
+          {title}
+        </Text>
+      </Box>
       <Webreader />
 
       <Box className={styles.tabs}>
@@ -46,12 +48,14 @@ const BillsScreen = () => {
         />
       </Box>
 
-      <Text variant="h3" as="h2">
-        {sessionHeading}
-      </Text>
+      <Box marginTop={2}>
+        <Text variant="h3" as="h2">
+          {sessionHeading}
+        </Text>
+      </Box>
 
       <Box className={styles.search}>
-        <MockSearch />
+        <BillSearch />
         <Button variant="utility">
           {filterButton}
           <Box marginLeft={1}>
@@ -65,7 +69,7 @@ const BillsScreen = () => {
       <Box width="full">
         <Divider />
       </Box>
-    </>
+    </Box>
   )
 }
 

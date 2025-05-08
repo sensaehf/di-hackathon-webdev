@@ -9,10 +9,12 @@ const LawsScreen = () => {
   const { laws: lawsSection, resolutions, bills } = i18n.t.laws.sections
 
   return (
-    <>
-      <Text variant="h2" as="h2">
-        {i18n.t.laws.title}
-      </Text>
+    <Box marginBottom={6}>
+      <Box marginTop={2}>
+        <Text variant="h1">
+          {i18n.t.laws.title}
+        </Text>
+      </Box>
       <Webreader />
 
       <Box className={styles.cardContainer}>
@@ -35,10 +37,10 @@ const LawsScreen = () => {
           title={bills.title}
           description={bills.description}
           shortcuts={bills.shortcuts}
-          href="/work/lawsResolutionsAndBills/bills"
+          href={i18n.t.routes.bills}
         />
       </Box>
-    </>
+    </Box>
   )
 }
 
