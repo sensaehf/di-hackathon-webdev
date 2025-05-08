@@ -181,33 +181,73 @@
   },
 
   "bills": {
-  "title": "Frumvörp",
-  "tabs": {
-    "active": "Virk",
-    "archive": "Skjalasafn",
-    "reports": "Skýrslur"
-  },
-  "sessionHeading": "156. löggjafarþing 2025",
-  "filterButton": "Sía",
-  "table": {
-    "headers": {
-      "caseNumber": "Mál",
-      "date": "Dagsetning",
-      "title": "Heiti frumvarps",
-      "submitter": "Flutningsaðili",
-      "status": "Staða"
+    "title": "Frumvörp",
+    "tabs": {
+      "active": "Virk",
+      "archive": "Skjalasafn",
+      "reports": "Skýrslur"
     },
-    "rows": [
-      {
-        "caseNumber": "123",
-        "date": "1. janúar 2024",
-        "title": "Leikskólalög",
-        "submitter": "Atvinnuvega- og nýsköpunarráðuneytið",
-        "status": "1. umræða"
-      }
-    ]
-  }
+    "sessionHeading": "156. löggjafarþing 2025",
+    "filterButton": "Sía",
+    "table": {
+      "headers": {
+        "caseNumber": "Mál",
+        "date": "Dagsetning",
+        "title": "Heiti frumvarps",
+        "submitter": "Flutningsaðili",
+        "status": "Staða"
+      },
+      "rows": [
+        {
+          "caseNumber": "123",
+          "date": "1. janúar 2024",
+          "title": "Leikskólalög",
+          "submitter": "Atvinnuvega- og nýsköpunarráðuneytið",
+          "status": "1. umræða"
+        }
+      ]
+    }
+  },
+  "bill": {
+    "meta": {
+      "caseReference": "Mál 97, frumvarp 156. löggjafarþings 2025.",
+      "title": "Grunnskólar"
+    },
+    "commentSection": {
+      "infoText": "Allir geta sent skriflega athugasemd til fastanefndar um þingmál. Athugasemdir skulu sendar í gegnum athugasemdakerfi Alþingis. Ef formlegt ferli við að taka við athugasemdum hefur ekki hafist eða frestur til athugasemda er liðinn, er hægt að senda athugasemd á netfangið comments@althingi.is",
+      "button": "Fara í athugasemdakerfi Alþingis"
+    },
+    "discussions": ["1. umræða", "2. umræða", "Frumvarp eftir 2. umræðu"],
+    "related": {
+      "title": "Tengd skjöl",
+      "links": [
+        "Tengd mál og efni",
+        "Allar umsagnarbeiðnir",
+        "Skil skjala og umsagnir"
+      ]
+    }
+  },
+  "search": {
+    "placeholder": "Leita á Alþingi",
+    "noResults": "Engar niðurstöður fundust",
+    "loading": "Leita...",
+    "buttonLabel": "Leita"
+  },
+  "webreader": {
+  "label": "Hlusta",
+  "title": "Hlustaðu á þessa síðu lesna af ReadSpeaker webReader"
 },
+
+
+  "membersOfParliament": {
+    "title": "Alþingismenn",
+    "subtitle": "Allir þingmenn",
+    "searchPlaceholder": "Leita að þingmönnum",
+    "sortBy": "Raða eftir",
+    "filters": ["Nafni", "Flokki", "Kjördæmi", "Nefnd"],
+    "filterButton": "Sía",
+    "totalLabel": "{count} þingmenn alls"
+  },
 
   "about": {
     "annualReport": "Ársskýrslur",
