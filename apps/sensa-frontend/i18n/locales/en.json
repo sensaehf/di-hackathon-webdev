@@ -373,37 +373,14 @@
   "footer": {
     "middleLinksTitle": "Categories",
     "middleLinks": [
-      { "title": "Vehicles & Driving", "href": "#" },
-      { "title": "Business Owners & Independent Contractors", "href": "#" },
-      { "title": "The Courts & Justice System", "href": "#" },
-      { "title": "Finances & Taxes", "href": "#" },
-      { "title": "Family & Social Welfare", "href": "#" },
-      { "title": "Health", "href": "#" },
-      { "title": "Housing", "href": "#" },
-      { "title": "Industry", "href": "#" },
-      { "title": "Immigrating to Iceland", "href": "#" },
-      { "title": "Wage Earners, Workplace Rights & Pensions", "href": "#" },
-      { "title": "People with Disabilities", "href": "#" },
-      { "title": "Education", "href": "#" },
-      { "title": "Consumer Protections", "href": "#" },
-      { "title": "Civil Matters & Personal Rights", "href": "#" },
-      { "title": "Transportation", "href": "#" },
-      { "title": "The Environment", "href": "#" },
-      { "title": "Travel, Passports & Living Outside Iceland", "href": "#" }
+      { "title": "People and Committees", "href": "#" },
+      { "title": "Laws, Resolutions and Bills", "href": "#" },
+      { "title": "Sessions and Speeches", "href": "#" },
+      { "title": "About Alþingi", "href": "#" },
+      { "title": "News and announcements", "href": "#" }
     ],
     "topLinksInfo": [
-      {
-        "title": "About Digital Iceland",
-        "href": "https://stafraent.island.is/"
-      },
-      {
-        "title": "Public Institutions",
-        "href": "https://island.is/en/organizations"
-      },
-      {
-        "title": "Services on Ísland.is",
-        "href": "https://island.is/en/category/services-on-island-is"
-      }
+
     ],
     "topLinksContact": [
       {

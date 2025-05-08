@@ -14,27 +14,27 @@ const BioFrame = ({ member }: { member: ParliamentMember }) => {
             label={i18n.t.member?.frame?.position?.label}
             value={i18n.t.member?.frame?.position?.value}
           />
-          {member.ministry && 
+          {member.ministry &&
             <BioLine
               label={i18n.t.member?.frame?.ministry?.label}
               value={i18n.t.home.locale === 'is' ? member.ministry : member.ministryEn}
             />
           }
-          {member.constituency && 
+          {member.constituency &&
             <BioLine
               label={i18n.t.member?.frame?.constituency?.label}
               value={i18n.t.home.locale === 'is' ? member.constituency : member.constituencyEn}
             />
           }
 
-          {member.party && 
+          {member.party &&
             <BioLine
               label={i18n.t.member?.frame?.party?.label}
               value={i18n.t.home.locale === 'is' ? member.party : member.partyEn}
             />
           }
 
-          {member.dateOfBirth &&   
+          {member.dateOfBirth &&
             <BioLine
               label={i18n.t.member?.frame?.dob?.label}
               value={member.dateOfBirth}
@@ -47,6 +47,14 @@ const BioFrame = ({ member }: { member: ParliamentMember }) => {
         {/* Contact */}
         <Box className={styles.contactBox}>
           <ContactLine member={member} />
+          <Box className={styles.contactLine}>
+            <Icon icon="call" type="outline" />
+            <Text>765-4321</Text>
+          </Box>
+          <Box className={styles.contactLine}>
+            <Icon icon="link" type="outline" />
+            <Text>thingmadur.is</Text>
+          </Box>
         </Box>
         <Box width="full">
           <Divider />
